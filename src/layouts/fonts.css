@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Chivo:400");
+
+@font-face {
+    font-family: 'DIN';
+    font-weight: 300;
+    font-style: italic;
+    src: url(../fonts/DIN-LightItalicAlt.otf) format("opentype")
+  }
+
+@font-face {
+    font-family: 'DIN';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/DINWeb.eot), url(../fonts/DINWeb.eot#iefix) format("embedded-opentype"), url(../fonts/DINWeb.woff) format("woff")
+}
+  
+
+* {
+  color:white;
+  font-family: 'Chivo', -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+header, h1, h1 span, h2, h2 sup, h3, h4, h4 a, h5, h6, nav ul li a, .links a, .category {
+  font-family: 'DIN', -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+h6 {
+  font-size: 0.8em;
+  margin: 0;
+}

@@ -1,0 +1,74 @@
+import React from 'react'
+import Link from 'gatsby-link'
+import WorkCard from '../components/work'
+
+const IndexPage = () => (
+  <div className="container">
+    <div className="containerGroup">
+      <h1>be what’s next<br/>… w/ design and tech<br/>this is Zhen, a fresh ux designer</h1>
+    </div>
+    <div className="containerGroup">
+      <h2>Selected projects</h2>
+      <div className="cardsGroup">
+        <WorkCard 
+          image={require("../images/alipay-cover.png")}
+          id="alipay"
+          title="Alipay"
+          subtitle="Next to connected city service era"
+          text="What high-level view I learned from working for Alipay in Ant Finiancial"
+        />
+        <WorkCard 
+          image={require("../images/uatmich-cover.png")}
+          id="alipay"
+          title="U@Mich"
+          subtitle="Next to info sharing"
+          text="What high-level view I learned from working for Alipay in Ant Finiancial"
+        />
+        <WorkCard 
+          image={require("../images/default-cover.png")}
+          id="alipay"
+          title="Tide Mobile"
+          subtitle="Next to educational productivity"
+          text="Redefine a new school lifestyle with more fun, accessible for everyone in one touch"
+        />
+        <WorkCard 
+          image={require("../images/default-cover.png")}
+          id="alipay"
+          title="SmartPill"
+          subtitle="Next to pharmacy business mode"
+          text="Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways"
+        />
+        <WorkCard 
+          image={require("../images/default-cover.png")}
+          id="alipay"
+          title="Sketch Clip"
+          subtitle="Next to lazy designers"
+          text="What will Git for Designer look like... What? OK... You don't know Git..."
+        />
+        <WorkCard 
+          image={require("../images/inforest-cover.png")}
+          id="alipay"
+          title="Inforest Space"
+          subtitle="Next to non-touch interaction"
+          text="Invoke deep dreams of forest in heavy city mist by a beatiful heart travel"
+        />
+        <WorkCard
+          image={require("../images/default-cover.png")}
+          id="alipay"
+          title="Edge Shelter For Animals"
+          subtitle="Next to homeless animals"
+          text="Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption"
+        />
+        <WorkCard
+          image={require("../images/default-cover.png")}
+          id="alipay"
+          title="Int. Education"
+          subtitle="Next to intro coding education"
+          text="Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption"
+        />
+      </div>
+    </div>
+  </div>
+)
+
+export default IndexPage

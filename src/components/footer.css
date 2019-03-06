@@ -1,0 +1,45 @@
+footer {
+    width: 80%;
+    margin: 300px 10% 0 10%;
+    height: 150px;
+    z-index: 100;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.Copyright p {
+    padding-left: calc(48px + 2em);
+    color: white;
+
+    font-family: 'DIN';
+    font-weight: 400;
+}
+
+.PersonalLinks {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+}
+
+.PersonalLinks a {
+    display: block;
+    padding-left: 2em;
+    color: white;
+
+    font-family: 'DIN';
+    font-weight: 400;
+}
