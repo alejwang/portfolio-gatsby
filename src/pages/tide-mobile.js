@@ -1,20 +1,20 @@
 import React from 'react'
 import { BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
-const Alipay = () => (
+const TideMobile = () => (
   <div>
-    <BannerGroup image={require("../images/alipay-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
-        <Title>Alipay</Title>
+    <BannerGroup image={require("../images/default-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
+        <Title>Tide Mobile</Title>
         <Subtitle>Next to connected city service era - <br/> What high-level view I learned <br/> from working for Alipay in Ant Finiancial</Subtitle>
     </BannerGroup>
     <InfoPanelGroup>
       <InfoGroup>
-        <InfoTitle>Internship</InfoTitle>
-        <InfoText>2018</InfoText>
+        <InfoTitle>Project</InfoTitle>
+        <InfoText>2017</InfoText>
       </InfoGroup>
       <InfoGroup>
-        <InfoTitle>Company + Team</InfoTitle>
-        <InfoText>Ant Finiancial <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
+        <InfoTitle>Client + Team</InfoTitle>
+        <InfoText>Zhejiang University <br/> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
       </InfoGroup>
       <MainText>
         In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
@@ -56,4 +56,4 @@ const Alipay = () => (
   </div>
 )
 
-export default Alipay
+export default TideMobile

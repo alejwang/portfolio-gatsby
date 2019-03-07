@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const WorkCardGroup = styled.div`
     /* width: 400px; */
     /* height: 300px; */
-    margin:0 5em 3em 0;
+    margin:0 5em 1em 0;
     
     position: relative;
     /* overflow: hidden; */
@@ -27,7 +27,6 @@ const Title = styled.p`
     font-weight: 300;
     font-style: italic;
     font-size: 4em;
-    font-style: italic;
     color: white;
     opacity: 0.5;
 
@@ -41,9 +40,16 @@ const Title = styled.p`
     }
 `
 
+const Sub = styled.span`
+    font-family: 'DIN';
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.5em;
+`
+
 const Subtitle = styled.p`
     width: 400px;
-    margin: -10px 0 0 0;
+    margin: -20px 0 0 0;
     padding-left: 1.5px;
     position: absolute;
 
@@ -64,6 +70,8 @@ const Subtitle = styled.p`
         transform: translateY(-15px);
     }
 `
+
+
 
 const Image = styled.div`
     width: 400px;
@@ -91,7 +99,7 @@ const Image = styled.div`
 
 const WorkCard = props => (
     <WorkCardGroup>
-        <Link to={props.id}><Title>{props.title}</Title></Link>
+        <Link to={props.id}><Title>{props.title}<Sub>{props.sub}</Sub></Title></Link>
         <Subtitle>{props.subtitle}</Subtitle>
         <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
     </WorkCardGroup>

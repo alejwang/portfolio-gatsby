@@ -128,7 +128,7 @@ h6 {
 
 .cardsGroup {
   width: 100%;
-  margin: 4em 2em 1em 0;
+  margin: 2em 2em 1em 0;
   display: inline-flex;
   flex-wrap: wrap;
   /* justify-items: center; */

@@ -21,10 +21,11 @@ const IndexPage = () => (
         />
         <WorkCard 
           image={require("../images/uatmich-cover.png")}
-          gradient_start="#626262" 
-          gradient_end="#626262"
+          gradient_start="#032859" 
+          gradient_end="#16319D"
           id="uatmich"
           title="U@Mich"
+          sub=" / tba"
           subtitle="Next to info sharing"
           text="What high-level view I learned from working for Alipay in Ant Finiancial"
         />
