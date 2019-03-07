@@ -12,6 +12,8 @@ const IndexPage = () => (
       <div className="cardsGroup">
         <WorkCard 
           image={require("../images/alipay-cover.png")}
+          gradient_start="#153c88" 
+          gradient_end="#3068e8"
           id="alipay"
           title="Alipay"
           subtitle="Next to connected city service era"
@@ -19,13 +21,17 @@ const IndexPage = () => (
         />
         <WorkCard 
           image={require("../images/uatmich-cover.png")}
-          id="alipay"
+          gradient_start="#626262" 
+          gradient_end="#626262"
+          id="uatmich"
           title="U@Mich"
           subtitle="Next to info sharing"
           text="What high-level view I learned from working for Alipay in Ant Finiancial"
         />
         <WorkCard 
           image={require("../images/default-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="Tide Mobile"
           subtitle="Next to educational productivity"
@@ -33,6 +39,8 @@ const IndexPage = () => (
         />
         <WorkCard 
           image={require("../images/default-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="SmartPill"
           subtitle="Next to pharmacy business mode"
@@ -40,6 +48,8 @@ const IndexPage = () => (
         />
         <WorkCard 
           image={require("../images/default-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="Sketch Clip"
           subtitle="Next to lazy designers"
@@ -47,6 +57,8 @@ const IndexPage = () => (
         />
         <WorkCard 
           image={require("../images/inforest-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="Inforest Space"
           subtitle="Next to non-touch interaction"
@@ -54,6 +66,8 @@ const IndexPage = () => (
         />
         <WorkCard
           image={require("../images/default-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="Edge Shelter For Animals"
           subtitle="Next to homeless animals"
@@ -61,6 +75,8 @@ const IndexPage = () => (
         />
         <WorkCard
           image={require("../images/default-cover.png")}
+          gradient_start="#626262" 
+          gradient_end="#626262"
           id="alipay"
           title="Int. Education"
           subtitle="Next to intro coding education"

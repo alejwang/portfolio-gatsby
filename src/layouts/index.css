@@ -11,6 +11,13 @@ body {
   background-color: black;
 }
 
+p {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #eee;
+}
+
 a {
   /* background-color: transparent; */
   /* -webkit-text-decoration-skip: objects; */
@@ -27,6 +34,50 @@ span {
   font-weight: 600;
 }
 
+h1 {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 3em;
+  font-style: italic;
+  line-height: 2em;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+h3 {
+  margin: 0 0 200px 0;
+  
+  font-size: 2em;
+  line-height: 1.4em;
+  font-weight: 300;
+  color: #dddddd;
+}
+
+h4 {
+  margin: 0;
+
+  font-size: 1.05em;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #ccc;
+}
+
+h6 {
+  margin: 0 0 0.8em 0;
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #eee;
+}
+
 .container {
   /* padding: 0 0 0 250px; */
   /* background: url('../images/wallpaper3.jpg');
@@ -38,7 +89,7 @@ span {
   width: 80%;
   min-height: 150px;
   margin: 0 10%;
-  padding: calc(50vh - 120px) 0 0 calc(48px + 2em);
+  padding: calc(50vh - 144px) 0 0 calc(48px + 2em);
   /* text-align: center; */
 }
 
@@ -53,10 +104,11 @@ span {
 }
 
 .containerGroup h2 {
-  margin: 1em 0;
+  margin: 0;
 
   font-weight: 400;
   font-size: 0.9em;
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: 0.6em;
   color: white;
@@ -76,7 +128,7 @@ span {
 
 .cardsGroup {
   width: 100%;
-  margin: 1em 2em 1em 0;
+  margin: 4em 2em 1em 0;
   display: inline-flex;
   flex-wrap: wrap;
   /* justify-items: center; */
