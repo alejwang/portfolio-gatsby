@@ -17,7 +17,6 @@ const IndexPage = () => (
           id="alipay"
           title="Alipay"
           subtitle="Next to connected city service era"
-          text="What high-level view I learned from working for Alipay in Ant Finiancial"
         />
         <WorkCard 
           image={require("../images/uatmich-cover.png")}
@@ -27,7 +26,6 @@ const IndexPage = () => (
           title="U@Mich"
           sub=" / tba"
           subtitle="Next to info sharing"
-          text="What high-level view I learned from working for Alipay in Ant Finiancial"
         />
         <WorkCard 
           image={require("../images/default-cover.png")}
@@ -35,6 +33,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="Tide Mobile"
+          sub=" / tba"
           subtitle="Next to educational productivity"
           text="Redefine a new school lifestyle with more fun, accessible for everyone in one touch"
         />
@@ -44,6 +43,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="SmartPill"
+          sub=" / tba"
           subtitle="Next to pharmacy business mode"
           text="Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways"
         />
@@ -53,6 +53,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="Sketch Clip"
+          sub=" / tba"
           subtitle="Next to lazy designers"
           text="What will Git for Designer look like... What? OK... You don't know Git..."
         />
@@ -62,6 +63,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="Inforest Space"
+          sub=" / tba"
           subtitle="Next to non-touch interaction"
           text="Invoke deep dreams of forest in heavy city mist by a beatiful heart travel"
         />
@@ -71,6 +73,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="Edge Shelter For Animals"
+          sub=" / tba"
           subtitle="Next to homeless animals"
           text="Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption"
         />
@@ -80,6 +83,7 @@ const IndexPage = () => (
           gradient_end="#626262"
           id="alipay"
           title="Int. Education"
+          sub=" / tba"
           subtitle="Next to intro coding education"
           text="Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption"
         />

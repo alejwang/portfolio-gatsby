@@ -18,7 +18,7 @@ const Layout = ({ children, data, location }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
+    <Header location={location.pathname}/>
     {/* {location.pathname === '/' &&
       <Header />
     } */}

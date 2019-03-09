@@ -8,6 +8,7 @@ class Header extends React.Component {
     this.state = {
       isScrolled: false
     }
+    this.location = props.location.slice(1)
   }
 
   componentDidMount() {
