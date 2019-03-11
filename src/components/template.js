@@ -26,7 +26,7 @@ export const InfoPanelGroup = styled.div`
   overflow:auto;
 `
 export const InfoGroup = styled.div`
-  min-width: 14%;
+  min-width: 18%;
   padding-right: 10px;
   box-sizing: border-box;
   float: left;
@@ -43,15 +43,16 @@ export const Image = styled.img`
   height: auto;
   margin: 100px 10%;
   box-sizing: border-box;
-  padding-left: calc(48px + 2em);
+  ${'' /* padding-left: calc(48px + 2em); */}
   overflow:auto;
 `
 
 export const Section = styled.div`
   width: 80%;
-  margin: 100px 10%;
+  max-width: 1200px
+  margin: 100px auto;
   box-sizing: border-box;
-  padding-left: calc(48px + 2em);
+  ${'' /* padding-left: calc(48px + 2em); */}
   ${'' /* overflow: auto; */}
 `
 
@@ -98,22 +99,22 @@ export const StepNo = styled.span`
 
 export const StepText = styled.p`
   display: block;
-  width: 55%;
+  width: 50%;
   float: right;
   margin: 0;
 
   font-size: 1.05em;
   font-weight: 300;
   line-height: 1.65em;
-  color: #ccc;
+  color: #ddd;
   
 `
 
 export const MainText = styled.p`
   display: block;
-  width: 55%;
+  width: 50%;
   height: auto;
-  margin: 0 0 0 45%;
+  margin: 0 0 0 50%;
 
   & + & {
     margin-top: 2em;

@@ -31,7 +31,7 @@ const IndexPage = () => (
           image={require("../images/default-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="Tide Mobile"
           sub=" / tba"
           subtitle="Next to educational productivity"
@@ -41,7 +41,7 @@ const IndexPage = () => (
           image={require("../images/default-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="SmartPill"
           sub=" / tba"
           subtitle="Next to pharmacy business mode"
@@ -51,7 +51,7 @@ const IndexPage = () => (
           image={require("../images/default-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="Sketch Clip"
           sub=" / tba"
           subtitle="Next to lazy designers"
@@ -61,7 +61,7 @@ const IndexPage = () => (
           image={require("../images/inforest-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="Inforest Space"
           sub=" / tba"
           subtitle="Next to non-touch interaction"
@@ -71,7 +71,7 @@ const IndexPage = () => (
           image={require("../images/default-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="Edge Shelter For Animals"
           sub=" / tba"
           subtitle="Next to homeless animals"
@@ -81,7 +81,7 @@ const IndexPage = () => (
           image={require("../images/default-cover.png")}
           gradient_start="#626262" 
           gradient_end="#626262"
-          id="alipay"
+          id="#"
           title="Int. Education"
           sub=" / tba"
           subtitle="Next to intro coding education"

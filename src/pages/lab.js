@@ -1,14 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import WorkCard from '../components/work'
 
-const IndexPage = () => (
+const LabPage = () => (
   <div className="container">
-    <div className="containerGroup">
+    <div className="containerGroupShort">
       <h2>Experimental Projects</h2>
       <div className="cardsGroup">
         <WorkCard 
-          image={require("../images/default-cover.png")}
+          image={require("../images/default-exp-cover.png")}
           gradient_start="#153c88" 
           gradient_end="#3068e8"
           id="#"
@@ -17,7 +16,7 @@ const IndexPage = () => (
           subtitle="The future of textbook"
         />
         <WorkCard 
-          image={require("../images/default-cover.png")}
+          image={require("../images/default-exp-cover.png")}
           gradient_start="#153c88" 
           gradient_end="#3068e8"
           id="#"
@@ -31,4 +30,4 @@ const IndexPage = () => (
   </div>
 )
 
-export default IndexPage
+export default LabPage

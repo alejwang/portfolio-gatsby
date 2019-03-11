@@ -21,13 +21,14 @@ p {
 a {
   /* background-color: transparent; */
   /* -webkit-text-decoration-skip: objects; */
-  color: #5334F5;
-  font-weight: 600;
+  color: #ED9849;
+  font-weight: 300;
   text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration-line: underline;
 }
 
 span {
@@ -78,33 +79,49 @@ h6 {
   color: #eee;
 }
 
-.container {
-  /* padding: 0 0 0 250px; */
-  /* background: url('../images/wallpaper3.jpg');
-  background-size: cover;
-  background-position: center; */
-}
 
 .containerGroup {
   width: 80%;
   min-height: 150px;
   margin: 0 10%;
   padding: calc(50vh - 144px) 0 0 calc(48px + 2em);
+  /* padding: calc(50vh - 144px) 0 0 0; */
   /* text-align: center; */
 }
 
-.containerGroup h1 {
-  margin: 0;
+.containerGroupShort {
+  width: 80%;
+  min-height: 150px;
+  margin: 0 10%;
+  padding: 300px 0 0 calc(48px + 2em);
+}
+
+.containerGroupShort + .containerGroupShort {
+  padding: 200px 0 0 calc(48px + 2em);
+}
+
+.containerGroup h1, .containerGroupShort h1 {
+  margin: 1em 0;
+  /* padding-left: 80px; */
 
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.8em;
   font-style: italic;
   line-height: 1.5;
   color: white;
 }
 
-.containerGroup h2 {
+.containerGroupShort h1 a{
+  margin-right: 2em;
+
+  font-weight: 300;
+  font-style: italic;
+  
+}
+
+.containerGroup h2, .containerGroupShort h2 {
   margin: 0;
+  
 
   font-weight: 400;
   font-size: 0.9em;

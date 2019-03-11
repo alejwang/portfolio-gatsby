@@ -2,15 +2,18 @@ import React from 'react'
 import Link from 'gatsby-link'
 import WorkCard from '../components/work'
 import { Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import pdf from "../files/Zhen_Wang_resume_2019.pdf"
 
 
 const AboutPage = () => (
   <div className="container">
-    <div className="containerGroup">
-      <h1>a synthesized project I've been working on for 24 years. <br />... all right you catch ME!</h1>
+    <div className="containerGroupShort">
+      <h1>Hey, I am Zhen - an UX Designer studying at the University of Michigan, <br /> specializing in human-computer interaction.</h1>
+      <h1>Besides work, you may find me swimming 🏊 , <br />listening to pop/classic music  🎵, and grazing at bubble tea shops 🍶.</h1>
+      <h1><a href={pdf}>Check my resume ></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">Let's talk! ></a></h1>
     </div>
-    
-    <Image src={require("../images/about-me.png")} /> 
+
+    <Image src={require("../images/about-me.jpg")} /> 
 
 
     <Section>
