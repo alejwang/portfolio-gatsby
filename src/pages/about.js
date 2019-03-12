@@ -4,8 +4,11 @@ import WorkCard from '../components/work'
 import { Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import pdf from "../files/Zhen_Wang_resume_2019.pdf"
 
+import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const AboutPage = () => (
+
   <div className="container">
     <div className="containerGroupShort">
       <h1>Hey, I am Zhen - an UX Designer studying at the University of Michigan, <br /> specializing in human-computer interaction.</h1>
@@ -13,11 +16,11 @@ const AboutPage = () => (
       <h1><a href={pdf}>Check my resume ></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">Let's talk! ></a></h1>
     </div>
 
-    <Image src={require("../images/about-me.jpg")} /> 
+    <Image src={require("../images/about-me.jpg")} />
 
 
     <Section>
-    
+
       <StepContainerGroup>
         <StepTitle>before</StepTitle>
         <StepText>I was a coder at the beginning. I was an exploring architect. I like combination beauty between technology and design. Because once they being together, the mixing magic can make life easier and joyful. </StepText>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './header.css'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,7 +9,6 @@ class Header extends React.Component {
     this.state = {
       isScrolled: false
     }
-    this.location = props.location.slice(1)
   }
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class Header extends React.Component {
     const offsetY = window.pageYOffset
 
     if (offsetY > 100) {
-      this.setState({ isScrolled: true }) 
+      this.setState({ isScrolled: true })
     } else {
       this.setState({ isScrolled: false })
     }
@@ -28,14 +28,17 @@ class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isScrolled ? 'HeaderScrolled' : 'Header'}>
-        <div className="Logo">
-          <Link to="/"><img width="48" height="48" src={require('../images/aw-logo-white-2.5px.svg')}/></Link>
-          <Link to="/">alejandro.wang</Link>
-        </div>
-        <div className="Links">
-          <Link to="/work">work.</Link>
-          <Link to="/lab">lab.</Link>
-          <Link to="/about">about.</Link>
+        <div className="HeaderGroup">
+          <div className="blurrer"></div>
+          <div className="Logo">
+            <AniLink cover to="/" direction="down" bg="#111" to="/"><img width="48" height="48" src={require('../images/aw-logo-white-2.5px.svg')}/></AniLink>
+            <AniLink cover to="/" direction="down" bg="#111" to="/">alejandro.wang</AniLink>
+          </div>
+          <div className="Links">
+            <AniLink cover to="/work" direction="down" bg="#111" to="/work">work.</AniLink>
+            <AniLink cover to="/lab" direction="down" bg="#111" to="/lab">lab.</AniLink>
+            <AniLink cover to="/about" direction="down" bg="#111" to="/about">about.</AniLink>
+          </div>
         </div>
       </header>
     )

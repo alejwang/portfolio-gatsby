@@ -1,12 +1,16 @@
 header {
     position: fixed;
     width: 100%;
-    padding: 0 10%;
     box-sizing: border-box;
     height: 100px;
     z-index: 100;
-    transition: 0.8s ;
+}
 
+.HeaderGroup {
+    width: 80%;
+    max-width: 1440px;
+    height: 100px;
+    margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -16,12 +20,32 @@ header {
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
 }
 
-.HeaderScrolled {
-    height: 100px;
-    /* background: rgba(0,0,0, 0.8); */
-    backdrop-filter: blur(10px);
+
+.blurrer {
+    height: 150px;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    position: absolute;
+    /* overflow: hidden; */
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    z-index: -500;
+    background-image: linear-gradient(black 25%, rgba(0,0,0,0));
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+
+.HeaderScrolled .blurrer{
+    opacity: 1;
 }
 
 .Logo {

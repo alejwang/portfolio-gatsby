@@ -1,6 +1,7 @@
 footer {
     width: 80%;
-    margin: 300px 10% 0 10%;
+    max-width: 1440px;
+    margin: 100px auto 0 auto;
     height: 150px;
     z-index: 100;
 
@@ -9,7 +10,7 @@ footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;

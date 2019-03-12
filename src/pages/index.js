@@ -9,26 +9,26 @@ const IndexPage = () => (
     <div className="containerGroup">
       <h2>Selected projects</h2>
       <div className="cardsGroup">
-        <WorkCard 
+        <WorkCard
           image={require("../images/alipay-cover.png")}
-          gradient_start="#153c88" 
+          gradient_start="#153c88"
           gradient_end="#3068e8"
           id="alipay"
           title="Alipay"
           subtitle="Next to connected city service era"
         />
-        <WorkCard 
+        <WorkCard
           image={require("../images/uatmich-cover.png")}
-          gradient_start="#032859" 
+          gradient_start="#032859"
           gradient_end="#16319D"
           id="uatmich"
           title="U@Mich"
           sub=" / tba"
           subtitle="Next to info sharing"
         />
-        <WorkCard 
+        <WorkCard
           image={require("../images/default-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="Tide Mobile"
@@ -36,9 +36,9 @@ const IndexPage = () => (
           subtitle="Next to educational productivity"
           text="Redefine a new school lifestyle with more fun, accessible for everyone in one touch"
         />
-        <WorkCard 
+        <WorkCard
           image={require("../images/default-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="SmartPill"
@@ -46,9 +46,9 @@ const IndexPage = () => (
           subtitle="Next to pharmacy business mode"
           text="Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways"
         />
-        <WorkCard 
+        <WorkCard
           image={require("../images/default-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="Sketch Clip"
@@ -56,9 +56,9 @@ const IndexPage = () => (
           subtitle="Next to lazy designers"
           text="What will Git for Designer look like... What? OK... You don't know Git..."
         />
-        <WorkCard 
+        <WorkCard
           image={require("../images/inforest-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="Inforest Space"
@@ -68,7 +68,7 @@ const IndexPage = () => (
         />
         <WorkCard
           image={require("../images/default-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="Edge Shelter For Animals"
@@ -78,7 +78,7 @@ const IndexPage = () => (
         />
         <WorkCard
           image={require("../images/default-cover.png")}
-          gradient_start="#626262" 
+          gradient_start="#626262"
           gradient_end="#626262"
           id="#"
           title="Int. Education"

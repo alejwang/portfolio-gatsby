@@ -1,11 +1,13 @@
 import React from 'react'
-import { BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 const UatMich = () => (
   <div>
     <BannerGroup image={require("../images/uatmich-cover.png")} gradient_start="#032859" gradient_end="#16319D">
+      <TitleGroup>
         <Title>U@Mich</Title>
         <Subtitle>LBS discover app development <br /> for U of Mich freshmen <br /> using agile methods</Subtitle>
+      </TitleGroup>
     </BannerGroup>
     <InfoPanelGroup>
       <InfoGroup>
@@ -25,6 +27,7 @@ const UatMich = () => (
       </MainText>
     </InfoPanelGroup>
     {/* <Image src={require("../images/alipay-timeline.png")} />  */}
+    <hr></hr>
     <Section>
       <SectionTitle>Sprint 1 <br />Research, Tech Spikes, and Lo-fi Prototype</SectionTitle>
       {/* <StepContainerGroup>

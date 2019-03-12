@@ -4,8 +4,7 @@ export const BannerGroup = styled.div`
   width: 100%;
   min-height: 600px;
   box-sizing: border-box;
-  padding: 200px 0 0 calc(48px + 2em + 10%);
-  /* text-align: center; */
+  padding-top: 200px;
 
   background: ${props => props.gradient_start};
   background-image: url(${props => props.image}), linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
@@ -13,16 +12,25 @@ export const BannerGroup = styled.div`
   background-position: right bottom;
 `
 
+export const TitleGroup = styled.div`
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: calc(48px + 2em);
+  box-sizing: border-box;
+`
+
 export const Title = styled.h1``
 
 export const Subtitle = styled.h2``
 
 export const InfoPanelGroup = styled.div`
-  width: 80%;
+  width: 100%;
+  max-width: 1440px;
   height:auto;
-  margin: 200px 10% 100px 10%;
-  box-sizing: border-box;
+  margin: 200px auto 100px auto;
   padding-left: calc(48px + 2em);
+  box-sizing: border-box;
   overflow:auto;
 `
 export const InfoGroup = styled.div`
@@ -40,19 +48,20 @@ export const InfoText = styled.p`
 
 export const Image = styled.img`
   width: 80%;
+  max-width: 1440px;
   height: auto;
-  margin: 100px 10%;
+  margin: 100px auto;
   box-sizing: border-box;
-  ${'' /* padding-left: calc(48px + 2em); */}
+  display:block;
   overflow:auto;
 `
 
 export const Section = styled.div`
-  width: 80%;
-  max-width: 1200px
+  width: 100%;
+  max-width: 1440px
   margin: 100px auto;
   box-sizing: border-box;
-  ${'' /* padding-left: calc(48px + 2em); */}
+  padding-left: calc(48px + 2em);
   ${'' /* overflow: auto; */}
 `
 

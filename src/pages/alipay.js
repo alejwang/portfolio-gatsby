@@ -1,32 +1,34 @@
 import React from 'react'
-import { BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 const Alipay = () => (
   <div>
     <BannerGroup image={require("../images/alipay-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
+      <TitleGroup>
         <Title>Alipay</Title>
         <Subtitle>Next to connected city service era - <br/> What high-level view I learned <br/> from working for Alipay in Ant Finiancial</Subtitle>
+      </TitleGroup>
     </BannerGroup>
     <InfoPanelGroup>
-      <InfoGroup>
-        <InfoTitle>Internship</InfoTitle>
-        <InfoText>2018</InfoText>
-      </InfoGroup>
-      <InfoGroup>
-        <InfoTitle>Company + Team</InfoTitle>
-        <InfoText>Ant Finiancial <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
-      </InfoGroup>
-      <MainText>
-        In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
-        I was lucky to work in Alipay Design team with talented colleagues together to bring more ideas to come true. 
-        During my internship, I worked on developing two new projects and improving one launched project. (NDA)
-      </MainText>
-      <MainText>
-        My Role: <br/>
-        Create design concepts, IA, user flows, wireframe, and also prototypes.<br/>
-        Work with government, researchers and developers to launch the project and establish evaluation methods.<br/>
-        Spend my free time working on motion design and usability testing on a cross-devices prototype.
-      </MainText>
+        <InfoGroup>
+          <InfoTitle>Internship</InfoTitle>
+          <InfoText>2018</InfoText>
+        </InfoGroup>
+        <InfoGroup>
+          <InfoTitle>Company + Team</InfoTitle>
+          <InfoText>Ant Finiancial <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
+        </InfoGroup>
+        <MainText>
+          In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
+          I was lucky to work in Alipay Design team with talented colleagues together to bring more ideas to come true. 
+          During my internship, I worked on developing two new projects and improving one launched project. (NDA)
+        </MainText>
+        <MainText>
+          My Role: <br/>
+          Create design concepts, IA, user flows, wireframe, and also prototypes.<br/>
+          Work with government, researchers and developers to launch the project and establish evaluation methods.<br/>
+          Spend my free time working on motion design and usability testing on a cross-devices prototype.
+        </MainText>
     </InfoPanelGroup>
     <Image src={require("../images/alipay-timeline.png")} /> 
     <Section>

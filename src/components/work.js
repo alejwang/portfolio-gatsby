@@ -1,13 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 import styled from 'styled-components'
-// import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+
 
 const WorkCardGroup = styled.div`
     /* width: 400px; */
     /* height: 300px; */
     margin:0 5em 1em 0;
-    
+
     position: relative;
     /* overflow: hidden; */
     /* border-radius: 20px; */
@@ -100,7 +101,7 @@ const Image = styled.div`
 
 const WorkCard = props => (
     <WorkCardGroup>
-        <Link to={props.id}><Title>{props.title}<Sub>{props.sub}</Sub></Title></Link>
+        <AniLink cover to={props.id} direction="down" bg="#111"><Title>{props.title}<Sub>{props.sub}</Sub></Title></AniLink>
         <Subtitle>{props.subtitle}</Subtitle>
         <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
     </WorkCardGroup>
