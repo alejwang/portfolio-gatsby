@@ -1,5 +1,5 @@
 import React from 'react'
-import { TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 const Alipay = () => (
   <div>
@@ -9,6 +9,7 @@ const Alipay = () => (
         <Subtitle>Next to connected city service era - <br/> What high-level view I learned <br/> from working for Alipay in Ant Finiancial</Subtitle>
       </TitleGroup>
     </BannerGroup>
+
     <InfoPanelGroup>
         <InfoGroup>
           <InfoTitle>Internship</InfoTitle>
@@ -21,7 +22,7 @@ const Alipay = () => (
         <MainText>
           In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
           I was lucky to work in Alipay Design team with talented colleagues together to bring more ideas to come true. 
-          During my internship, I worked on developing two new projects and improving one launched project. (NDA)
+          During my internship, I worked on developing two new projects and improving one launched project.
         </MainText>
         <MainText>
           My Role: <br/>
@@ -29,8 +30,14 @@ const Alipay = () => (
           Work with government, researchers and developers to launch the project and establish evaluation methods.<br/>
           Spend my free time working on motion design and usability testing on a cross-devices prototype.
         </MainText>
+
+        <NoteText>
+          Due to NDA, I can't reveal my work details.
+        </NoteText>
     </InfoPanelGroup>
+
     <Image src={require("../images/alipay-timeline.png")} /> 
+
     <Section>
       <SectionTitle>What I learned, <br />experienced, and experimented</SectionTitle>
       <StepContainerGroup>
@@ -50,7 +57,9 @@ const Alipay = () => (
         It's necessary to always be creative and not be limited by tools. I worked on flexible card prototyping for complex IA designs, paper prototyping for motion designs, and made developer-must-love-it pseudo-algorithm flowcharts for an institution solution project. You know what... they loved it!</StepText>
       </StepContainerGroup>
     </Section>
+
     <Image src={require("../images/alipay-memory.jpg")} /> 
+    
     <Section>
       <MainText>Lastly, a memory of us celebrating Chilren's Day lol.</MainText>
       <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>

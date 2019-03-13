@@ -1,59 +1,99 @@
 import React from 'react'
-import { BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionForImage, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import DeviceMockUp from '../components/devicemockup'
 
 const TideMobile = () => (
   <div>
-    <BannerGroup image={require("../images/default-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
+    <BannerGroup image={require("../images/tide-mobile-cover.png")} 
+          gradient_start="#E77826"
+          gradient_end="#F6C38F">
+      <TitleGroup>
         <Title>Tide Mobile</Title>
-        <Subtitle>Next to connected city service era - <br/> What high-level view I learned <br/> from working for Alipay in Ant Finiancial</Subtitle>
+        <Subtitle>Next to campus lifestyle - <br/> Redefine how college students gath information and have fun, <br/> accessible for everyone in one touch</Subtitle>
+      </TitleGroup>
     </BannerGroup>
+
     <InfoPanelGroup>
-      <InfoGroup>
-        <InfoTitle>Project</InfoTitle>
-        <InfoText>2017</InfoText>
-      </InfoGroup>
-      <InfoGroup>
-        <InfoTitle>Client + Team</InfoTitle>
-        <InfoText>Zhejiang University <br/> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
-      </InfoGroup>
-      <MainText>
-        In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
-        I was lucky to work in Alipay Design team with talented colleagues together to bring more ideas to come true. 
-        During my internship, I worked on developing two new projects and improving one launched project. (NDA)
-      </MainText>
-      <MainText>
-        My Role: <br/>
-        Create design concepts, IA, user flows, wireframe, and also prototypes.<br/>
-        Work with government, researchers and developers to launch the project and establish evaluation methods.<br/>
-        Spend my free time working on motion design and usability testing on a cross-devices prototype.
-      </MainText>
+        <InfoGroup>
+          <InfoTitle>Project</InfoTitle>
+          <InfoText>2016-17</InfoText>
+        </InfoGroup>
+        <InfoGroup>
+          <InfoTitle>Client + Team</InfoTitle>
+          <InfoText>Student Portal, ZJU <br/> Bubu, Jingjing, Shiguan</InfoText>
+        </InfoGroup>
+        <MainText>
+        Tide Mobile (求是潮手机站) is an everyday calendar app for university students to organize their academic calendar and find more club activities in leisure life. <br/> Check it out on <a href="https://itunes.apple.com/app/qiu-shi-chaomobile/id583334920">App Store<span className="linkarrow">></span></a>.
+        </MainText>
+        <MainText>
+          My Role: <br/>
+          As a team leader, I engaged the team forward in an open atmosphere. I made user research and design critique on the previous version of Tide Mobile to come up with ideas about the new version. As a team, we made the design desicions together during discovering and making the ia, wireframes, interactions and later developing.
+        </MainText>
+
+        <NoteText>
+          Due to agile updates, the images below from different periods may look a little bit different.
+        </NoteText>
     </InfoPanelGroup>
-    <Image src={require("../images/alipay-timeline.png")} /> 
+
+    <Image src={require("../images/tide-mobile-overall.png")} /> 
+
     <Section>
-      <SectionTitle>What I learned, <br />experienced, and experimented</SectionTitle>
+      <ChapterTitle>key problems</ChapterTitle>
+      <SectionTitle>Before, life in my school wasn't easy and fun <br/>because of two major problems.</SectionTitle>
       <StepContainerGroup>
         <StepNo>01</StepNo>
-        <StepTitle>Think broader and broader <br /> for the user spectrum</StepTitle>
-        <StepText>Design for both key user cases and lost of edge cases. I had never designed for 300,000+ users and created the user spectrum for any possibilities - even for potential users who can only see a poster with a QR code. Because to transfer local users to our online app easier is also an important design goal.</StepText>
+        <StepTitle>Isolated useful resources</StepTitle>
+        <StepText>Students waste lots of time on checking plenty of information including courses, exams, homework, labs, financial aids and school bus from several places. It spends time, but students don't want to miss things.</StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>02</StepNo>
-        <StepTitle>Give me a fulcrum <br /> and I will convince the stakeholders</StepTitle>
-        <StepText>The fulcrum is design decisions driven by research result, company culture or precise data. We are not convincing ourselves and post something fancy to Dribbble. Instead, we are facing huge external resistance - from governments, clients, different developer teams (project team, API team, security team in one project!!!). I learned to make the right design decisions and use it to convince other people. Sometimes, to finish a convincing draft efficiently with stakeholders is way more important than keeping your sketch file not dirty.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>03</StepNo>
-        <StepTitle>Break through the mindset <br /> and chase for excellence</StepTitle>
-        <StepText>"If you work in a textbook style, you may never reach excellence in limited time". - my mentor <br/><br/>
-        It's necessary to always be creative and not be limited by tools. I worked on flexible card prototyping for complex IA designs, paper prototyping for motion designs, and made developer-must-love-it pseudo-algorithm flowcharts for an institution solution project. You know what... they loved it!</StepText>
+        <StepTitle>Information overload</StepTitle>
+        <StepText>Students also get information passively outside their academic life from tons of posters, paper ads, outdoor banners or SMS/email sent by departments and student clubs. But those ways are not attractive for students, also inprecise and expensive for the sender.</StepText>
       </StepContainerGroup>
     </Section>
-    <Image src={require("../images/alipay-memory.jpg")} /> 
+
+    <hr/>
     <Section>
-      <MainText>Lastly, a memory of us celebrating Chilren's Day lol.</MainText>
-      <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>
+      <ChapterTitle>solution overview</ChapterTitle>
+      <SectionTitle>Tide Mobile 3 is born to improve the productivity in school. <br/>By saving students' time and energy to organize all information they need, <br/>we finally brought them a new school lifestyle.</SectionTitle>
     </Section>
+
+    <SectionForImage>
+      <DeviceMockUp video={require("../images/tide-mobile-showcase1.mp4")} text="Today - Designed for 'this' moment. With one glance, users can know the ongoing event, and next events coming up today."/>
+      <DeviceMockUp video={require("../images/tide-mobile-showcase2.mp4")} text="Calendar - All the events are synced from the educational system or our database so the user's schedule is always up-to-date."/>
+      <DeviceMockUp video={require("../images/tide-mobile-showcase3.mp4")} text="Discover - A place with lots of fun activities posted by hundreds of clubs. View activities. Check availability. Book tickets online. And add to the calendar with one click."/>
+      <DeviceMockUp video={require("../images/tide-mobile-showcase4.mp4")} text="Tools - Check some popular tools and links - your physical training, GPA, the school bus, mail..."/>
+    </SectionForImage>
+
+    <Section>
+      <ChapterTitle>design critique + research</ChapterTitle>
+      <SectionTitle>We started from design critique on the previous version base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
+    </Section>
+    <Image src={require("../images/tide-mobile-research.png")} /> 
+    <Section>
+      <MainText>
+        Conclusion: a new information structure needed
+      </MainText>
+      <MainText>
+        Although the previous design created an unique (fancy!) experience by cards view, some interactions are still hard to understand. The card didn't work as we thought because the needed information is not shown enough while useless details showed a lot. 
+      </MainText>
+      <MainText>
+        We also noticed the big differences of how user use it depending on when and where. In different scenarios, users want to focus on only few things without noises.
+      </MainText>
+    </Section>
+
+    <hr/>
+    <Section>
+      <ChapterTitle>design thinking</ChapterTitle>
+      <SectionTitle>Our goal is to redefine the "easy + joyful" experience on Mobile. <br/> 
+      "Easy" is designing for situations and tasks to let users gather information quickly and "joyful" is a sense of surprise.</SectionTitle>
+    </Section>
+
+    
   </div>
 )
+
+
+
 
 export default TideMobile

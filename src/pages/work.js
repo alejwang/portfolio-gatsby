@@ -40,13 +40,12 @@ const WorkPage = () => (
           subtitle="Next to info sharing"
         />
         <WorkCard
-          image={require("../images/default-cover.png")}
-          gradient_start="#626262"
-          gradient_end="#626262"
-          id="#"
+          image={require("../images/tide-mobile-cover.png")}
+          gradient_start="#EE9655"
+          gradient_end="#F6C38F"
+          id="tide-mobile"
           title="Tide Mobile"
-          sub=" / tba"
-          subtitle="Next to educational productivity"
+          subtitle="Next to campus lifestyle"
           text="Redefine a new school lifestyle with more fun, accessible for everyone in one touch"
         />
         <WorkCard

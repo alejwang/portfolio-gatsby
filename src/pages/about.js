@@ -18,9 +18,7 @@ const AboutPage = () => (
 
     <Image src={require("../images/about-me.jpg")} />
 
-
     <Section>
-
       <StepContainerGroup>
         <StepTitle>before</StepTitle>
         <StepText>I was a coder at the beginning. I was an exploring architect. I like combination beauty between technology and design. Because once they being together, the mixing magic can make life easier and joyful. </StepText>

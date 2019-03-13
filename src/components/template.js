@@ -25,7 +25,7 @@ export const Title = styled.h1``
 export const Subtitle = styled.h2``
 
 export const InfoPanelGroup = styled.div`
-  width: 100%;
+  width: 80%;
   max-width: 1440px;
   height:auto;
   margin: 200px auto 100px auto;
@@ -33,6 +33,7 @@ export const InfoPanelGroup = styled.div`
   box-sizing: border-box;
   overflow:auto;
 `
+
 export const InfoGroup = styled.div`
   min-width: 18%;
   padding-right: 10px;
@@ -50,22 +51,23 @@ export const Image = styled.img`
   width: 80%;
   max-width: 1440px;
   height: auto;
-  margin: 100px auto;
+  margin: 200px auto;
   box-sizing: border-box;
   display:block;
   overflow:auto;
 `
 
 export const Section = styled.div`
-  width: 100%;
+  width: 80%;
   max-width: 1440px
-  margin: 100px auto;
+  margin: 200px auto;
   box-sizing: border-box;
   padding-left: calc(48px + 2em);
   ${'' /* overflow: auto; */}
 `
 
-export const SectionTitle = styled.h3``
+
+export const SectionTitle = styled.h4``
 
 export const StepContainerGroup = styled.div`
   width: 100%;
@@ -73,7 +75,7 @@ export const StepContainerGroup = styled.div`
   margin: 100px 0;
 `
 
-export const StepTitle = styled.h4`
+export const StepTitle = styled.h5`
   width: 30%;
   padding-right: 10px;
   box-sizing: border-box;
@@ -129,4 +131,35 @@ export const MainText = styled.p`
     margin-top: 2em;
   }
   
+`
+
+export const NoteText = styled.p`
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 2em 0 0 50%;
+  
+  font-size: 1em;
+  opacity: 0.5;
+`
+
+export const ChapterTitle = styled.h3``
+
+export const SectionForImage = styled.div`
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+
+  width: 100%;
+  margin: 100px auto;
+  padding: 150px 0;
+  background: #222;
+  background-clip: padding-box;
 `
