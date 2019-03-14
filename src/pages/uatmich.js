@@ -1,6 +1,6 @@
 import React from 'react'
 import Next from '../components/next'
-import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Section, SectionTitle, MainText } from '../components/template';
 
 const UatMich = () => (
   <div>
@@ -27,7 +27,6 @@ const UatMich = () => (
         Act as scrum master to push the agile progress. Conduct user and technology research. Develop iOS application using Swift and back-end script in Python + MySQL.
       </MainText>
     </InfoPanelGroup>
-    {/* <Image src={require("../images/alipay-timeline.png")} />  */}
     <hr></hr>
     <Section>
       <ChapterTitle>sprint 1 - for 4 weeks</ChapterTitle>

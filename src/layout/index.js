@@ -18,7 +18,6 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'UX Designer Engineer Design Portfolio UMSI GoBlue' }
       ]}
     />
-    
     <Header/>
     {children}
     <Footer />

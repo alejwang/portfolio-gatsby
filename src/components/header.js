@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import './header.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NoteText, ChapterTitle, SectionForImageWhite, SectionForImage, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { NoteText, ChapterTitle, SectionForImageWhite, SectionForImage, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template';
 import pdf from "../files/Zhen_Wang_SmartPill.pdf"
 import Next from '../components/next'
 

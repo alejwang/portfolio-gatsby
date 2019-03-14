@@ -212,3 +212,38 @@ hr {
   transform: translate(-50%, -50%);
   position: absolute;
 }
+
+
+/* -------- Preloader -------- */
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.no-js .preloader-container, .oldie .preloader-container {
+  display: none;
+}
+
+.preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  padding: 0;
+  background-color: #aaa;
+  border-radius: 100%;
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}

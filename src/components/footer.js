@@ -22,9 +22,9 @@ class Footer extends React.Component {
           <p>© crafted in San Diego / Ann Arbor</p>
         </div>
         <div className="PersonalLinks">
-          <a href="https://github.com/alejwang"><Icon src={require("../images/footer-github.svg")} /></a>
-          <a href="https://www.instagram.com/alejwang/"><Icon src={require("../images/footer-instagram.svg")} /></a>
-          <a href="https://www.linkedin.com/in/alejwang/"><Icon src={require("../images/footer-linkedin.svg")} /></a>
+          <a href="https://github.com/alejwang"><Icon src={require("../images/footer-github.svg")} alt="My Github"/></a>
+          <a href="https://www.instagram.com/alejwang/"><Icon src={require("../images/footer-instagram.svg")} alt="My Instagram"/></a>
+          <a href="https://www.linkedin.com/in/alejwang/"><Icon src={require("../images/footer-linkedin.svg")} alt="My LinkedIn"/></a>
         </div>
       </footer>
     )

@@ -1,11 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import WorkCard from '../components/work'
-import { Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { Image, Section,  StepContainerGroup, StepTitle, StepText } from '../components/template';
 import pdf from "../files/Zhen_Wang_resume_2019.pdf"
-
-import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const AboutPage = () => (
 
@@ -16,7 +11,7 @@ const AboutPage = () => (
       <h1><a href={pdf}>check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">let's talk! <span className="linkarrow">></span></a></h1>
     </div>
 
-    <Image src={require("../images/about-me.jpg")} />
+    <Image src={require("../images/about-me.jpg")} alt="My portrait"/>
 
     <Section>
       <StepContainerGroup>
