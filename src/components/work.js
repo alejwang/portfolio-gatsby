@@ -40,6 +40,27 @@ const Title = styled.p`
         opacity: 1;
         transform: translateY(-10px);
     }
+
+    &:after {
+        content: " ";
+        width: 0;
+        height:1.1em;
+        top: 0.25em;
+        left: -10px;
+        margin: 0;
+
+        position: absolute;
+        z-index: -1;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.6s;
+
+        background: #222;
+    }
+
+    ${WorkCardGroup}:hover &:after {
+        width: calc(100% + 20px);
+    }
 `
 
 const Sub = styled.span`
@@ -50,7 +71,7 @@ const Sub = styled.span`
 `
 
 const Subtitle = styled.p`
-    width: 400px;
+    width: 350px;
     margin: -20px 0 0 0;
     padding-left: 1.5px;
     position: absolute;

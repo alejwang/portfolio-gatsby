@@ -1,4 +1,5 @@
 import React from 'react'
+import Next from '../components/next'
 import { NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 const Alipay = () => (
@@ -64,6 +65,8 @@ const Alipay = () => (
       <MainText>Lastly, a memory of us celebrating Chilren's Day lol.</MainText>
       <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>
     </Section>
+
+    <Next left_id="#" left_name="#" right_id="uatmich" right_name="U@Mich"/>
   </div>
 )
 

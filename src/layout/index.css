@@ -129,7 +129,7 @@ hr {
   max-width: 1440px;
   min-height: 150px;
   margin: 0 auto;
-  padding: 300px 0 0 calc(48px + 2em);
+  padding: calc(50vh - 144px) 0 100px calc(48px + 2em);
   box-sizing: border-box;
 }
 

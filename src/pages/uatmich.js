@@ -1,18 +1,19 @@
 import React from 'react'
-import { TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import Next from '../components/next'
+import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 const UatMich = () => (
   <div>
     <BannerGroup image={require("../images/uatmich-cover.png")} gradient_start="#032859" gradient_end="#16319D">
       <TitleGroup>
         <Title>U@Mich</Title>
-        <Subtitle>LBS discover app development <br /> for U of Mich freshmen <br /> using agile methods</Subtitle>
+        <Subtitle>Next to LBS educational social -<br/>Discovery app agile development <br /> for U of Mich freshmen</Subtitle>
       </TitleGroup>
     </BannerGroup>
     <InfoPanelGroup>
       <InfoGroup>
         <InfoTitle>Course</InfoTitle>
-        <InfoText>2019</InfoText>
+        <InfoText>2019 <br/> SI-699</InfoText>
       </InfoGroup>
       <InfoGroup>
         <InfoTitle>Advisor + Team</InfoTitle>
@@ -29,28 +30,18 @@ const UatMich = () => (
     {/* <Image src={require("../images/alipay-timeline.png")} />  */}
     <hr></hr>
     <Section>
-      <SectionTitle>Sprint 1 <br />Research, Tech Spikes, and Lo-fi Prototype</SectionTitle>
-      {/* <StepContainerGroup>
-        <StepNo>01</StepNo>
-        <StepTitle>Think broader and broader <br /> for the user spectrum</StepTitle>
-        <StepText>Design for both key user cases and lost of edge cases. I had never designed for 300,000+ users and created the user spectrum for any possibilities - even for potential users who can only see a poster with a QR code. Because to transfer local users to our online app easier is also an important design goal.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>02</StepNo>
-        <StepTitle>Give me a fulcrum <br /> and I will convince the stakeholders</StepTitle>
-        <StepText>The fulcrum is design decisions driven by research result, company culture or precise data. We are not convincing ourselves and post something fancy to Dribbble. Instead, we are facing huge external resistance - from governments, clients, different developer teams (project team, API team, security team in one project!!!). I learned to make the right design decisions and use it to convince other people. Sometimes, to finish a convincing draft efficiently with stakeholders is way more important than keeping your sketch file not dirty.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>03</StepNo>
-        <StepTitle>Break through the mindset <br /> and chase for excellence</StepTitle>
-        <StepText>"If you work in a textbook style, you may never reach excellence in limited time". - my mentor <br/><br/>
-        It's necessary to always be creative and not be limited by tools. I worked on flexible card prototyping for complex IA designs, paper prototyping for motion designs, and made developer-must-love-it pseudo-algorithm flowcharts for an institution solution project. You know what... they loved it!</StepText>
-      </StepContainerGroup> */}
-    </Section>
-    {/* <Image src={require("../images/alipay-memory.jpg")} />  */}
-    <Section>
+      <ChapterTitle>sprint 1 - for 4 weeks</ChapterTitle>
+      <SectionTitle>Research, tech spikes, database and lo-fi Prototype</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
+
+    <hr/>
+    <Section>
+      <ChapterTitle>sprint 2 - for 2 weeks</ChapterTitle>
+      <SectionTitle>Algorithm, key featurem, and hi-fi Prototype</SectionTitle>
+      <MainText>Still working on it... Waiting to be updated.</MainText>
+    </Section>
+    <Next left_id="alipay" left_name="Alipay" right_id="tide-mobile" right_name="Tide Mobile"/>
   </div>
 )
 

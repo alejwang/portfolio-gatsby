@@ -11,9 +11,9 @@ const AboutPage = () => (
 
   <div className="container">
     <div className="containerGroupShort">
-      <h1>Hey, I am Zhen - an UX Designer studying at the University of Michigan, <br /> specializing in human-computer interaction.</h1>
-      <h1>Besides work, you may find me swimming 🏊 , <br />listening to pop/classic music  🎵, and grazing at bubble tea shops 🍶.</h1>
-      <h1><a href={pdf}>Check my resume ></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">Let's talk! ></a></h1>
+      <h1>hey, I am Zhen - an UX Designer studying at the University of Michigan, <br /> specializing in human-computer interaction.</h1>
+      <h1>besides work, you may find me swimming 🏊 , <br />listening to pop/classic music  🎵, and grazing at bubble tea shops 🍶.</h1>
+      <h1><a href={pdf}>check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">let's talk! <span className="linkarrow">></span></a></h1>
     </div>
 
     <Image src={require("../images/about-me.jpg")} />

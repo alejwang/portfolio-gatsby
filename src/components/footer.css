@@ -1,7 +1,7 @@
 footer {
     width: 80%;
     max-width: 1440px;
-    margin: 100px auto 0 auto;
+    margin: 0 auto 0 auto;
     height: 150px;
     z-index: 100;
 
@@ -14,12 +14,11 @@ footer {
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    opacity: 0.5;
 }
 
 .Copyright p {
     padding-left: calc(48px + 2em);
-    color: white;
+    color: #666;
 
     font-size: 1em;
     font-family: 'DIN';

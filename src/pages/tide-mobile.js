@@ -1,6 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import { ChapterTitle, NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionForImage, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import DeviceMockUp from '../components/devicemockup'
+import pdf from "../files/Zhen_Wang_Tide_Mobile.pdf"
+import Next from '../components/next'
+
+export const ImageEnd = styled.img`
+  width: 80%;
+  max-width: 1440px;
+  height: 80%;
+  margin: 200px auto -200px auto;
+  box-sizing: border-box;
+  display:block;
+  overflow:auto;
+`
 
 const TideMobile = () => (
   <div>
@@ -20,10 +33,10 @@ const TideMobile = () => (
         </InfoGroup>
         <InfoGroup>
           <InfoTitle>Client + Team</InfoTitle>
-          <InfoText>Student Portal, ZJU <br/> Bubu, Jingjing, Shiguan</InfoText>
+          <InfoText><a href="http://www.qsc.zju.edu.cn">Student Portal, ZJU<span className="linkarrow">></span></a> <br/> Bubu, Jingjing, Shiguan</InfoText>
         </InfoGroup>
         <MainText>
-        Tide Mobile (求是潮手机站) is an everyday calendar app for university students to organize their academic calendar and find more club activities in leisure life. <br/> Check it out on <a href="https://itunes.apple.com/app/qiu-shi-chaomobile/id583334920">App Store<span className="linkarrow">></span></a>.
+        Tide Mobile 3.0 (求是潮手机站) is an everyday calendar app for university students to organize their academic calendar and find more club activities in leisure life. <br/> Check it out on <a href="https://itunes.apple.com/app/qiu-shi-chaomobile/id583334920">App Store<span className="linkarrow">></span></a>.
         </MainText>
         <MainText>
           My Role: <br/>
@@ -31,30 +44,15 @@ const TideMobile = () => (
         </MainText>
 
         <NoteText>
-          Due to agile updates, the images below from different periods may look a little bit different.
+        <a href={pdf}>Download the PDF version <span className="linkarrow">></span></a><br/>Due to agile updates, the images below from different periods may look a little bit different.
         </NoteText>
     </InfoPanelGroup>
 
     <Image src={require("../images/tide-mobile-overall.png")} /> 
 
+    
     <Section>
-      <ChapterTitle>key problems</ChapterTitle>
-      <SectionTitle>Before, life in my school wasn't easy and fun <br/>because of two major problems.</SectionTitle>
-      <StepContainerGroup>
-        <StepNo>01</StepNo>
-        <StepTitle>Isolated useful resources</StepTitle>
-        <StepText>Students waste lots of time on checking plenty of information including courses, exams, homework, labs, financial aids and school bus from several places. It spends time, but students don't want to miss things.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>02</StepNo>
-        <StepTitle>Information overload</StepTitle>
-        <StepText>Students also get information passively outside their academic life from tons of posters, paper ads, outdoor banners or SMS/email sent by departments and student clubs. But those ways are not attractive for students, also inprecise and expensive for the sender.</StepText>
-      </StepContainerGroup>
-    </Section>
-
-    <hr/>
-    <Section>
-      <ChapterTitle>solution overview</ChapterTitle>
+      <ChapterTitle>overview</ChapterTitle>
       <SectionTitle>Tide Mobile 3 is born to improve the productivity in school. <br/>By saving students' time and energy to organize all information they need, <br/>we finally brought them a new school lifestyle.</SectionTitle>
     </Section>
 
@@ -66,8 +64,30 @@ const TideMobile = () => (
     </SectionForImage>
 
     <Section>
+      <ChapterTitle>key problems</ChapterTitle>
+      <SectionTitle>Before, life in my school wasn't easy and fun <br/>because of some major problems.</SectionTitle>
+      <StepContainerGroup>
+        <StepNo>01</StepNo>
+        <StepTitle>Isolated useful resources</StepTitle>
+        <StepText>Students waste lots of time on checking plenty of information including courses, exams, homework, labs, financial aids and school bus from several places. It spends time, but students don't want to miss things.</StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>02</StepNo>
+        <StepTitle>Information overload</StepTitle>
+        <StepText>Students also get information passively outside their academic life from tons of posters, paper ads, outdoor banners or SMS/email sent by departments and student clubs. But those ways are not attractive for students, also inprecise and expensive for the sender.</StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>03</StepNo>
+        <StepTitle>Tide Mobile 2.0 can't fulfill the changing user needs</StepTitle>
+        <StepText>Tide Mobile's old verison designed by <a href="http://ruolan.design">Ruolan Xia<span className="linkarrow">></span></a> was published at 2014. Cards with different information showed on the Home screen and users can click cards to see more and do actions. However, students are having increasing negative feedback on this app.</StepText>
+      </StepContainerGroup>
+    </Section>
+
+    <hr/>
+
+    <Section>
       <ChapterTitle>design critique + research</ChapterTitle>
-      <SectionTitle>We started from design critique on the previous version base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
+      <SectionTitle>We started from design critique on the previous version 2.0 base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
     </Section>
     <Image src={require("../images/tide-mobile-research.png")} /> 
     <Section>
@@ -89,7 +109,68 @@ const TideMobile = () => (
       "Easy" is designing for situations and tasks to let users gather information quickly and "joyful" is a sense of surprise.</SectionTitle>
     </Section>
 
+    <Image src={require("../images/tide-mobile-scenario.png")} /> 
+    <Section>
+      <MainText>
+      In our consideration, the most important information for one situation should be specially designed to support users finish related tasks quickly. Users don't want everything. They just want one thing at a time.
+      </MainText>
+      <MainText>
+      For instance, when users want to check the timetable on the bed or before sleep, theys wish to a full calendar for a day. While an anxious boy standing near a building touching his phone, he wants to know only the classroom number where he should be in there in 30 sec.
+      </MainText>
+      <MainText>
+      To increase the productivity, we double checked our exsiting ia to see the current workflows and resources.
+      </MainText>
+    </Section>
+
+    <Image src={require("../images/tide-mobile-ia.png")} /> 
+    <Section>
+      <MainText>
+      Scenario-based design provide an extreme clear IA where useful information can be accessible in a fewer level.
+      </MainText>
+      <MainText>
+      We reorganize the information architecture to make sure elements have the right priority, so users can get them in easier.
+      </MainText>
+    </Section>
+
+    <SectionForImage>
+      <Image src={require("../images/tide-mobile-wireframe.png")} /> 
+      <ImageEnd src={require("../images/tide-mobile-visual.png")} /> 
+    </SectionForImage>
     
+    <Section>
+      <ChapterTitle>after release</ChapterTitle>
+      <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. <br/>
+        We feel very proud to help almost 61% undergraduate student <br/>
+        at Zhejiang Univeristy to have an easy and joyful life. <br/>
+        Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">></span></a>.</SectionTitle>
+    </Section>
+
+    <hr/>
+    <Section>
+      <ChapterTitle>rethink in 2019</ChapterTitle>
+      <StepContainerGroup>
+        <StepNo>Good</StepNo>
+        <StepTitle>Positive feedback. <br/>Users mostly like the change.</StepTitle>
+        <StepText>After 2017, I left the project team due to graduation. We did some design iterations during the years. And students were already live in a lifestyle with Tide Mobile. I also growed up and gain more abilities in design and coding, thanks for my team.</StepText>
+        <StepText>Our project also had a big impact out of school. My teammates and I got the Second Prize in China Collegiate Computing Contest Mobile Application Innovation Contest by Apple and MOE China in 2016. I felt so proud that my name is on the about page in every Tide Mobile.</StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>Bad</StepNo>
+        <StepTitle>Unique design language lost. <br/>It somehow became common.</StepTitle>
+        <StepText>For a pure experience, we started from zero. As a team leader, when you decide to start over, everyone is actually facing a big pressure. We didn't enough time to develop our own style but we already lost our old style. Also, a big change from card view to tab view can also make users confused, so we added a first-time tutorial after.  </StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>Ugly</StepNo>
+        <StepTitle>Lack of testing. <br/> We were young.</StepTitle>
+        <StepText>We were not expert and we were not perfect. At that time, we didn't know how to test our design and validate our decision. We did some desicion decisions (for example, the main clue for Tide Mobile - time? location? social?), but by our own abilities. We did some quick workflow analysis after, but judged by our own minds. Those can't reflect users' mind and our minds were limited.</StepText>
+      </StepContainerGroup>
+    </Section>
+
+    <SectionForImage>
+      <Image src={require("../images/tide-mobile-love.png")} /> 
+    </SectionForImage>
+
+    <Next left_id="uatmich" left_name="U@Mich" right_id="smartpill" right_name="SmartPill"/>
   </div>
 )
 

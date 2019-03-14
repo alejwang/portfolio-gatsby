@@ -28,7 +28,7 @@ export const InfoPanelGroup = styled.div`
   width: 80%;
   max-width: 1440px;
   height:auto;
-  margin: 200px auto 100px auto;
+  margin: 200px auto 200px auto;
   padding-left: calc(48px + 2em);
   box-sizing: border-box;
   overflow:auto;
@@ -50,8 +50,8 @@ export const InfoText = styled.p`
 export const Image = styled.img`
   width: 80%;
   max-width: 1440px;
-  height: auto;
-  margin: 200px auto;
+  height: 80%;
+  margin: 0 auto;
   box-sizing: border-box;
   display:block;
   overflow:auto;
@@ -111,14 +111,17 @@ export const StepNo = styled.span`
 export const StepText = styled.p`
   display: block;
   width: 50%;
-  float: right;
-  margin: 0;
+  ${'' /* float: right; */}
+  margin: 0 0 0 50%;
 
   font-size: 1.05em;
   font-weight: 300;
   line-height: 1.65em;
   color: #ddd;
   
+  & + & {
+    margin-top: 20px;
+  }
 `
 
 export const MainText = styled.p`
@@ -138,9 +141,9 @@ export const NoteText = styled.p`
   width: 50%;
   height: auto;
   margin: 2em 0 0 50%;
-  
+  color: #666;
   font-size: 1em;
-  opacity: 0.5;
+  opacity: 1;
 `
 
 export const ChapterTitle = styled.h3``
@@ -158,8 +161,15 @@ export const SectionForImage = styled.div`
   align-content: stretch;
 
   width: 100%;
-  margin: 100px auto;
-  padding: 150px 0;
+  padding: 200px 0;
   background: #222;
+  background-clip: padding-box;
+`
+
+export const SectionForImageWhite = styled.div`
+  display: block;
+  width: 100%;
+  padding: 200px 0;
+  background: #fff;
   background-clip: padding-box;
 `
