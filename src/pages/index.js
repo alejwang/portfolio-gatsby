@@ -23,7 +23,7 @@ const IndexPage = () => (
           gradient_start="#032859"
           gradient_end="#16319D"
           id="uatmich"
-          title="U@Mich"
+          title="UM Hunt"
           subtitle="Next to LBS educational social"
           text="Discovery app agile development for U of Mich freshmen"
         />
@@ -69,7 +69,7 @@ const IndexPage = () => (
           gradient_start="rgba(0,0,0,0)"
           gradient_end="rgba(0,0,0,0)"
           id="#"
-          title="Edge Shelter For Animals"
+          title="Edge Shelter 4 🐱"
           sub=" / tba"
           subtitle="Next to homeless animals"
           text="Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption"

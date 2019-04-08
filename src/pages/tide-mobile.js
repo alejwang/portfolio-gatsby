@@ -6,13 +6,16 @@ import pdf from "../files/Zhen_Wang_Tide_Mobile.pdf"
 import Next from '../components/next'
 
 export const ImageEnd = styled.img`
-  width: 80%;
+  width: 90%;
   max-width: 1440px;
   height: 80%;
   margin: 200px auto -200px auto;
   box-sizing: border-box;
   display:block;
   overflow:auto;
+  @media (max-width: 768px) {
+    margin: 80px auto -80px auto;
+  }
 `
 
 const TideMobile = () => (
@@ -166,10 +169,7 @@ const TideMobile = () => (
       </StepContainerGroup>
     </Section>
 
-    <SectionForImage>
-      <Image src={require("../images/tide-mobile-love.png")} /> 
-    </SectionForImage>
-
+    <Image src={require("../images/tide-mobile-love.png")} /> 
     <Next left_id="uatmich" left_name="U@Mich" right_id="smartpill" right_name="SmartPill"/>
   </div>
 )

@@ -19,7 +19,7 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className="Copyright">
-          <p>© crafted in San Diego / Ann Arbor</p>
+          <p>© crafted in San Diego</p>
         </div>
         <div className="PersonalLinks">
           <a href="https://github.com/alejwang"><Icon src={require("../images/footer-github.svg")} alt="My Github"/></a>

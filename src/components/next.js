@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const NextContainer = styled.div`
-  width: 80%;
+  width: 90%;
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -17,13 +17,23 @@ const NextContainer = styled.div`
   
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
+  @media (max-width: 1224px) {
+    padding-left: 0;
+  }
 `
 
 
-const NextGroup = styled.div``
+const NextGroup = styled.div`
+    @media (max-width: 768px) {
+        max-width: 50%;
+    }
+`
 
 const NextGroupRight = styled.div`
     text-align: right;
+    @media (max-width: 768px) {
+        max-width: 50%;
+    }
 `
 
 const NextName = styled.p`
@@ -42,6 +52,10 @@ const NextWork = styled.p`
     font-weight: 300;
     font-style: italic;
     color: #999;
+
+    @media (max-width: 768px) {
+        font-size: 1.5em;
+    }
 
     &:hover {
         color: #ED9849;

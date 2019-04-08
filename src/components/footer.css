@@ -1,5 +1,5 @@
 footer {
-    width: 80%;
+    width: 90%;
     max-width: 1440px;
     margin: 0 auto 0 auto;
     height: 150px;
@@ -43,4 +43,10 @@ footer {
 
     font-family: 'DIN';
     font-weight: 400;
+}
+
+@media (max-width: 1224px) {
+    .Copyright p {
+        padding-left: 0;
+    }
 }
