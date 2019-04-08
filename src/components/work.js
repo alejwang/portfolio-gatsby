@@ -33,23 +33,6 @@ const Title = styled.p`
     z-index: -2;
     transition: 0.2s;
 
-    &:after {
-        content: " ";
-        width: 0;
-        height:1.1em;
-        top: 0.25em;
-        left: -10px;
-        margin: 0;
-
-        position: absolute;
-        z-index: -1;
-        display: inline-block;
-        vertical-align: middle;
-        transition: 0.6s;
-
-        background: #222;
-    }
-
     @media (min-width: 768px) {
         ${WorkCardGroup}:hover & {
             z-index: 100;
@@ -59,6 +42,22 @@ const Title = styled.p`
         ${WorkCardGroup}:hover &:after {
             width: calc(100% + 20px);
         }
+        &:after {
+            content: " ";
+            width: 0;
+            height:1.1em;
+            top: 0.25em;
+            left: -10px;
+            margin: 0;
+    
+            position: absolute;
+            z-index: -1;
+            display: inline-block;
+            vertical-align: middle;
+            transition: 0.6s;
+    
+            background: #222;
+        }
     }
     
     @media (max-width: 1224px) {
@@ -67,6 +66,7 @@ const Title = styled.p`
     @media (max-width: 768px) {
         font-size: 2.5em;
         opacity: 0.7;
+        z-index: 1;
     }
 `
 
