@@ -5,16 +5,9 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
 const WorkCardGroup = styled.div`
-    /* width: 400px; */
-    /* height: 300px; */
     margin:0 5em 1em 0;
 
     position: relative;
-    /* overflow: hidden; */
-    /* border-radius: 20px; */
-    /* box-shadow: 0 20px 40px rgba(0,0,0, 0.15); */
-    /* display: grid;
-    grid-template-rows: 1fr 1fr; */
     transition: 0.8s;
     cursor: pointer;
 
@@ -40,12 +33,6 @@ const Title = styled.p`
     z-index: -2;
     transition: 0.2s;
 
-    ${WorkCardGroup}:hover & {
-        z-index: 0;
-        opacity: 1;
-        transform: translateY(-10px);
-    }
-
     &:after {
         content: " ";
         width: 0;
@@ -63,10 +50,17 @@ const Title = styled.p`
         background: #222;
     }
 
-    ${WorkCardGroup}:hover &:after {
-        width: calc(100% + 20px);
+    @media (min-width: 768px) {
+        ${WorkCardGroup}:hover & {
+            z-index: 100;
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+        ${WorkCardGroup}:hover &:after {
+            width: calc(100% + 20px);
+        }
     }
-
+    
     @media (max-width: 1224px) {
         font-size: 3em;
     }
@@ -104,15 +98,17 @@ const Subtitle = styled.p`
     z-index: -2;
     transition: 0.2s;
 
-    ${WorkCardGroup}:hover & {
-        z-index: 0;
-        opacity: 0.7;
-        transform: translateY(-15px);
-    }
-
     @media (max-width: 1224px) {
         margin: -15px 0 0 0;
         font-size: 1.2em;
+    }
+
+    @media (min-width: 768px) {
+        ${WorkCardGroup}:hover & {
+            z-index: 0;
+            opacity: 0.7;
+            transform: translateY(-15px);
+        }
     }
 `
 
@@ -131,15 +127,17 @@ const Image = styled.div`
     background-repeat: no-repeat;
     background-position: 52% 50%;
     object-fit:cover;
-    transition: 0.6s;
+    transition: 0.4s;
     opacity: 0;
 
-    ${WorkCardGroup}:hover & {
-        z-index: -1;
-        width: 400px;
-        transform: translate(20px, 30px);
-        background-position: center;
-        opacity: 1;
+    @media (min-width: 768px) {
+        ${WorkCardGroup}:hover & {
+            z-index: -1;
+            width: 400px;
+            transform: translate(20px, 30px);
+            background-position: center;
+            opacity: 1;
+        }
     }
 `
 

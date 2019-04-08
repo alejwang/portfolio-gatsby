@@ -18,7 +18,7 @@ const Alipay = () => (
         </InfoGroup>
         <InfoGroup>
           <InfoTitle>Company + Team</InfoTitle>
-          <InfoText>Ant Finiancial <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
+          <InfoText><a href="https://www.antfin.com/index.htm?locale=en_US">Ant Finiancial<span className="linkarrow">></span></a><br/> <a href="https://global.alipay.com/index.htm">Alipay App<span className="linkarrow">></span></a> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
         </InfoGroup>
         <MainText>
           In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
@@ -44,12 +44,12 @@ const Alipay = () => (
       <StepContainerGroup>
         <StepNo>01</StepNo>
         <StepTitle>Think broader and broader <br /> for the user spectrum</StepTitle>
-        <StepText>Design for both key user cases and lost of edge cases. I had never designed for 300,000+ users and created the user spectrum for any possibilities - even for potential users who can only see a poster with a QR code. Because to transfer local users to our online app easier is also an important design goal.</StepText>
+        <StepText>Design for both key user cases and lost of edge cases from more than 300,000+ users. Think how user access the new product/service and how it can take advantage of the exsiting resources - created the user spectrum for a wider possibilities, even for potential users who can only see a poster with a QR code. Because to transfer current users or poster ad receivers to the new product/service easier is also an important design goal.</StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>02</StepNo>
         <StepTitle>Give me a fulcrum <br /> and I will convince the stakeholders</StepTitle>
-        <StepText>The fulcrum is design decisions driven by research result, company culture or precise data. We are not convincing ourselves and post something fancy to Dribbble. Instead, we are facing huge external resistance - from governments, clients, different developer teams (project team, API team, security team in one project!!!). I learned to make the right design decisions and use it to convince other people. Sometimes, to finish a convincing draft efficiently with stakeholders is way more important than keeping your sketch file not dirty.</StepText>
+        <StepText>The fulcrum is design decisions driven by research result, company culture or big data. We are not convincing ourselves and be a fancy guy on Dribbble. Instead, we are facing huge external resistance - from governments, clients, different developer teams (project team, API team, security team in one project maybe!). I learned to make the right design decisions and use it to convince other people - how our design goals can inheritance from business goals, how we will track the design quality, how many potential users one feature is facing to, etc. Sometimes, to finish a convincing draft efficiently with stakeholders is way more important than keeping your sketch file not dirty.</StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>03</StepNo>
@@ -66,7 +66,7 @@ const Alipay = () => (
       <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>
     </Section>
 
-    <Next left_id="#" left_name="#" right_id="uatmich" right_name="U@Mich"/>
+    <Next left_id="#" left_name="#" right_id="uatmich" right_name="UM Hunt"/>
   </div>
 )
 

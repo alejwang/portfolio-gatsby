@@ -44,7 +44,7 @@ export const Title = styled.h1`
 
     position: relative;
     display: inline-block;
-    z-index: 100;
+    z-index: 10;
 
   @media (max-width: 768px) {
     padding-left: 10px;
@@ -129,14 +129,14 @@ export const Image = styled.img`
 
 export const Section = styled.div`
   width: 90%;
-  max-width: 1440px
+  max-width: 1440px;
   margin: 200px auto;
   box-sizing: border-box;
   padding-left: calc(48px + 2em);
-  ${'' /* overflow: auto; */}
+  overflow: auto;
   @media (max-width: 1224px) {
     padding-left: 0;
-    ${'' /* margin: 150px auto; */}
+    margin: 150px auto; 
   }
   @media (max-width: 768px) {
     margin: 80px auto;
