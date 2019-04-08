@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-// import Header from '../components/header'
+import Header from '../components/header'
 import Footer from '../components/footer'
 import './normalize.css'
 import './index.css'
@@ -18,7 +18,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'UX Designer Engineer Design Portfolio UMSI GoBlue' }
       ]}
     />
-    {/* <Header/> */}
+    <Header/>
     {children}
     <Footer />
   </div>

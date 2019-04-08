@@ -1,33 +1,13 @@
 import React from 'react'
 import './header.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import styled from 'styled-components'
-import HeaderMenuIcon from "../images/header-menu.svg"
-import HeaderCloseIcon from "../images/header-cross.svg"
-
-export const Icon = styled.img`
-  width: 24px;
-  height: 24px;
-  margin: 0px;
-  box-sizing: border-box;
-  opacity: 0.4;
-  display: none;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    display: inline-block;
-  }
-`
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isScrolled: false,
-      isExpanded: false
+      isExpanded: false,
     }
   }
 
@@ -38,19 +18,15 @@ class Header extends React.Component {
   handleScroll = (event) => {
     const offsetY = window.pageYOffset
 
-    if (offsetY > 100) {
+    if (offsetY > 50) {
       this.setState({ isScrolled: true })
     } else {
       this.setState({ isScrolled: false })
     }
   }
 
-  handleExpand = () => {
-    if (this.state.isExpanded === true) {
-      this.setState({ isExpanded: false })
-    } else {
-      this.setState({ isExpanded: true })
-    }
+  openExpand = () => {
+    this.setState({ isExpanded: true })
   }
 
   closeExpand = () => {
@@ -70,7 +46,8 @@ class Header extends React.Component {
             <AniLink cover to="/work" direction="down" bg="#111">work.</AniLink>
             <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink>
             <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
-            <Icon onClick={this.handleExpand} src={this.state.isExpanded ? HeaderCloseIcon : HeaderMenuIcon} alt="Open Menu"/>
+            <img className={this.state.isExpanded ? 'MenuIcon Hidden' : 'MenuIcon'} onClick={this.openExpand} src={require('../images/header-menu.svg')} alt="Open Menu"/>
+            <img className={this.state.isExpanded ? 'MenuIcon' : 'MenuIcon Hidden'} onClick={this.closeExpand} src={require('../images/header-cross.svg')} alt="Close Menu"/>
           </div>
         </div>
         <div className={this.state.isExpanded ? 'HeaderExpanded' : 'HeaderExpanded Hidden'} onClick={this.closeExpand} >

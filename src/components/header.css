@@ -17,6 +17,7 @@ header {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    z-index: 1000;
     
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
@@ -92,11 +93,22 @@ header {
     font-weight: 400;
 }
 
+.MenuIcon {
+    width: 24px;
+    height: 24px;
+    margin: 0px;
+    box-sizing: border-box;
+    opacity: 0.4;
+    display: none;
+}
+
+.MenuIcon:hover {
+    opacity: 1;
+}
 
 .HeaderExpanded {
     display: none;
 }
-
 
 
 @media (max-width: 768px) {
@@ -115,15 +127,27 @@ header {
         display: none;
     }
 
-    .HeaderGroup.Black {
+    /* .HeaderGroup.Black {
         background-color: #111;
-    }
+    } */
     
+    .MenuIcon {
+        display: inline-block;
+    }
+
+    .MenuIcon.Hidden {
+        display: none;
+    }
 
     .HeaderExpanded {
         width: 100%;
         height: 400px;
-        position: relative;
+        top: 0;
+        left: 0;
+        padding-top: 75px;
+        position: absolute;
+        z-index: -1;
+        
         background-color: #111;
         display: block;
         transition: 0.3s;
@@ -135,7 +159,7 @@ header {
     .HeaderExpanded.Hidden {
         /* z-index: -1; */
         height: 0px;
-        transition: none;
+        padding-top: 0; 
         /* opacity: 0; */
     }
     
@@ -149,7 +173,7 @@ header {
         box-sizing: border-box;
         padding-left: 48px;
         pointer-events: all;
-        border-bottom: #222 solid 1px;
+        border-top: #222 solid 1px;
     
         font-family: 'DIN';
         font-size: 2em;
@@ -166,4 +190,5 @@ header {
     .HeaderExpanded.Hidden a{
         pointer-events: none;
     }
+
 }

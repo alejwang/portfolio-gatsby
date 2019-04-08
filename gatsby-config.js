@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'alejandro.wang',
-    description: 'meet alejandro wang - ux designer/engineer'
+    description: 'meet alejandro wang - ux designer/engineer',
   },
   plugins: [
     'gatsby-plugin-ngrok-tunneling',
