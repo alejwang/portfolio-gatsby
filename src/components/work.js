@@ -17,6 +17,10 @@ const WorkCardGroup = styled.div`
     grid-template-rows: 1fr 1fr; */
     transition: 0.8s;
     cursor: pointer;
+
+    @media (max-width: 1224px) {
+        margin:0 3em 0.6em 0;
+    }
 `
 
 const Title = styled.p`
@@ -61,6 +65,14 @@ const Title = styled.p`
     ${WorkCardGroup}:hover &:after {
         width: calc(100% + 20px);
     }
+
+    @media (max-width: 1224px) {
+        font-size: 3em;
+    }
+    @media (max-width: 768px) {
+        font-size: 2.5em;
+        opacity: 0.7;
+    }
 `
 
 const Sub = styled.span`
@@ -68,11 +80,15 @@ const Sub = styled.span`
     font-weight: 300;
     font-style: italic;
     font-size: 0.5em;
+    white-space: nowrap;
+    @media (max-width: 768px) {
+        font-size: 0.3em;
+    }
 `
 
 const Subtitle = styled.p`
     width: 350px;
-    margin: -20px 0 0 0;
+    margin: -25px 0 0 0;
     padding-left: 1.5px;
     position: absolute;
 
@@ -91,6 +107,11 @@ const Subtitle = styled.p`
         z-index: 0;
         opacity: 0.7;
         transform: translateY(-15px);
+    }
+
+    @media (max-width: 1224px) {
+        margin: -15px 0 0 0;
+        font-size: 1.2em;
     }
 `
 
@@ -114,6 +135,7 @@ const Image = styled.div`
 
     ${WorkCardGroup}:hover & {
         z-index: -1;
+        width: 400px;
         transform: translate(20px, 30px);
         background-position: center;
         opacity: 1;

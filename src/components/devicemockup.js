@@ -7,7 +7,9 @@ const DeviceMockUpGroup = styled.div`
   margin: 50px 80px;
   display: block;
   position: relative;
-
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `
 
 const VideoGroup = styled.div`

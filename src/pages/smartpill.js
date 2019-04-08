@@ -72,11 +72,6 @@ const SmartPill = () => (
     <Section>
       <ChapterTitle>market analysis</ChapterTitle>
       <SectionTitle>We applied the PEST to analysis the potiential market, <br/> and then dig in who can we serve, <br/> and what can Smartpill do in capability</SectionTitle>
-      <MainText>China's hospital medical resourse is scarce to afford billions people's daily health care. According to the research in 2014, the number of doctors per 10000 citizen was only 21 and the average waiting time in 3A hospital was half an hour. The bad condition brings patients miserable experience and risk to give wrong diagnose.
-      </MainText>
-      <MainText>
-      The youngs in China is becoming unwilling to go to hospital and wait in long queue if they feel not that bad. To deal with sight illness or their occupational disease, they buy themselves pills by parents' experience or searching on the Internet. But both way are not safe. Cold with similar symptom can be the wind-cold, wind-heat or rheumatism-cold type which mess people deeply. With increasing mobile medical market and new technology, there should be a better way to improve the experience and accuracy in self-diagnostics.
-      </MainText>
     </Section>
 
     <SectionForImageWhite>
