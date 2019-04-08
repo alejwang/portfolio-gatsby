@@ -18,6 +18,7 @@ const WorkCardGroup = styled.div`
     transition: 0.8s;
     cursor: pointer;
 `
+WorkCardGroup.displayName='work-card-g';
 
 const Title = styled.p`
     margin: 0;
