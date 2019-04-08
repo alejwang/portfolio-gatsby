@@ -32,7 +32,13 @@ module.exports = {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-116480014-1",
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
     // 'gatsby-plugin-transition-link',
   ],
 }
