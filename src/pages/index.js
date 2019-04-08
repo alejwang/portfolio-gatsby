@@ -7,7 +7,7 @@ const IndexPage = () => (
       <h1>be what’s next<br/>… w/ design and tech<br/>this is Zhen, a fresh ux designer</h1>
     </div>
     <div className="containerGroup">
-      <h2>Selected projects</h2>
+      <h2>Selected projects ▽</h2>
       <div className="cardsGroup">
         <WorkCard
           image={require("../images/alipay-cover.png")}

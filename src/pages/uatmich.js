@@ -6,7 +6,7 @@ const UatMich = () => (
   <div>
     <BannerGroup image={require("../images/uatmich-cover.png")} gradient_start="#032859" gradient_end="#16319D">
       <TitleGroup>
-        <Title>U@Mich</Title>
+        <Title>UM Hunt</Title>
         <Subtitle>Next to LBS educational social -<br/>Discovery app agile development <br /> for U of Mich freshmen</Subtitle>
       </TitleGroup>
     </BannerGroup>
