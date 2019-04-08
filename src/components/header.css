@@ -8,6 +8,7 @@ header {
 
 .HeaderGroup {
     width: 90%;
+    padding: 0 5%;
     max-width: 1440px;
     height: 100%;
     margin: 0 auto;
@@ -114,6 +115,10 @@ header {
         display: none;
     }
 
+    .HeaderGroup.Black {
+        background-color: #111;
+    }
+    
 
     .HeaderExpanded {
         width: 100%;
@@ -121,7 +126,7 @@ header {
         position: relative;
         background-color: #111;
         display: block;
-        transition: 0.5s;
+        transition: 0.3s;
         opacity: 1;
         overflow: hidden;
 
@@ -130,7 +135,8 @@ header {
     .HeaderExpanded.Hidden {
         /* z-index: -1; */
         height: 0px;
-        opacity: 0;
+        transition: none;
+        /* opacity: 0; */
     }
     
     .HeaderExpanded a {

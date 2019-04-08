@@ -46,7 +46,7 @@ class Header extends React.Component {
   }
 
   handleExpand = () => {
-    if (this.state.isExpanded == true) {
+    if (this.state.isExpanded === true) {
       this.setState({ isExpanded: false })
     } else {
       this.setState({ isExpanded: true })
@@ -60,16 +60,16 @@ class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isScrolled ? 'HeaderScrolled' : 'Header'}>
-        <div className="HeaderGroup">
+        <div className={this.state.isExpanded ? 'HeaderGroup Black' : 'HeaderGroup'}>
           <div className="blurrer"></div>
           <div className="Logo">
-            <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-white-2.5px.svg')}/></AniLink>
+            <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-white-2.5px.svg')} alt="Logo"/></AniLink>
             <AniLink cover to="/" direction="down" bg="#111">alejandro.wang</AniLink>
           </div>
           <div className="Links">
-            <AniLink cover to="/work" direction="down" bg="#111" to="/work">work.</AniLink>
-            <AniLink cover to="/lab" direction="down" bg="#111" to="/lab">lab.</AniLink>
-            <AniLink cover to="/about" direction="down" bg="#111" to="/about">about.</AniLink>
+            <AniLink cover to="/work" direction="down" bg="#111">work.</AniLink>
+            <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink>
+            <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
             <Icon onClick={this.handleExpand} src={this.state.isExpanded ? HeaderCloseIcon : HeaderMenuIcon} alt="Open Menu"/>
           </div>
         </div>
