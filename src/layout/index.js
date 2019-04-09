@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
@@ -25,9 +25,9 @@ const Layout = ({ children }) => (
   </div>
 )
 
-Layout.propTypes = {
-  children: PropTypes.func,
-}
+// Layout.propTypes = {
+//   children: PropTypes.func,
+// }
 
 export default Layout
 

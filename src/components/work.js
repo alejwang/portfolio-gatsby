@@ -1,6 +1,6 @@
 import React from 'react'
-// import Link from 'gatsby-link'
 import styled from 'styled-components'
+// import { Link } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const WorkCardGroup = styled.div`
@@ -22,7 +22,6 @@ const WorkCardGroup = styled.div`
         margin:0 0 12px 0;
         padding-top: 170px;
     }
-    
 `
 
 const Title = styled.p`
@@ -181,7 +180,7 @@ const Image = styled.div`
 
 const Work = props => (
     <WorkCardGroup>
-        <AniLink cover to={props.id} direction="down" bg="#111">
+        <AniLink cover to={'/'+props.id} direction="down" bg="#111111" duration={1}>
             <Title>{props.title}<Sub>{props.sub}</Sub></Title>
             <Subtitle>{props.subtitle}</Subtitle>
             <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />

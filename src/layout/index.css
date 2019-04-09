@@ -125,6 +125,7 @@ hr {
 .container {
   width: 100%;
   margin: 0 0 420px 0;
+  position: relative;
 }
 
 .containerGroup {

@@ -18,13 +18,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-remove-serviceworker',
-    {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: require.resolve(`./src/layout`),
-      },
-    },
+    // 'gatsby-plugin-remove-serviceworker',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -36,6 +30,12 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve(`./src/layout`),
       },
     },
     // 'gatsby-plugin-transition-link',

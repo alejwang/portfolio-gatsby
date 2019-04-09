@@ -72,11 +72,11 @@ const Next = props => (
         <NextContainer>
             <NextGroup>
                 { props.left_id === '#' ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
-                { props.left_id === '#' ? "" : <AniLink cover to={props.left_id} direction="right" bg="#111"><NextWork> &lt; {props.left_name}</NextWork></AniLink> } 
+                { props.left_id === '#' ? "" : <AniLink cover to={'/'+props.left_id} direction="right" bg="#111"><NextWork> &lt; {props.left_name}</NextWork></AniLink> } 
             </NextGroup>
             <NextGroupRight>
                 { props.right_id === '#' ? (<NextName>this is the last one</NextName>) : <NextName>next</NextName> }
-                { props.right_id === '#' ? "" :<AniLink cover to={props.right_id} direction="left" bg="#111"><NextWork> {props.right_name} &gt; </NextWork></AniLink> }
+                { props.right_id === '#' ? "" :<AniLink cover to={'/'+props.right_id} direction="left" bg="#111"><NextWork> {props.right_name} &gt; </NextWork></AniLink> }
             </NextGroupRight>
         </NextContainer>
     </div>
