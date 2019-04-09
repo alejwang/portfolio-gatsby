@@ -7,17 +7,15 @@ header {
 }
 
 .HeaderGroup {
-    width: 90%;
-    padding: 0 5%;
+    width: 80%;
     max-width: 1440px;
-    height: 100%;
+    height: 100px;
     margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    z-index: 1000;
     
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
@@ -28,9 +26,9 @@ header {
 
 .blurrer {
     height: 150px;
-    top: -30px;
-    left: -30px;
-    right: -30px;
+    top: -25px;
+    left: -25px;
+    right: -25px;
     position: absolute;
     /* overflow: hidden; */
     -webkit-filter: blur(20px);
@@ -93,102 +91,25 @@ header {
     font-weight: 400;
 }
 
-.MenuIcon {
-    width: 24px;
-    height: 24px;
-    margin: 0px;
-    box-sizing: border-box;
-    opacity: 0.4;
-    display: none;
-}
+/* .HeaderGroup {
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    justify-items: center;
+} */
 
-.MenuIcon:hover {
-    opacity: 1;
-}
-
-.HeaderExpanded {
-    display: none;
-}
-
-
-@media (max-width: 768px) {
-    header {
-        height: 75px;
+@media (max-width: 640px) {
+    .Header {
+        padding: 15px 0;
     }
-    .Logo a {
-        padding-right: 0;
+
+    .HeaderGroup {
+        grid-template-columns: repeat(4, auto);
     }
-    .Logo a img {
-        height: 32px;
-        width: 32px;
-        margin-right: 16px;
-    }
-    .Links a{
+
+    .Header a:nth-child(4) {
         display: none;
     }
-
-    /* .HeaderGroup.Black {
-        background-color: #111;
-    } */
-    
-    .MenuIcon {
-        display: inline-block;
-    }
-
-    .MenuIcon.Hidden {
-        display: none;
-    }
-
-    .HeaderExpanded {
-        width: 100%;
-        height: 400px;
-        top: 0;
-        left: 0;
-        padding-top: 75px;
-        position: absolute;
-        z-index: -1;
-        
-        background-color: #111;
-        display: block;
-        transition: 0.3s;
-        opacity: 1;
-        overflow: hidden;
-
-    }
-    
-    .HeaderExpanded.Hidden {
-        /* z-index: -1; */
-        height: 0px;
-        padding-top: 0; 
-        /* opacity: 0; */
-    }
-    
-    .HeaderExpanded a {
-        width: 90%;
-        margin: 0 auto;
-
-        height: 100px;
-        line-height: 100px;
-        display: block;
-        box-sizing: border-box;
-        padding-left: 48px;
-        pointer-events: all;
-        border-top: #222 solid 1px;
-    
-        font-family: 'DIN';
-        font-size: 2em;
-        font-style: italic;
-        font-weight: 300;
-        color: white;
-        opacity: 1;
-    }
-    
-    .HeaderExpanded a:last-child {
-        border-bottom: none;
-    }
-
-    .HeaderExpanded.Hidden a{
-        pointer-events: none;
-    }
-
 }

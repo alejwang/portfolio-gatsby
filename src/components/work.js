@@ -5,27 +5,19 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
 const WorkCardGroup = styled.div`
+    /* width: 400px; */
+    /* height: 300px; */
     margin:0 5em 1em 0;
-    display: inline-block;
-    box-sizing: border-box;
-    position: relative;
 
+    position: relative;
+    /* overflow: hidden; */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 20px 40px rgba(0,0,0, 0.15); */
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
     transition: 0.8s;
     cursor: pointer;
-
-    @media (max-width: 1224px) {
-        margin:0 3em 0.6em 0;
-    }
-    @media (max-width: 768px) {
-        width: 100%;
-        height: 220px;
-        display: block;
-        margin:0 0 12px 0;
-        padding-top: 170px;
-    }
-    
 `
-WorkCardGroup.displayName='work-card-g';
 
 const Title = styled.p`
     margin: 0;
@@ -42,6 +34,12 @@ const Title = styled.p`
 
     z-index: -2;
     transition: 0.2s;
+
+    ${WorkCardGroup}:hover & {
+        z-index: 0;
+        opacity: 1;
+        transform: translateY(-10px);
+    }
 
     &:after {
         content: " ";
@@ -60,28 +58,8 @@ const Title = styled.p`
         background: #222;
     }
 
-    @media (min-width: 768px) {
-        ${WorkCardGroup}:hover & {
-            z-index: 100;
-            opacity: 1;
-            transform: translateY(-10px);
-        }
-        ${WorkCardGroup}:hover &:after {
-            width: calc(100% + 20px);
-        }
-    }
-    
-    @media (max-width: 1224px) {
-        font-size: 3em;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 2.5em;
-        opacity: 1;
-        z-index: 100;
-        &:after {
-            width: calc(100% + 20px);
-        }
+    ${WorkCardGroup}:hover &:after {
+        width: calc(100% + 20px);
     }
 `
 
@@ -90,15 +68,11 @@ const Sub = styled.span`
     font-weight: 300;
     font-style: italic;
     font-size: 0.5em;
-    white-space: nowrap;
-    @media (max-width: 768px) {
-        font-size: 0.3em;
-    }
 `
 
 const Subtitle = styled.p`
     width: 350px;
-    margin: -25px 0 0 0;
+    margin: -20px 0 0 0;
     padding-left: 1.5px;
     position: absolute;
 
@@ -113,29 +87,11 @@ const Subtitle = styled.p`
     z-index: -2;
     transition: 0.2s;
 
-    @media (min-width: 768px) {
-        ${WorkCardGroup}:hover & {
-            z-index: 0;
-            opacity: 0.7;
-            transform: translateY(-15px);
-        }
+    ${WorkCardGroup}:hover & {
+        z-index: 0;
+        opacity: 0.7;
+        transform: translateY(-15px);
     }
-
-    @media (max-width: 1224px) {
-        margin: -15px 0 0 0;
-        font-size: 1.2em;
-    }
-
-    @media (max-width: 768px) {
-        // position: relative;
-        // margin: -15px 0 0 0;
-        // font-size: 1.2em;
-        // opacity: 0.7;
-        // z-index: 100;
-        display: none;
-    }
-
-    
 `
 
 
@@ -152,46 +108,23 @@ const Image = styled.div`
     background-image: url(${props => props.image}), linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
     background-repeat: no-repeat;
     background-position: 52% 50%;
-    object-fit: cover;
-    transition: 0.4s;
+    object-fit:cover;
+    transition: 0.6s;
     opacity: 0;
-    
-    @media (min-width: 768px) {
-        ${WorkCardGroup}:hover & {
-            z-index: -1;
-            transform: translate(20px, 30px);
-            background-position: center;
-            opacity: 1;
-        }
-    }
 
-    @media (max-width: 1224px) {
-        width: 300px;
-        height: 450px;
-        left: 16px;
-        top: -69px;
-        background-size: cover;
-        
-    }
-    @media (max-width: 768px) {
-        // position: relative;
-        width: 100vw;
-        height: 220px;
-        left: 0;
-        top: 0;
-        margin: 10px 0 50px calc(-500%/90);
-        z-index: 0;
-        opacity: 1;   
+    ${WorkCardGroup}:hover & {
+        z-index: -1;
+        transform: translate(20px, 30px);
+        background-position: center;
+        opacity: 1;
     }
 `
 
 const WorkCard = props => (
     <WorkCardGroup>
-        <AniLink cover to={props.id} direction="down" bg="#111">
-            <Title>{props.title}<Sub>{props.sub}</Sub></Title>
-            <Subtitle>{props.subtitle}</Subtitle>
-            <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
-        </AniLink>
+        <AniLink cover to={props.id} direction="down" bg="#111"><Title>{props.title}<Sub>{props.sub}</Sub></Title></AniLink>
+        <Subtitle>{props.subtitle}</Subtitle>
+        <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
     </WorkCardGroup>
 )
 

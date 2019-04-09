@@ -5,12 +5,11 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import './normalize.css'
-import './fonts.css'
 import './index.css'
+import './fonts.css'
 
 
-
-const Layout = ({ children }) => (
+const Layout = ({ children, data }) => (
   <div>
    <Helmet
       title="alejandro.wang"
@@ -25,11 +24,9 @@ const Layout = ({ children }) => (
   </div>
 )
 
-// Layout.propTypes = {
-//   children: PropTypes.func,
-// }
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func,
 }
+
 export default Layout
 
