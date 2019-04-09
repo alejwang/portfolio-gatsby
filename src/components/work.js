@@ -1,6 +1,7 @@
 import React from 'react'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+// import Link from 'gatsby-link'
 import styled from 'styled-components'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const WorkCardGroup = styled.div`
     margin:0 5em 1em 0;

@@ -25,11 +25,9 @@ const Layout = ({ children }) => (
   </div>
 )
 
-// Layout.propTypes = {
-//   children: PropTypes.func,
-// }
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
+Layout.propTypes = {
+  children: PropTypes.func,
+}
+
 export default Layout
 
