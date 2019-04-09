@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import './normalize.css'
-import './fonts.css'
 import './index.css'
+import './fonts.css'
 
 
 

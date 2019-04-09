@@ -18,7 +18,6 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    // 'gatsby-plugin-offline',
     'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-plugin-transition-link',
@@ -33,12 +32,12 @@ module.exports = {
         trackingId: "UA-116480014-1",
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-styled-components`,
-    //   options: {
-    //     displayName: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
     // 'gatsby-plugin-transition-link',
   ],
 }
