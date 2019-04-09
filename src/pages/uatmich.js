@@ -20,11 +20,11 @@ const UatMich = () => (
         <InfoText>Mark Newman <br/> Rahul, Dora, Yu</InfoText>
       </InfoGroup>
       <MainText>
-      For my mastery course 'User-centered Agile Development in Human-computer Interaction', we designed an app to help freshmen, part-time and remote students to discover school events, navigate indoor to resources and also join social communities by creating new interaction technologies. <br />After user and tech research, our app design combined navigation, image recognition, AR view, short-distance beacon communication. To achieve the goals, we're applying high-efficient agile development methods, for both design and development process.
+      For my mastery course 'User-centered Agile Development in Human-computer Interaction', we designed an app to help freshmen, part-time and visitors to discover school events based on locations, navigate indoor to resources and also join social communities by new distance-based technologies. <br />After user and tech research, our app design combined navigation, image recognition, AR view, short-distance beacon communication. To achieve the goals, we're applying high-efficient agile development methods, for both design and development process.
       </MainText>
       <MainText>
         My Role: <br/>
-        Act as scrum master to push the agile progress. Conduct user and technology research. Develop iOS application using Swift and back-end script in Python + MySQL.
+        Act as scrum master to push the agile progress. Conduct user and technology research. Develop iOS application using Swift and back-end script in Python/Flask + MySQL.
       </MainText>
     </InfoPanelGroup>
     <hr></hr>
@@ -37,7 +37,14 @@ const UatMich = () => (
     <hr/>
     <Section>
       <ChapterTitle>sprint 2 - for 2 weeks</ChapterTitle>
-      <SectionTitle>Algorithm, key featurem, and hi-fi Prototype</SectionTitle>
+      <SectionTitle>Algorithm, key features, and hi-fi prototype</SectionTitle>
+      <MainText>Still working on it... Waiting to be updated.</MainText>
+    </Section>
+
+    <hr/>
+    <Section>
+      <ChapterTitle>sprint 3 - for 3 weeks</ChapterTitle>
+      <SectionTitle>UMSI Expo, visual implement</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
     <Next left_id="alipay" left_name="Alipay" right_id="tide-mobile" right_name="Tide Mobile"/>

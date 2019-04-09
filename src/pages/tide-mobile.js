@@ -159,13 +159,13 @@ const TideMobile = () => (
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>Bad</StepNo>
-        <StepTitle>Unique design language lost. <br/>It somehow became common.</StepTitle>
-        <StepText>For a pure experience, we started from zero. As a team leader, when you decide to start over, everyone is actually facing a big pressure. We didn't enough time to develop our own style but we already lost our old style. Also, a big change from card view to tab view can also make users confused, so we added a first-time tutorial after.  </StepText>
+        <StepTitle>Can have more testing. <br/>Can think bigger.</StepTitle>
+        <StepText>We always wanted to chase perfection, in a right path. At that time, we didn't keep conducting user tests and validating our big decision. We did some design decisions (for example, the main clue for Tide Mobile - time? location? social?), but only supported by typical user data. We did some quick workflow analysis after, but judged by our own minds. Those can't reflect users' mind and our minds were limited to think bigger.  </StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>Ugly</StepNo>
-        <StepTitle>Lack of testing. <br/> We were young.</StepTitle>
-        <StepText>We were not expert and we were not perfect. At that time, we didn't know how to test our design and validate our decision. We did some desicion decisions (for example, the main clue for Tide Mobile - time? location? social?), but by our own abilities. We did some quick workflow analysis after, but judged by our own minds. Those can't reflect users' mind and our minds were limited.</StepText>
+        <StepTitle>Unique design language lost. <br/>It somehow became common.</StepTitle>
+        <StepText>For a pure experience, we started from zero. As a team leader, when you decide to start over, everyone is actually facing a big pressure. We didn't have enough time to inheritance from our own style. Also, a big change from card view to tab view can also make users confused, so we had to add a first-time tutorial after.</StepText>
       </StepContainerGroup>
     </Section>
 
