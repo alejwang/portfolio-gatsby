@@ -1,12 +1,12 @@
 import React from 'react'
-import WorkCard from '../components/work'
+import Work from '../components/work'
 
 const WorkPage = () => (
   <div className="container">
     <div className="containerGroupShort">
       <h2>Storys</h2>
       <div className="cardsGroup">
-        <WorkCard
+        <Work
           image={require("../images/alipay-cover.png")}
           gradient_start="#153c88"
           gradient_end="#3068e8"
@@ -14,7 +14,7 @@ const WorkPage = () => (
           title="Alipay"
           subtitle="Next to connected city service era"
         />
-        <WorkCard
+        <Work
           image={require("../images/default-cover.png")}
           gradient_start="rgba(0,0,0,0)"
           gradient_end="rgba(0,0,0,0)"
@@ -30,7 +30,7 @@ const WorkPage = () => (
     <div className="containerGroupShort">
       <h2>UX Projects</h2>
       <div className="cardsGroup">
-      <WorkCard
+      <Work
           image={require("../images/uatmich-cover.png")}
           gradient_start="#032859"
           gradient_end="#16319D"
@@ -38,7 +38,7 @@ const WorkPage = () => (
           title="U@Mich"
           subtitle="Next to info sharing"
         />
-        <WorkCard
+        <Work
           image={require("../images/tide-mobile-cover.png")}
           gradient_start="#EE9655"
           gradient_end="#F6C38F"
@@ -47,7 +47,7 @@ const WorkPage = () => (
           subtitle="Next to campus lifestyle"
           text="Redefine a new school lifestyle with more fun, accessible for everyone in one touch"
         />
-        <WorkCard
+        <Work
           image={require("../images/default-cover.png")}
           gradient_start="rgba(0,0,0,0)"
           gradient_end="rgba(0,0,0,0)"
@@ -57,7 +57,7 @@ const WorkPage = () => (
           subtitle="Next to lazy designers"
           text="What will Git for Designer look like... What? OK... You don't know Git..."
         />
-        <WorkCard
+        <Work
           image={require("../images/smartpill-cover.png")} 
           gradient_start="#0C9D6A" 
           gradient_end="#3BD3AF"
@@ -73,7 +73,7 @@ const WorkPage = () => (
     <div className="containerGroupShort">
       <h2>Others</h2>
       <div className="cardsGroup">
-        <WorkCard
+        <Work
           image={require("../images/inforest-cover.png")}
           gradient_start="#626262"
           gradient_end="#626262"
@@ -82,7 +82,7 @@ const WorkPage = () => (
           subtitle="Next to non-touch interaction"
           text="Invoke deep dreams of forest in heavy city mist by a beatiful heart travel"
         />
-        <WorkCard
+        <Work
           image={require("../images/default-cover.png")}
           gradient_start="rgba(0,0,0,0)"
           gradient_end="rgba(0,0,0,0)"
