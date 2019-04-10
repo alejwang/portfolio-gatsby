@@ -153,19 +153,19 @@ const TideMobile = () => (
       <ChapterTitle>rethink in 2019</ChapterTitle>
       <StepContainerGroup>
         <StepNo>Good</StepNo>
-        <StepTitle>Positive feedback. <br/>Users mostly like the change.</StepTitle>
+        <StepTitle>Positive feedback. <br/>Users mostly like the changes.</StepTitle>
         <StepText>After 2017, I left the project team due to graduation. We did some design iterations during the years. And students were already live in a lifestyle with Tide Mobile. I also growed up and gain more abilities in design and coding, thanks for my team.</StepText>
         <StepText>Our project also had a big impact out of school. My teammates and I got the Second Prize in China Collegiate Computing Contest Mobile Application Innovation Contest by Apple and MOE China in 2016. I felt so proud that my name is on the about page in every Tide Mobile.</StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>Bad</StepNo>
-        <StepTitle>Can have more testing. <br/>Can think bigger.</StepTitle>
+        <StepTitle>Should have more testing. <br/>Can think bigger.</StepTitle>
         <StepText>We always wanted to chase perfection, in a right path. At that time, we didn't keep conducting user tests and validating our big decision. We did some design decisions (for example, the main clue for Tide Mobile - time? location? social?), but only supported by typical user data. We did some quick workflow analysis after, but judged by our own minds. Those can't reflect users' mind and our minds were limited to think bigger.  </StepText>
       </StepContainerGroup>
       <StepContainerGroup>
         <StepNo>Ugly</StepNo>
         <StepTitle>Unique design language lost. <br/>It somehow became common.</StepTitle>
-        <StepText>For a pure experience, we started from zero. As a team leader, when you decide to start over, everyone is actually facing a big pressure. We didn't have enough time to inheritance from our own style. Also, a big change from card view to tab view can also make users confused, so we had to add a first-time tutorial after.</StepText>
+        <StepText>For a pure experience, we started from zero. As a team leader, when you decide to start over, everyone is actually facing a big pressure. We didn't have enough time to inheritance from our own style. Also, a big change from card view to tab view improve the efficiency, but somehow users feel the emotional bond was missing.</StepText>
       </StepContainerGroup>
     </Section>
 

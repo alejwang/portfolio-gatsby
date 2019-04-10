@@ -30,21 +30,21 @@ const UatMich = () => (
     <hr></hr>
     <Section>
       <ChapterTitle>sprint 1 - for 4 weeks</ChapterTitle>
-      <SectionTitle>Research, tech spikes, database and lo-fi Prototype</SectionTitle>
+      <SectionTitle>Research, tech spikes, database and minimal Prototype</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
 
     <hr/>
     <Section>
       <ChapterTitle>sprint 2 - for 2 weeks</ChapterTitle>
-      <SectionTitle>Algorithm, key features, and hi-fi prototype</SectionTitle>
+      <SectionTitle>Key features, Algorithm, and lo-fi prototype</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
 
     <hr/>
     <Section>
       <ChapterTitle>sprint 3 - for 3 weeks</ChapterTitle>
-      <SectionTitle>UMSI Expo, visual implement</SectionTitle>
+      <SectionTitle>UMSI Expo, general solution, visual implement</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
     <Next left_id="alipay" left_name="Alipay" right_id="tide-mobile" right_name="Tide Mobile"/>

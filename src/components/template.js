@@ -251,7 +251,7 @@ export const NoteText = styled.p`
   width: 50%;
   height: auto;
   margin: 2em 0 0 50%;
-  color: #666;
+  color: #888;
   font-size: 1em;
   opacity: 1;
   @media (max-width: 1224px) {
