@@ -39,7 +39,7 @@ class Header extends React.Component {
         <div className={this.state.isExpanded ? 'HeaderGroup Black' : 'HeaderGroup'}>
           <div className="blurrer"></div>
           <div className="Logo">
-            <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-white-2.5px.svg')} alt="Logo"/></AniLink>
+            <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-black-6x.png')} alt="Logo"/></AniLink>
             <AniLink cover to="/" direction="down" bg="#111">alejandro.wang</AniLink>
           </div>
           <div className="Links">

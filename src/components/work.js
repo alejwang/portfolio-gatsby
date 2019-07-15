@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const WorkCardGroup = styled.div`
-    margin:0 5em 1em 0;
+    margin:0 6em 0em 0;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
+    // width: 100%;
 
     transition: 0.8s;
     cursor: pointer;
@@ -25,17 +26,19 @@ const WorkCardGroup = styled.div`
 `
 
 const Title = styled.p`
-    margin: 0;
+    margin: -0.2em 0 0 -0.1em;
     padding-left: 1.5px;
     position: relative;
     display: inline-block;
 
-    font-family: 'DIN';
-    font-weight: 300;
-    font-style: italic;
-    font-size: 4em;
+    font-family: 'Barlow';
+    font-weight: 600;
+    // font-style: italic;
+    // font-weight: 400;
+    font-size: 7em;
     color: white;
-    opacity: 0.5;
+    opacity: 0.9;
+    letter-spacing: 1.5px;
 
     z-index: -2;
     transition: 0.2s;
@@ -43,9 +46,9 @@ const Title = styled.p`
     &:after {
         content: " ";
         width: 0;
-        height:1.1em;
-        top: 0.25em;
-        left: -10px;
+        height:0.2em;
+        bottom: 0.5em;
+        left: -8px;
         margin: 0;
 
         position: absolute;
@@ -53,8 +56,9 @@ const Title = styled.p`
         display: inline-block;
         vertical-align: middle;
         transition: 0.6s;
+        transition-delay: 0.2s;
 
-        background: #222;
+        background: #333;
 
         @media (max-width: 768px) {
             transition: none;
@@ -63,7 +67,7 @@ const Title = styled.p`
     }
 
     @media (max-width: 1224px) {
-        font-size: 3em;
+        font-size: 4.5em;
     }
 
     @media (max-width: 768px) {
@@ -76,19 +80,19 @@ const Title = styled.p`
         @media (min-width: 768px) {
             z-index: 100;
             opacity: 1;
-            transform: translateY(-10px);
+            transform: translateX(-10px);
         }
     }
         
     ${WorkCardGroup}:hover &:after {
         @media (min-width: 768px) {
-            width: calc(100% + 20px);
+            width: calc(100% + 16px);
         }
     }
 `
 
 const Sub = styled.span`
-    font-family: 'DIN';
+    font-family: 'Barlow';
     font-weight: 300;
     font-style: italic;
     font-size: 0.5em;
@@ -99,19 +103,20 @@ const Sub = styled.span`
 `
 
 const Subtitle = styled.p`
-    width: 350px;
+    width: 380px;
     margin: -25px 0 0 0;
     padding-left: 1.5px;
     position: absolute;
 
-    font-family: 'DIN';
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Barlow';
+    // font-weight: 400;
+    // font-style: italic;
     font-size: 1.5em;
     text-transform: lowercase;
     color: white;
     opacity: 0;
 
+    display: none;
     z-index: -2;
     transition: 0.2s;
 
@@ -135,10 +140,10 @@ const Subtitle = styled.p`
 
 
 const Image = styled.div`
-    width: 400px;
-    height: 600px;
-    left: 22px;
-    top: -92px;
+    width: 500px;
+    height: 750px;
+    left: 48px;
+    top: -115px;
     position: absolute;
     z-index: -2;
 
@@ -151,8 +156,8 @@ const Image = styled.div`
     opacity: 0;
 
     @media (max-width: 1224px) {
-        width: 300px;
-        height: 450px;
+        width: 400px;
+        height: 600px;
         left: 16px;
         top: -69px;
         background-size: cover;

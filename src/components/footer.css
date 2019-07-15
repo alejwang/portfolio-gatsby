@@ -1,9 +1,10 @@
 footer {
     width: 90%;
     max-width: 1440px;
-    margin: 0 auto 0 auto;
-    height: 150px;
-    z-index: 100;
+    margin: -100px auto 0 auto;
+    height: 100px;
+    z-index: 1000;
+    position: relative;
 
     display: -webkit-box;
     display: -moz-box;
@@ -14,14 +15,17 @@ footer {
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+
+    background-color: transparent;
 }
 
 .Copyright p {
     padding-left: calc(48px + 2em);
-    color: #666;
+    color: #fff;
+    opacity: 0.25;
 
     font-size: 1em;
-    font-family: 'DIN';
+    font-family: 'Barlow';
     font-weight: 400;
 }
 
@@ -41,7 +45,7 @@ footer {
     padding-left: 2em;
     color: white;
 
-    font-family: 'DIN';
+    font-family: 'Barlow';
     font-weight: 400;
 }
 

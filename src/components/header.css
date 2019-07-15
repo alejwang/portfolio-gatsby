@@ -68,9 +68,11 @@ header {
     /* line-height: 48px; */
     padding-right: 2em;
 
-    font-family: 'DIN';
+    /* font-family: 'DIN'; */
     font-weight: 400;
+    letter-spacing: 1px;
     color: white;
+    opacity: 0.6;
 }
 
 .Links {
@@ -88,9 +90,11 @@ header {
     display: block;
     padding-left: 2em;
     color: white;
-
-    font-family: 'DIN';
+    opacity: 0.6;
+    
+    /* font-family: 'DIN'; */
     font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .MenuIcon {
@@ -175,10 +179,10 @@ header {
         pointer-events: all;
         border-top: #222 solid 1px;
     
-        font-family: 'DIN';
+        /* font-family: 'DIN'; */
         font-size: 2em;
-        font-style: italic;
-        font-weight: 300;
+        /* font-style: italic; */
+        /* font-weight: 300; */
         color: white;
         opacity: 1;
     }
