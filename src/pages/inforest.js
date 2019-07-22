@@ -23,7 +23,7 @@ const Inforest = () => (
         <InfoText>Charles, Siyu</InfoText>
       </InfoGroup>
       <MainText>
-      Inforest, is a recreation of forest for the future citizens who don't know what forest was, an urban public breathing space where people could interact with plants just like in a forest. Through technology research, engineering, interaction design and architecture design.
+      Invoke deep dreams of forest in heavy city mist by a beatiful heart travel in Inforest, a recreation of forest for the future citizens who don't know what forest was. Through technology research, engineering, interaction design and architecture design.
       </MainText>
       <MainText>
         My Role: <br/>

@@ -44,7 +44,7 @@ const SmartPill = () => (
         <InfoText>Maggie, Zheng, Yan</InfoText>
       </InfoGroup>
       <MainText>
-      For my course 'Business Culture and Entrepreneurship', we came up with the idea for patents to get possible medical resourse on their phone with Smartpill.
+      An idea for patents to get possible medical resourse on their phone with Smartpill.
       </MainText>
       <MainText>
         My Role: <br/>

@@ -5,6 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 const NextContainer = styled.div`
   width: 90%;
   max-width: 1440px;
+  padding-bottom: 100px;
   margin: 0 auto;
   box-sizing: border-box;
   padding-left: calc(48px + 2em);
@@ -48,9 +49,9 @@ const NextWork = styled.p`
     margin: 0;
 
     font-size: 2em;
-    font-family: 'DIN';
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Barlow';
+    font-weight: 600;
+    // font-style: italic;
     color: #999;
 
     @media (max-width: 768px) {

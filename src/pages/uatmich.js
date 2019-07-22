@@ -20,6 +20,9 @@ const UatMich = () => (
         <InfoText>Mark Newman <br/> Rahul, Dora, Yu</InfoText>
       </InfoGroup>
       <MainText>
+      A discovery app agile development for School of Information freshmen.
+      </MainText>
+      <MainText>
       For my mastery course 'User-centered Agile Development in Human-computer Interaction', we designed an app to help freshmen, part-time and visitors to discover school events based on locations, navigate indoor to resources and also join social communities by new distance-based technologies. <br />After user and tech research, our app design combined navigation, image recognition, AR view, short-distance beacon communication. To achieve the goals, we're applying high-efficient agile development methods, for both design and development process.
       </MainText>
       <MainText>

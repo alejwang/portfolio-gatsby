@@ -21,6 +21,9 @@ const Alipay = () => (
           <InfoText><a href="https://www.antfin.com/index.htm?locale=en_US">Ant Finiancial<span className="linkarrow">></span></a><br/> <a href="https://global.alipay.com/index.htm">Alipay App<span className="linkarrow">></span></a> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
         </InfoGroup>
         <MainText>
+          Mobile payments in city service era - what I learned from working for Alipay in Ant Finiancial.
+        </MainText>
+        <MainText>
           In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 
           I was lucky to work in Alipay Design team with talented colleagues together to bring more ideas to come true. 
           During my internship, I worked on developing two new projects and improving one launched project.

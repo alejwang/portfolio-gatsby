@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const BannerGroup = styled.div`
   width: 100%;
-  min-height: 600px;
+  min-height: 750px;
   box-sizing: border-box;
-  padding-top: 200px;
+  padding-top: 280px;
 
   background: ${props => props.gradient_start};
   background-image: url(${props => props.image}), linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
@@ -21,7 +21,7 @@ export const BannerGroup = styled.div`
 
   @media (max-width: 768px) {
     min-height: 300px;
-    padding-top: 200px;
+    padding-top: 220px;
   }
 `
 
@@ -30,30 +30,33 @@ export const TitleGroup = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding-left: calc(48px + 2em);
+  // padding-top: 120px;
   box-sizing: border-box;
 
   @media (max-width: 1224px) {
     padding-left: 0;
+    // padding-top: 0px;
   }
 
 
 `
 
 export const Title = styled.h1`
-    margin: 0;
+    margin: 0 0 -0.2em 0;
 
     position: relative;
     display: inline-block;
     z-index: 10;
 
   @media (max-width: 768px) {
+    font-size: 2.5em;
     padding-left: 10px;
 
     &:after {
         content: " ";
         width: calc(100% + 15px);
-        height:1.3em;
-        top: 0.35em;
+        height:0.3em;
+        bottom: 0.5em;
         left: 0px;
         margin: 0;
 
@@ -69,7 +72,8 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.h2`
-  display: block;
+  // display: block;
+  display: none;
   @media (max-width: 768px) {
     display: none;
   }

@@ -4,17 +4,17 @@ import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const WorkCardGroup = styled.div`
-    margin:0 6em 0em 0;
+    margin:0 8em 0em 0;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
     // width: 100%;
 
-    transition: 0.8s;
+    // transition: 0.8s;
     cursor: pointer;
 
     @media (max-width: 1224px) {
-        margin:0 3em 0.6em 0;
+        margin:0 6em 0.6em 0;
     }
     @media (max-width: 768px) {
         width: 100%;
@@ -97,6 +97,7 @@ const Sub = styled.span`
     font-style: italic;
     font-size: 0.5em;
     white-space: nowrap;
+
     @media (max-width: 768px) {
         font-size: 0.3em;
     }
