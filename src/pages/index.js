@@ -63,8 +63,8 @@ class IndexPage extends React.Component {
                 image={require("../images/uatmich-cover.png")}
                 gradient_start="#032859"
                 gradient_end="#16319D"
-                id="uatmich"
-                title="UM Hunt"
+                id="sihunt"
+                title="SI Hunt"
                 subtitle="Next to LBS educational social"
                 text="Discovery app agile development for U of Mich freshmen"
               />

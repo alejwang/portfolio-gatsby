@@ -34,8 +34,8 @@ const WorkPage = () => (
           image={require("../images/uatmich-cover.png")}
           gradient_start="#032859"
           gradient_end="#16319D"
-          id="uatmich"
-          title="U@Mich"
+          id="sihunt"
+          title="SI Hunt"
           subtitle="Next to info sharing"
         />
         <Work
