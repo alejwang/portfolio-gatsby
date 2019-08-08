@@ -1,12 +1,19 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Next from '../components/next'
 import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Section, SectionTitle, MainText } from '../components/template';
 
+const workTitle = 'SI Hunt'
+
 const UatMich = () => (
   <div>
+    <Helmet
+      title= {"zander.wang - " + workTitle}
+    />
+
     <BannerGroup image={require("../images/uatmich-cover.png")} gradient_start="#032859" gradient_end="#16319D">
       <TitleGroup>
-        <Title>UM Hunt</Title>
+        <Title>SI Hunt</Title>
         <Subtitle>Next to LBS educational social -<br/>Discovery app agile development <br /> for U of Mich freshmen</Subtitle>
       </TitleGroup>
     </BannerGroup>
@@ -34,7 +41,13 @@ const UatMich = () => (
     <Section>
       <ChapterTitle>sprint 1 - for 4 weeks</ChapterTitle>
       <SectionTitle>Research, tech spikes, database and minimal Prototype</SectionTitle>
-      <MainText>Still working on it... Waiting to be updated.</MainText>
+      <MainText>Things we done in this sprint:
+        <br/>- Brainstorming
+        <br/>- Learning and practicing agile methods
+        <br/>- User research - interviews, surveys, personas, affinity diagrams...
+        <br/>- Tech spikes to expand our knowledge in usable technology - vr, ARkit, ARCore, image recognition, 3D maps, mapbox indoor apis, beacons...
+        <br/>- Information architecture and finish the database using Python
+        <br/>- Prototyping a minimal version of SI Hunt → Fine, but not a testable version :(</MainText>
     </Section>
 
     <hr/>
@@ -50,6 +63,7 @@ const UatMich = () => (
       <SectionTitle>UMSI Expo, general solution, visual implement</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
+
     <Next left_id="alipay" left_name="Alipay" right_id="tide-mobile" right_name="Tide Mobile"/>
   </div>
 )

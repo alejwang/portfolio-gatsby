@@ -13,9 +13,9 @@ import './fonts.css'
 const Layout = ({ children }) => (
   <div>
    <Helmet
-      title="alejandro.wang"
+      title="zander.wang"
       meta={[
-        { name: 'description', content: 'Alejandro Zhen Wang Portfolio' },
+        { name: 'description', content: 'Zander Zhen Wang Portfolio' },
         { name: 'keywords', content: 'UX Designer Engineer Design Portfolio UMSI GoBlue' }
       ]}
     />

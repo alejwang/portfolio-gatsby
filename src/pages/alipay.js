@@ -1,9 +1,16 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Next from '../components/next'
 import { NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
+const workTitle = 'Alipay'
+
 const Alipay = () => (
   <div>
+    <Helmet
+      title= {"zander.wang - " + workTitle}
+    />
+
     <BannerGroup image={require("../images/alipay-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
       <TitleGroup>
         <Title>Alipay</Title>
@@ -69,7 +76,7 @@ const Alipay = () => (
       <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>
     </Section>
 
-    <Next left_id="#" left_name="#" right_id="uatmich" right_name="UM Hunt"/>
+    <Next left_id="#" left_name="#" right_id="sihunt" right_name="SI Hunt"/>
   </div>
 )
 

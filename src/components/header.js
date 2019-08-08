@@ -40,10 +40,10 @@ class Header extends React.Component {
           <div className="blurrer"></div>
           <div className="Logo">
             <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-black-6x.png')} alt="Logo"/></AniLink>
-            <AniLink cover to="/" direction="down" bg="#111">alejandro.wang</AniLink>
+            <AniLink cover to="/" direction="down" bg="#111">zander.wang</AniLink>
           </div>
           <div className="Links">
-            <AniLink cover to="/work" direction="down" bg="#111">work.</AniLink>
+            <AniLink cover to="/works" direction="down" bg="#111">work.</AniLink>
             <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink>
             <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
             <img className={this.state.isExpanded ? 'MenuIcon Hidden' : 'MenuIcon'} onClick={this.openExpand} src={require('../images/header-menu.svg')} alt="Open Menu"/>
@@ -52,7 +52,7 @@ class Header extends React.Component {
         </div>
         <div className={this.state.isExpanded ? 'HeaderExpanded' : 'HeaderExpanded Hidden'} onClick={this.closeExpand} >
             <AniLink cover to="/" direction="down" bg="#111">home.</AniLink>
-            <AniLink cover to="/work" direction="down" bg="#111">work.</AniLink>
+            <AniLink cover to="/works" direction="down" bg="#111">work.</AniLink>
             <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink>
             <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
         </div>
