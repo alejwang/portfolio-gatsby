@@ -44,7 +44,7 @@ const SmartPill = () => (
         <InfoText>Maggie, Zheng, Yan</InfoText>
       </InfoGroup>
       <MainText>
-      An idea for patents to get possible medical resourse on their phone with Smartpill.
+      An idea for patents to get affordable resource at their fingertipson with Smartpill.
       </MainText>
       <MainText>
         My Role: <br/>
@@ -59,11 +59,11 @@ const SmartPill = () => (
     
     <Section>
       <ChapterTitle>background</ChapterTitle>
-      <SectionTitle>China's hospital medical resourse is scarce. <br/>The young generation don't like to go to hospital, <br/>that's why pharmacist became important.</SectionTitle>
-      <MainText>China's hospital medical resourse is scarce to afford billions people's daily health care. According to the research in 2014, the number of doctors per 10000 citizen was only 21 and the average waiting time in 3A hospital was half an hour. The bad condition brings patients miserable experience and risk to give wrong diagnose.
+      <SectionTitle>China's hospital resource is scarce. <br/>The young generation go to hospital less frequently. <br/>Instead, they seek help from pharmacist.</SectionTitle>
+      <MainText>China's hospital medical resource is scarce to afford billions of people's daily health care. According to the research in 2014, the number of doctors per 10000 citizens was only 21 and the average waiting time in 3A hospital was half an hour. The bad condition brings patients miserable experience and risk to give wrong diagnose.
       </MainText>
       <MainText>
-      The youngs in China is becoming unwilling to go to hospital and wait in long queue if they feel not that bad. To deal with sight illness or their occupational disease, they buy themselves pills by parents' experience or searching on the Internet. But both way are not safe. Cold with similar symptom can be the wind-cold, wind-heat or rheumatism-cold type which mess people deeply. With increasing mobile medical market and new technology, there should be a better way to improve the experience and accuracy in self-diagnostics.
+      The youngs in China is becoming unwilling to go to the hospital and wait in a long queue if they feel not that bad. To deal with sight illness or their occupational disease, they buy themselves pills by parents' experience or searching on the Internet. But both way is not safe. Cold with similar symptom can be the wind-cold, wind-heat or rheumatism-cold type which mess people deeply. With increasing mobile medical market and new technology, there should be a better way to improve the experience and accuracy in self-diagnostics.
       </MainText>
     </Section>
 
@@ -71,7 +71,7 @@ const SmartPill = () => (
 
     <Section>
       <ChapterTitle>market analysis</ChapterTitle>
-      <SectionTitle>We applied the PEST to analysis the potiential market, <br/> and then dig in who can we serve, <br/> and what can Smartpill do in capability</SectionTitle>
+      <SectionTitle>We applied the PEST to invest in the potential market, <br/> and then dig in who can we serve, <br/> and what can Smartpill do in capability</SectionTitle>
     </Section>
 
     <SectionForImageWhite>
@@ -81,7 +81,7 @@ const SmartPill = () => (
     <Section>
       <ChapterTitle>business model innovation</ChapterTitle>
       <SectionTitle>"SmartPill offers self-diagnostics and drug use inquiry services <br/> for the young and mid-aged patients with slight or chronic disease" <br/>
-      After this decision, we made more research to make complete model with all resources.</SectionTitle>
+      After this decision, we made more research to make a complete model with all resources.</SectionTitle>
     </Section>
 
     <SectionForImage>
@@ -90,7 +90,7 @@ const SmartPill = () => (
 
     <Section>
       <MainText>
-      As shown, we expand the partners to medical companies and pharmacist union to provide stable service and collect more information in diagnostics database.
+      As shown, we expand the partners to medical companies and pharmacist union to provide stable service and collect more information in the diagnostics database.
       </MainText>
     </Section>
 
@@ -98,7 +98,7 @@ const SmartPill = () => (
 
     <Section>
       <ChapterTitle>service design</ChapterTitle>
-      <SectionTitle>We designed a service strategy in 4P frame to make sure our target users are accurate.</SectionTitle>
+      <SectionTitle>We designed a service strategy in 4P frame to examine if SmartPill targets the accurate user group, and to classify our users into more groups.</SectionTitle>
     </Section>
 
     <SectionForImageWhite>
@@ -120,8 +120,8 @@ const SmartPill = () => (
       <SectionTitle>One question left: <br/>
         What is the golden key for SmartPill - technology, institution support, or laws?</SectionTitle>
       <MainText>
-        From a desiner aspect, our thoughts on Smartpill are limited because we can't only use design to improve the precision. For now, it can only be a concept.</MainText>
-      <MainText> However, when the personal/mobile medical tool is becoming a trend, our designers need to think ahead - How to get users' trust? Can we use emotion design? Is our design accessible to the elders and disablities? These are places for design to make values.</MainText>
+      From a designer aspect, our thoughts on Smartpill are limited because we can't only use design to improve precision. For now, it can only be a concept.</MainText>
+      <MainText> However, when the personal/mobile medical tool is becoming a trend, our designers need to think ahead - How to get users' trust? Can we use emotion design? Is our design accessible to the elders and disabilities? These are places for design to make values.</MainText>
     </Section>
 
     <Next left_id="tide-mobile" left_name="Tide Mobile" right_id="inforest" right_name="Inforest Space"/>

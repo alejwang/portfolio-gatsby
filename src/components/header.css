@@ -33,12 +33,12 @@ header {
     right: -30px;
     position: absolute;
     /* overflow: hidden; */
-    -webkit-filter: blur(20px);
+    /* -webkit-filter: blur(20px);
     -moz-filter: blur(20px);
     -o-filter: blur(20px);
-    -ms-filter: blur(20px);
+    -ms-filter: blur(20px); */
     z-index: -500;
-    background-image: linear-gradient(black 25%, rgba(0,0,0,0));
+    /* background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 80%); */
     background-size: cover;
     opacity: 0;
     -webkit-transition: opacity 2s;
@@ -48,7 +48,21 @@ header {
 
 .HeaderScrolled .blurrer{
     opacity: 1;
+    
 }
+
+.LogoText {
+    width: 300px;
+    padding: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.HeaderScrolled .LogoText {
+    width: 0;
+    padding: 0;
+}
+
 
 .Logo {
     display: -webkit-box;

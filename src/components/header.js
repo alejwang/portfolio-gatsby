@@ -40,7 +40,7 @@ class Header extends React.Component {
           <div className="blurrer"></div>
           <div className="Logo">
             <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-black-6x.png')} alt="Logo"/></AniLink>
-            <AniLink cover to="/" direction="down" bg="#111">zander.wang</AniLink>
+            <AniLink cover to="/" direction="down" bg="#111" className="LogoText">zander.wang</AniLink>
           </div>
           <div className="Links">
             <AniLink cover to="/works" direction="down" bg="#111">work.</AniLink>

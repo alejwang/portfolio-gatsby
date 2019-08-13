@@ -24,14 +24,20 @@ class IndexPage extends React.Component {
     window.addEventListener('scroll', this.handleScroll)
     this.effect = window.VANTA.FOG({
       el: '#background',
-      highlightColor: 0x213a69,
-      midtoneColor: 0x0,
-      lowlightColor: 0x3b8275,
-      baseColor: 0x0,
+      highlightColor: 0x38b09c,
+      midtoneColor: 0x121e47,
+      lowlightColor: 0x6f0a36,
+      baseColor: 0x0a011f,
       blurFactor: 0.90,
-      speed: 2.00,
-      zoom: 1
+      zoom: 0.3,
+      speed: 1.00
     })
+    // this.effect = window.VANTA.DOTS({
+    //   el: "#background",
+    //   color: 0xffa320,
+    //   color2: 0x222222,
+    //   spacing: 50.00
+    // })
   }
   
   componentWillUnmount() {
