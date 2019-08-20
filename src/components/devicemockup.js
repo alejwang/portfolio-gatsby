@@ -20,11 +20,6 @@ const VideoGroup = styled.div`
 `
 
 const Video = styled.video`
-  left: 50%;
-  top: 50%;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
-  position: absolute;
 `
 
 const Image = styled.img`
