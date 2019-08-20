@@ -270,7 +270,7 @@ export const NoteText = styled.p`
 
 export const ChapterTitle = styled.h3``
 
-export const SectionForImage = styled.div`
+export const SectionForImagesFlex = styled.div`
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -283,7 +283,8 @@ export const SectionForImage = styled.div`
   align-content: stretch;
 
   width: 100%;
-  padding: 200px 0;
+  margin: ${props => props.lesspadding ? "200px auto 0 auto" : "200px auto"};
+  padding: ${props => props.lesspadding ? "200px 0 0 0" : "200px 0"};
   background: #222;
   background-clip: padding-box;
   @media (max-width: 768px) {
@@ -292,14 +293,35 @@ export const SectionForImage = styled.div`
   }
 `
 
-export const SectionForImageWhite = styled.div`
+
+export const SectionForImages = styled.div`
   display: block;
   width: 100%;
   padding: 200px 0;
-  background: #fff;
+  background: ${props => props.white ? "#fff" : "#222"};
+  
   background-clip: padding-box;
   @media (max-width: 768px) {
     padding: 80px 5%;
     box-sizing: border-box;
+  }
+`
+
+export const ImageText = styled.p`
+  display: block;
+  width: calc(50% - 24px - 3em);
+  max-width: 680px;
+  height: auto;
+  margin: 4em 0 0 calc(50% + 24px + 1em);
+  color: #888;
+  font-size: 1em;
+  opacity: 1;
+  @media (max-width: 1224px) {
+    width: 65%;
+    margin-left: 35%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
   }
 `

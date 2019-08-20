@@ -246,7 +246,7 @@ hr {
 /* -------- Video -------- */
 
 .video {
-  z-index: 10;
+  z-index: -1;
 }
 
 .video-mockup1 {
@@ -257,6 +257,16 @@ hr {
   transform: translate(-50%, -50%);
   position: absolute;
 }
+
+.video-mockupx {
+  height: 99%;
+  left: 50%;
+  top: 51.2%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
 
 
 /* -------- Preloader -------- */

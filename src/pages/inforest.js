@@ -1,5 +1,5 @@
 import React from 'react'
-import { NoteText, ChapterTitle, SectionForImageWhite, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template'
+import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template'
 import pdf from "../files/Zhen_Wang_Inforest.pdf"
 import Next from '../components/next'
 
@@ -23,7 +23,7 @@ const Inforest = () => (
         <InfoText>Charles, Siyu</InfoText>
       </InfoGroup>
       <MainText>
-      Invoke deep dreams of forest in heavy city mist by a beatiful heart travel in Inforest, a recreation of forest for the future citizens who don't know what forest was. Through technology research, engineering, interaction design and architecture design.
+      Invoke deep dreams of forest in heavy city mist by a beautiful heart journey in Inforest, a recreation of the forest for the future citizens who don't know what forest was. Through technology research, engineering, interaction design, and architecture design.
       </MainText>
       <MainText>
         My Role: <br/>
@@ -38,7 +38,7 @@ const Inforest = () => (
       <ChapterTitle>background</ChapterTitle>
       <SectionTitle>The forest is disappearing and the urban citizens are lost. <br/>People need the forest. For people who forgot already, we should let them remember the feeling of nature.</SectionTitle>
       <MainText>
-      Imagine if you were leisurely sauntering in a forest, taking in all the sights, sounds and smells of nature. It will the most welcome when you get tired of city’s noise. The concept of InForest originated to produce an interactive, experiential system arousing urban people the sensation of the forest. Our work started with analyzing the vertical structure of the forest which contributes to people’ s multi-layer sensory experience in the forest. Then we abstracted specific sounds from each layer of the following design.
+      Imagine if you were leisurely sauntering in a forest, taking in all the sights, sounds and smells of nature. It will most welcome when you get tired of the city’s noise. The concept of InForest originated to produce an interactive, experiential system arousing urban people the sensation of the forest. Our work started with analyzing the vertical structure of the forest which contributes to people’ s multi-layer sensory experience in the forest. Then we abstracted specific sounds from each layer of the following design.
       </MainText>
       <StepContainerGroup>
         <StepNo>startpoint</StepNo>
@@ -56,7 +56,7 @@ const Inforest = () => (
 
     <Section>
       <ChapterTitle>interactive technology research</ChapterTitle>
-      <SectionTitle>We use technology from Disney + CMU to inspire us <br/>to capture small signals created by touching the plants</SectionTitle>
+      <SectionTitle>We use technology from Disney + CMU to inspire us <br/>to capture small signals created by touching the plants.</SectionTitle>
     </Section>
 
     <Image src={require("../images/inforest-principle.png")} />
@@ -70,9 +70,9 @@ const Inforest = () => (
       <SectionTitle>Then by <a href="https://vimeo.com/202718376">gestures classification experiment<span className="linkarrow">></span></a>, <br/>we selected suitable plants and got valuable coefficient in results.</SectionTitle>
     </Section>
 
-    <SectionForImageWhite>
+    <SectionForImages white>
       <Image src={require("../images/inforest-exp.png")} />
-    </SectionForImageWhite>
+    </SectionForImages>
 
     <Section>
       <MainText>
@@ -83,7 +83,7 @@ const Inforest = () => (
 
     <Section>
       <ChapterTitle>design conception</ChapterTitle>
-      <SectionTitle>By designing different interaction on different height, <br/> Inforest tend to simulate the nature's feeling</SectionTitle>
+      <SectionTitle>By designing different interaction on different height, <br/> Inforest tend to simulate the nature's feeling:</SectionTitle>
       <StepContainerGroup>
         <StepNo>4F</StepNo>
         <StepTitle>Bird + Wind</StepTitle>

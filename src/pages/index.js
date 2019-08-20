@@ -93,15 +93,6 @@ class IndexPage extends React.Component {
                 text="Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways"
               />
               <Work
-                image={require("../images/inforest-cover.png")}
-                gradient_start="#365B41"
-                gradient_end="#596235"
-                id="inforest"
-                title="Inforest Space"
-                subtitle="Next to non-touch interaction"
-                text="Invoke deep dreams of forest in heavy city mist by a beatiful heart travel"
-              />
-              <Work
                 image={require("../images/default-cover.png")}
                 gradient_start="rgba(0,0,0,0)"
                 gradient_end="rgba(0,0,0,0)"
@@ -110,6 +101,15 @@ class IndexPage extends React.Component {
                 sub=" / tba"
                 subtitle="Next to lazy designers"
                 text="What will Git for Designer look like... What? OK... You don't know Git..."
+              />
+              <Work
+                image={require("../images/inforest-cover.png")}
+                gradient_start="#365B41"
+                gradient_end="#596235"
+                id="inforest"
+                title="Inforest"
+                subtitle="Next to non-touch interaction"
+                text="Invoke deep dreams of forest in heavy city mist by a beatiful heart travel"
               />
               <Work
                 image={require("../images/default-cover.png")}

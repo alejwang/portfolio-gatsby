@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NoteText, ChapterTitle, SectionForImageWhite, SectionForImage, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template';
+import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template';
 import pdf from "../files/Zhen_Wang_SmartPill.pdf"
 import Next from '../components/next'
 
@@ -74,9 +74,9 @@ const SmartPill = () => (
       <SectionTitle>We applied the PEST to invest in the potential market, <br/> and then dig in who can we serve, <br/> and what can Smartpill do in capability</SectionTitle>
     </Section>
 
-    <SectionForImageWhite>
+    <SectionForImages white>
       <Image src={require("../images/smartpill-pest.png")} />
-    </SectionForImageWhite>
+    </SectionForImages>
 
     <Section>
       <ChapterTitle>business model innovation</ChapterTitle>
@@ -84,9 +84,9 @@ const SmartPill = () => (
       After this decision, we made more research to make a complete model with all resources.</SectionTitle>
     </Section>
 
-    <SectionForImage>
+    <SectionForImages>
       <Image src={require("../images/smartpill-model.png")} />
-    </SectionForImage>
+    </SectionForImages>
 
     <Section>
       <MainText>
@@ -101,9 +101,9 @@ const SmartPill = () => (
       <SectionTitle>We designed a service strategy in 4P frame to examine if SmartPill targets the accurate user group, and to classify our users into more groups.</SectionTitle>
     </Section>
 
-    <SectionForImageWhite>
+    <SectionForImages white>
       <Image src={require("../images/smartpill-4p.png")} />
-    </SectionForImageWhite>
+    </SectionForImages>
 
     <Section>
       <ChapterTitle>wireframe + prototyping</ChapterTitle>

@@ -13,7 +13,8 @@ const DeviceMockUpGroup = styled.div`
 `
 
 const VideoGroup = styled.div`
-  width: 100%;
+  width: 350px;
+  height: ${props => props.iphonex ? "747px" : "725px"};
   position:relative;
   text-align: center;
 `
@@ -29,6 +30,10 @@ const Video = styled.video`
 const Image = styled.img`
   width: 100%;
   overflow:auto;
+  position: absolute;
+  z-index:300000;
+  left: 0;
+  top: 0;
 `
 
 const Description = styled.p`
@@ -43,10 +48,10 @@ const Description = styled.p`
 const DeviceMockUp = props => (
     <DeviceMockUpGroup>
       <VideoGroup>
-        <Video autoPlay loop className="video-mockup1" onclick="this.play()">
+        <Video autoPlay loop className={props.iphonex ? "video-mockupx" : "video-mockup1"} onclick="this.play()">
           <source src={props.video} type="video/mp4"></source>
         </Video>
-        <Image src={require("../images/tide-mobile-device-mockup.png")} alt="" />
+        <Image src = {props.iphonex ? require("../images/iphone-x-wireframe-new.png") : require("../images/tide-mobile-device-mockup.png")} alt="" />
       </VideoGroup>
       <Description>{props.text}</Description>
     </DeviceMockUpGroup>
