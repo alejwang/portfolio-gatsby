@@ -312,7 +312,7 @@ export const ImageText = styled.p`
   width: calc(50% - 24px - 3em);
   max-width: 680px;
   height: auto;
-  margin: 4em 0 0 calc(50% + 24px + 1em);
+  margin: 3em 0 -1em calc(50% + 24px + 1em);
   color: #888;
   font-size: 1em;
   opacity: 1;

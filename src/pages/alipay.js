@@ -71,12 +71,15 @@ const Alipay = () => (
       <ImageText>
         Since the work flow chart covers all the pages and components, it's easy for future usage - when another city use this feature with unique needs, developers only need to set some parameters for current interface and add some single pages.
       </ImageText>
+      <ImageText>
+        Powered by <a href="https://whimsical.com">Whimsical<span className="linkarrow">></span></a> .
+      </ImageText>
     </SectionForImages>
 
 
     <Section>
       <ChapterTitle>Other Projects</ChapterTitle>
-      <SectionTitle>Using my work time and free time, I also work on some user researches, brainstorming new ideas and some motion designs.</SectionTitle>
+      <SectionTitle>Using my work time and free time, I also work on brainstorming new ideas and some motion designs. Powered by <a href="https://framer.com">Framer Studio<span className="linkarrow">></span></a> and <a href="https://airbnb.design/lottie/">Lottie<span className="linkarrow">></span></a>.</SectionTitle>
     </Section>
 
     <SectionForImagesFlex>

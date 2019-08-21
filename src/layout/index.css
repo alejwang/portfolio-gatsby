@@ -39,10 +39,11 @@ a:hover {
 }
 
 a .linkarrow {
-  font-family: 'DIN';
+  font-family: 'Barlow';
   font-weight: 300;
   font-style: italic;
   color: inherit;
+  padding: 0 0.15em;
 }
 
 span {
