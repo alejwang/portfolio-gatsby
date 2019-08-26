@@ -59,7 +59,7 @@ const SmartPill = () => (
     
     <Section>
       <ChapterTitle>background</ChapterTitle>
-      <SectionTitle>China's hospital resource is scarce. <br/>The young generation go to hospital less frequently. <br/>Instead, they seek help from pharmacist.</SectionTitle>
+      <SectionTitle>China's hospital resource is scarce. <br/>The young generation go to hospital less frequently. <br/>Instead, they seek help from pharmacists.</SectionTitle>
       <MainText>China's hospital medical resource is scarce to afford billions of people's daily health care. According to the research in 2014, the number of doctors per 10000 citizens was only 21 and the average waiting time in 3A hospital was half an hour. The bad condition brings patients miserable experience and risk to give wrong diagnose.
       </MainText>
       <MainText>
@@ -118,7 +118,8 @@ const SmartPill = () => (
     <Section>
       <ChapterTitle>after class</ChapterTitle>
       <SectionTitle>One question left: <br/>
-        What is the golden key for SmartPill - technology, institution support, or laws?</SectionTitle>
+        What is the golden key for SmartPill - <br />
+        technology, institution support, or laws?</SectionTitle>
       <MainText>
       From a designer aspect, our thoughts on Smartpill are limited because we can't only use design to improve precision. For now, it can only be a concept.</MainText>
       <MainText> However, when the personal/mobile medical tool is becoming a trend, our designers need to think ahead - How to get users' trust? Can we use emotion design? Is our design accessible to the elders and disabilities? These are places for design to make values.</MainText>

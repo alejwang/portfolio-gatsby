@@ -36,7 +36,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isScrolled ? 'HeaderScrolled' : 'Header'}>
-        <div className={this.state.isExpanded ? 'HeaderGroup Black' : 'HeaderGroup'}>
+        <div className={this.state.isExpanded ? 'HeaderGroup Expanded' : 'HeaderGroup'}>
           <div className="blurrer"></div>
           <div className="Logo">
             <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-black-6x.png')} alt="Logo"/></AniLink>

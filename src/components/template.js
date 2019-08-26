@@ -83,7 +83,7 @@ export const InfoPanelGroup = styled.div`
   width: 90%;
   max-width: 1440px;
   height:auto;
-  margin: 200px auto;
+  margin: 150px auto;
   padding-left: calc(48px + 2em);
   box-sizing: border-box;
   overflow:auto;
@@ -148,12 +148,25 @@ export const Section = styled.div`
 `
 
 
-export const SectionTitle = styled.h4``
+export const SectionTitle = styled.h4`
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+    margin-bottom: 80px;
+  }
+`
 
 export const StepContainerGroup = styled.div`
   width: 100%;
   overflow: auto;
   margin: 100px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media (max-width: 768px) {
     margin: 80px 0;
   }
@@ -234,10 +247,14 @@ export const MainText = styled.p`
   display: block;
   width: 50%;
   height: auto;
-  margin: 0 0 0 50%;
+  margin: 0 0 150px 50%;
 
   & + & {
-    margin-top: 2em;
+    margin-top: -100px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @media (max-width: 1224px) {
@@ -246,18 +263,14 @@ export const MainText = styled.p`
   }
   @media (max-width: 768px) {
     width: 100%;
-    margin-left: 0;
+    margin: 0 0 120px 0;
   }
 `
 
-export const NoteText = styled.p`
-  display: block;
-  width: 50%;
-  height: auto;
+export const NoteText = styled(MainText)`
   margin: 2em 0 0 50%;
   color: #888;
   font-size: 1em;
-  opacity: 1;
   @media (max-width: 1224px) {
     width: 65%;
     margin-left: 35%;
@@ -283,12 +296,13 @@ export const SectionForImagesFlex = styled.div`
   align-content: stretch;
 
   width: 100%;
-  margin: ${props => props.lesspadding ? "200px auto 0 auto" : "200px auto"};
-  padding: ${props => props.lesspadding ? "200px 0 0 0" : "200px 0"};
+  margin: ${props => props.lesspadding ? "150px auto 0 auto" : "150px auto"};
+  padding: ${props => props.lesspadding ? "150px 0 0 0" : "150px 0"};
   background: #222;
   background-clip: padding-box;
   @media (max-width: 768px) {
-    padding: 80px 5%;
+    margin: ${props => props.lesspadding ? "80px auto 0 auto" : "80px auto"};
+    padding: ${props => props.lesspadding ? "80px 0 0 0" : "80px 0"};
     box-sizing: border-box;
   }
 `
@@ -297,7 +311,7 @@ export const SectionForImagesFlex = styled.div`
 export const SectionForImages = styled.div`
   display: block;
   width: 100%;
-  padding: 200px 0;
+  padding: 150px 0;
   background: ${props => props.white ? "#fff" : "#222"};
   
   background-clip: padding-box;

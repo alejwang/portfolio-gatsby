@@ -39,9 +39,9 @@ a:hover {
 }
 
 a .linkarrow {
-  font-family: 'Barlow';
+  /* font-family: 'Barlow'; */
   font-weight: 300;
-  font-style: italic;
+  /* font-style: italic; */
   color: inherit;
   padding: 0 0.15em;
 }
@@ -81,12 +81,15 @@ h3 {
 
 
 h4 {
-  margin: 0 0 120px 0;
-
-  font-size: 2em;
+  margin: 0 0 150px 0;
+  font-size: 3em;
   line-height: 1.4em;
-  font-weight: 300;
-  color: #dddddd;
+  font-weight: 600;
+  color: #ccc;
+}
+
+h4 a {
+  font-weight: 600;
 }
 
 h5 {

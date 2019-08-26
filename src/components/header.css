@@ -52,10 +52,14 @@ header {
 }
 
 .LogoText {
-    width: 300px;
+    width: 200px;
     padding: 0;
     overflow: hidden;
     transition: 1s;
+}
+
+.HeaderScrolled .Expanded .LogoText {
+    width: 200px;
 }
 
 .HeaderScrolled .LogoText {

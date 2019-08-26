@@ -53,7 +53,7 @@ const Alipay = () => (
 
     <Section>
       <ChapterTitle>Project one</ChapterTitle>
-      <SectionTitle>Social Insurance Payment Platform: worked with senoir designers, developers, governments, and other teams, we launched this project at August 2018 in several cities. This feature allow citizens in several cities to register their social insurance and pay the bills online. No need to wait in line or talk with agencies.</SectionTitle>
+      <SectionTitle>Social Insurance Payment Platform: worked with senoir designers, developers, governments, and other teams, we launched this project at August 2018. Citizens in several cities to register their social insurance and pay the bills online - no need to wait in line or talk with agencies.</SectionTitle>
     </Section>
 
 
@@ -79,7 +79,7 @@ const Alipay = () => (
 
     <Section>
       <ChapterTitle>Other Projects</ChapterTitle>
-      <SectionTitle>Using my work time and free time, I also work on brainstorming new ideas and some motion designs. Powered by <a href="https://framer.com">Framer Studio<span className="linkarrow">></span></a> and <a href="https://airbnb.design/lottie/">Lottie<span className="linkarrow">></span></a>.</SectionTitle>
+      <SectionTitle>Using my work time and free time, I also worked on brainstorming new ideas and some motion designs. Powered by <a href="https://framer.com">Framer Studio<span className="linkarrow">></span></a> and <a href="https://airbnb.design/lottie/">Lottie<span className="linkarrow">></span></a>.</SectionTitle>
     </Section>
 
     <SectionForImagesFlex>

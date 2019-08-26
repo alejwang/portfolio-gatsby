@@ -9,7 +9,7 @@ export const ImageEnd = styled.img`
   width: 90%;
   max-width: 1440px;
   height: 80%;
-  margin: 200px auto -200px auto;
+  margin: 150px auto -150px auto;
   box-sizing: border-box;
   display:block;
   overflow:auto;
@@ -53,7 +53,6 @@ const TideMobile = () => (
 
     <Image src={require("../images/tide-mobile-overall.png")} /> 
 
-    
     <Section>
       <ChapterTitle>overview</ChapterTitle>
       <SectionTitle>Tide Mobile 3 is born to improve productivity in school. <br/>By saving students' time and energy to organize all the information they need, <br/>we finally brought them a new school lifestyle.</SectionTitle>

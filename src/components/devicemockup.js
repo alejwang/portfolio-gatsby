@@ -8,7 +8,8 @@ const DeviceMockUpGroup = styled.div`
   display: block;
   position: relative;
   @media (max-width: 768px) {
-    width: auto;
+    width: 80%;
+    margin: 0 20px 80px 20px;
   }
 `
 
@@ -17,6 +18,10 @@ const VideoGroup = styled.div`
   height: ${props => props.iphonex ? "747px" : "725px"};
   position:relative;
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const Video = styled.video`
