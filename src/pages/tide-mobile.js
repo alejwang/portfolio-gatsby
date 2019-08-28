@@ -169,7 +169,7 @@ const TideMobile = () => (
     </Section>
 
     <Image src={require("../images/tide-mobile-love.png")} /> 
-    <Next left_id="sihunt" left_name="SI Hunt" right_id="smartpill" right_name="SmartPill"/>
+    <Next left_id="sketch-clip" left_name="Sketch Clip" right_id="smartpill" right_name="SmartPill"/>
   </div>
 )
 

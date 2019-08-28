@@ -1,0 +1,94 @@
+{
+    "works": {
+        "alipay": {
+            "title": "Alipay",
+            "id": "alipay",
+            "gradient_start": "#153c88",
+            "gradient_end": "#3068e8",
+            "subtitle": "Next to connected city service era",
+            "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
+            "year": 2018,
+            "cat": "story",
+            "selected": true
+        },
+        "si-hunt": {
+            "title": "SI Hunt",
+            "id": "si-hunt",
+            "gradient_start": "#032859",
+            "gradient_end": "#16319D",
+            "subtitle": "Next to LBS educational social",
+            "text": "Discovery app agile development for U of Mich freshmen", 
+            "year": 2019,
+            "cat": "ux",
+            "selected": true
+        },
+        "sketch-clip": {
+            "title": "Sketch Clip",
+            "id": "sketch-clip",
+            "gradient_start": "#1929E4",
+            "gradient_end": "#FF8029",
+            "subtitle": "Next to lazy designers",
+            "text": "What will Git for Designer look like... What? OK... You don't know Git...",
+            "year": 2019,
+            "cat": "ux",
+            "selected": true
+        },
+        "tide-mobile": {
+            "title": "Tide Mobile",
+            "id": "tide-mobile",
+            "gradient_start": "#E77826",
+            "gradient_end": "#F6C38F",
+            "subtitle": "Next to campus lifestyle",
+            "text": "Redefine how college students gath information and have fun, accessible for everyone in one touch",
+            "year": 2017,
+            "cat": "ux",
+            "selected": true
+        },
+        "smartpill": {
+            "title": "SmartPill",
+            "id": "smartpill",
+            "gradient_start": "#0C9D6A",
+            "gradient_end": "#3BD3AF",
+            "subtitle": "Next to pharmacy business mode",
+            "text": "Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways",
+            "year": 2016,
+            "cat": "ux",
+            "selected": true
+        },
+        "inforest": {
+            "title": "InForest",
+            "id": "inforest",
+            "gradient_start": "#365B41",
+            "gradient_end": "#596235",
+            "subtitle": "Next to non-touch interaction",
+            "text": "Invoke deep dreams of forest in heavy city mist by a beatiful heart travel",
+            "year": 2016,
+            "cat": "arch",
+            "selected": true
+        },
+        "tbd1": {
+            "title": "Edge Shelter",
+            "sub": "/tba",
+            "id": "#",
+            "gradient_start": "#000",
+            "gradient_end": "#000",
+            "subtitle": "Next to homeless animals",
+            "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
+            "year": 2016,
+            "cat": "arch",
+            "selected": true
+        },
+        "tbd2": {
+            "title": "Int. Education",
+            "sub": "/tba",
+            "id": "#",
+            "gradient_start": "#000",
+            "gradient_end": "#000",
+            "subtitle": "Next to intro coding education",
+            "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
+            "year": 2016,
+            "cat": "story",
+            "selected": true
+        }
+    }
+}

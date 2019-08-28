@@ -30,14 +30,14 @@ const WorkPage = () => (
     <div className="containerGroupShort">
       <h2>UX Projects</h2>
       <div className="cardsGroup">
-      <Work
+      {/* <Work
           image={require("../images/uatmich-cover.png")}
           gradient_start="#032859"
           gradient_end="#16319D"
           id="sihunt"
           title="SI Hunt"
           subtitle="Next to info sharing"
-        />
+        /> */}
         <Work
           image={require("../images/tide-mobile-cover.png")}
           gradient_start="#EE9655"

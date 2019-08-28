@@ -11,7 +11,7 @@ const UatMich = () => (
       title= {"zander.wang - " + workTitle}
     />
 
-    <BannerGroup image={require("../images/uatmich-cover.png")} gradient_start="#032859" gradient_end="#16319D">
+    <BannerGroup image={require("../images/si-hunt-cover.png")} gradient_start="#032859" gradient_end="#16319D">
       <TitleGroup>
         <Title>SI Hunt</Title>
         <Subtitle>Next to LBS educational social -<br/>Discovery app agile development <br /> for U of Mich freshmen</Subtitle>
@@ -64,7 +64,7 @@ const UatMich = () => (
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
 
-    <Next left_id="alipay" left_name="Alipay" right_id="tide-mobile" right_name="Tide Mobile"/>
+    <Next left_id="alipay" left_name="Alipay" right_id="sketch-clip" right_name="Sketch Clip"/>
   </div>
 )
 
