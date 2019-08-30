@@ -121,7 +121,7 @@ export const InfoText = styled.p`
 export const Image = styled.img`
   width: 90%;
   max-width: 1440px;
-  height: 80%;
+  // height: 80%;
   margin: 0 auto;
   box-sizing: border-box;
   display:block;
@@ -129,6 +129,11 @@ export const Image = styled.img`
   @media (max-width: 768px) {
     width: 100%;
   }
+`
+
+export const InlineImage = styled(Image)`
+  width: 100%;
+  margin: 150px auto;
 `
 
 export const Section = styled.div`
@@ -172,7 +177,7 @@ export const StepContainerGroup = styled.div`
   }
 `
 
-export const StepTitle = styled.h5`
+export const StepTitle = styled.h6`
   width: 30%;
   padding-right: 10px;
   box-sizing: border-box;
@@ -224,7 +229,6 @@ export const StepText = styled.p`
   margin: 0 0 0 50%;
 
   font-size: 1.05em;
-  font-weight: 300;
   line-height: 1.65em;
   color: #ddd;
   
@@ -241,6 +245,22 @@ export const StepText = styled.p`
     width: 100%;
     margin: 20px 0 0 0;
   }
+`
+
+export const SmallTitle = styled.h5`
+  width: 40%;
+  box-sizing: border-box;
+  float: left;
+
+  @media (max-width: 1224px) {
+    width: 30%;
+  }
+  @media (max-width: 768px) {
+    clear: left;
+    margin-bottom: 50px;
+    width:100%;
+  }
+
 `
 
 export const MainText = styled.p`

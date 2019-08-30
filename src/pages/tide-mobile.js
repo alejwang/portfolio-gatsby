@@ -59,10 +59,10 @@ const TideMobile = () => (
     </Section>
 
     <SectionForImagesFlex>
-      <DeviceMockUp video={require("../images/tide-mobile-showcase1.mp4")} text="Today - Designed for 'this' moment. With one glance, users can know the ongoing event, and following events coming up today."/>
-      <DeviceMockUp video={require("../images/tide-mobile-showcase2.mp4")} text="Calendar - All the events are synced from the educational system or our database so the user's schedule is always up-to-date."/>
-      <DeviceMockUp video={require("../images/tide-mobile-showcase3.mp4")} text="Discover - A place with lots of fun activities posted by hundreds of clubs. View activities. Check availability. Book tickets online. And add to the calendar with one click."/>
-      <DeviceMockUp video={require("../images/tide-mobile-showcase4.mp4")} text="Tools - Check some popular tools and links - your physical training, GPA, the school bus, mail..."/>
+      <DeviceMockUp iphone8 video={require("../images/tide-mobile-showcase1.mp4")} text="Today - Designed for 'this' moment. With one glance, users can know the ongoing event, and following events coming up today."/>
+      <DeviceMockUp iphone8 video={require("../images/tide-mobile-showcase2.mp4")} text="Calendar - All the events are synced from the educational system or our database so the user's schedule is always up-to-date."/>
+      <DeviceMockUp iphone8 video={require("../images/tide-mobile-showcase3.mp4")} text="Discover - A place with lots of fun activities posted by hundreds of clubs. View activities. Check availability. Book tickets online. And add to the calendar with one click."/>
+      <DeviceMockUp iphone8 video={require("../images/tide-mobile-showcase4.mp4")} text="Tools - Check some popular tools and links - your physical training, GPA, the school bus, mail..."/>
     </SectionForImagesFlex>
 
     <Section>
