@@ -23,16 +23,28 @@ class IndexPage extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    // this.effect = window.VANTA.FOG({
+    //   el: '#background',
+    //   highlightColor: 0x38b09c,
+    //   midtoneColor: 0x121e47,
+    //   lowlightColor: 0x6f0a36,
+    //   baseColor: 0x0a011f,
+    //   blurFactor: 0.90,
+    //   zoom: 0.3,
+    //   speed: 1.00
+    // })
     this.effect = window.VANTA.FOG({
       el: '#background',
-      highlightColor: 0x38b09c,
-      midtoneColor: 0x121e47,
-      lowlightColor: 0x6f0a36,
-      baseColor: 0x0a011f,
+      highlightColor: 0x666666,
+      midtoneColor: 0x0,
+      lowlightColor: 0x7265af,
+      baseColor: 0x0,
       blurFactor: 0.90,
-      zoom: 0.3,
-      speed: 1.00
+      speed: 2.00,
+      zoom: 0.50
     })
+
+
   }
   
   componentWillUnmount() {
@@ -60,6 +72,7 @@ class IndexPage extends React.Component {
                   sub={staticdata.works[key].sub}
                   subtitle={staticdata.works[key].subtitle}
                   text={staticdata.works[key].text}
+                  year={staticdata.works[key].year}
                 /> : null
               ))}
             </div>

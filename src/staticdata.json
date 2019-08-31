@@ -1,16 +1,5 @@
 {
     "works": {
-        "alipay": {
-            "title": "Alipay",
-            "id": "alipay",
-            "gradient_start": "#153c88",
-            "gradient_end": "#3068e8",
-            "subtitle": "Next to connected city service era",
-            "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
-            "year": 2018,
-            "cat": "story",
-            "selected": true
-        },
         "si-hunt": {
             "title": "SI Hunt",
             "id": "si-hunt",
@@ -22,14 +11,25 @@
             "cat": "ux",
             "selected": true
         },
+        "alipay": {
+            "title": "Alipay",
+            "id": "alipay",
+            "gradient_start": "#153c88",
+            "gradient_end": "#3068e8",
+            "subtitle": "Next to connected city service era",
+            "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
+            "year": 2018,
+            "cat": "story",
+            "selected": true
+        },
         "sketch-clip": {
-            "title": "Sketch Clip",
+            "title": "S-Clip",
             "id": "sketch-clip",
             "gradient_start": "#1929E4",
             "gradient_end": "#FF8029",
             "subtitle": "Next to lazy designers",
             "text": "What will Git for Designer look like... What? OK... You don't know Git...",
-            "year": 2019,
+            "year": 2018,
             "cat": "ux",
             "selected": true
         },
