@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import staticdata from '../staticdata.json'
 
 const NextContainer = styled.div`
   width: 90%;
@@ -22,7 +23,6 @@ const NextContainer = styled.div`
     padding-left: 0;
   }
 `
-
 
 const NextGroup = styled.div`
     @media (max-width: 768px) {
@@ -66,6 +66,40 @@ const NextWork = styled.p`
 const Hr = styled.hr`
     margin: 200px 0 50px 0;
 `
+
+class NextNav extends React.Component {
+    constructor(props) {
+        super(props)
+
+        for (let i = 0; i < 10; i++) {
+            this.setState({ labelCounter: ++this.state.labelCounter })
+
+            console.log(this.state.labelCounter)
+        }
+
+        this.state = {
+          isScrolled: false,
+          isExpanded: false,
+        }
+      }
+    render() {
+        return(
+            <div>
+                {/* <Hr/>
+                <NextContainer>
+                    <NextGroup>
+                        { props.left_id === '#' ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
+                        { props.left_id === '#' ? "" : <AniLink cover to={'/'+props.left_id} direction="right" bg="#111"><NextWork> &lt; {props.left_name}</NextWork></AniLink> } 
+                    </NextGroup>
+                    <NextGroupRight>
+                        { props.right_id === '#' ? (<NextName>this is the last one</NextName>) : <NextName>next</NextName> }
+                        { props.right_id === '#' ? "" :<AniLink cover to={'/'+props.right_id} direction="left" bg="#111"><NextWork> {props.right_name} &gt; </NextWork></AniLink> }
+                    </NextGroupRight>
+                </NextContainer> */}
+            </div>
+        )
+    }
+}
 
 const Next = props => (
     <div>

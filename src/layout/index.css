@@ -111,11 +111,11 @@ h6 {
 
 hr {
   display: block;
-  height: 1px;
+  height: 2px;
   border: 0;
   width: 200%;
-  border-top: 1px solid #fff;
-  opacity: 0.1;
+  border-top: 2px solid #fff;
+  opacity: 0.15;
   /* margin-left: calc(5% + 48px + 2em); */
   /* overflow: auto; */
 }

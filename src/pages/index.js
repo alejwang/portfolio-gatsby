@@ -1,6 +1,5 @@
 import React from 'react'
 import Work from '../components/work'
-import styled from 'styled-components'
 import staticdata from '../staticdata.json'
 
 class IndexPage extends React.Component {
@@ -50,6 +49,7 @@ class IndexPage extends React.Component {
   componentWillUnmount() {
     if (this.effect) this.effect.destroy()
   }
+  
   render() {
     return (
       <div>
@@ -64,7 +64,7 @@ class IndexPage extends React.Component {
             <div className="cardsGroup">
               {Object.keys(staticdata.works).map(key => ( staticdata.works[key].selected ?
                 <Work 
-                  image={require("../images/"+(staticdata.works[key].id=="#"?"default":staticdata.works[key].id)+"-cover.png")}
+                  image={require("../images/"+(staticdata.works[key].id==="#"?"default":staticdata.works[key].id)+"-cover.png")}
                   gradient_start={staticdata.works[key].gradient_start}
                   gradient_end={staticdata.works[key].gradient_end}
                   id={staticdata.works[key].id}
@@ -73,6 +73,7 @@ class IndexPage extends React.Component {
                   subtitle={staticdata.works[key].subtitle}
                   text={staticdata.works[key].text}
                   year={staticdata.works[key].year}
+                  list="selected"
                 /> : null
               ))}
             </div>

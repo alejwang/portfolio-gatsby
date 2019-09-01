@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 // import { Link } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { progressPercentage } from 'style-value-types';
 
 const WorkCardGroup = styled.div`
     margin:0 6.5em 0 0;
@@ -203,7 +204,7 @@ const No = styled.p`
 
 const Work = props => (
     <WorkCardGroup>
-        <AniLink cover to={'/'+props.id} direction="down" bg="#111111" duration={1}>
+        <AniLink cover to={'/'+props.id} state={{list: props.list}} direction="down" bg="#111111" duration={1}>
             <Title><No>{props.year % 100}</No>{props.title}<Sub>{props.sub}</Sub></Title>
             <Subtitle>{props.subtitle}</Subtitle>
             <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
