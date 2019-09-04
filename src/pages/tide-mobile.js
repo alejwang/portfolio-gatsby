@@ -1,9 +1,14 @@
 import React from 'react'
+import WorkPage from '../components/workpage'
+
 import styled from 'styled-components'
-import { ChapterTitle, NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionForImages, SectionForImagesFlex, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, NoteText, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionForImages, SectionForImagesFlex, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import DeviceMockUp from '../components/devicemockup'
 import pdf from "../files/Zhen_Wang_Tide_Mobile.pdf"
-import Next from '../components/next'
+
+
+
+const workId = 'tide-mobile' 
 
 export const ImageEnd = styled.img`
   width: 90%;
@@ -18,17 +23,9 @@ export const ImageEnd = styled.img`
   }
 `
 
-const TideMobile = () => (
-  <div>
-    <BannerGroup image={require("../images/tide-mobile-cover.png")} 
-          gradient_start="#E77826"
-          gradient_end="#F6C38F">
-      <TitleGroup>
-        <Title>Tide Mobile</Title>
-        <Subtitle>Next to campus lifestyle - <br/> Redefine how college students gath information and have fun, <br/> accessible for everyone in one touch</Subtitle>
-      </TitleGroup>
-    </BannerGroup>
-
+const TideMobile = ({ location }) => (
+  <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
+    
     <InfoPanelGroup>
         <InfoGroup>
           <InfoTitle>Project</InfoTitle>
@@ -86,7 +83,6 @@ const TideMobile = () => (
     </Section>
 
     <hr/>
-
     <Section>
       <ChapterTitle>design critique + research</ChapterTitle>
       <SectionTitle>We started from design critique on the previous version 2.0 base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
@@ -169,11 +165,7 @@ const TideMobile = () => (
     </Section>
 
     <Image src={require("../images/tide-mobile-love.png")} /> 
-    <Next left_id="sketch-clip" left_name="Sketch Clip" right_id="smartpill" right_name="SmartPill"/>
-  </div>
+  </WorkPage>
 )
-
-
-
 
 export default TideMobile

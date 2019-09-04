@@ -22,16 +22,6 @@ class IndexPage extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
-    // this.effect = window.VANTA.FOG({
-    //   el: '#background',
-    //   highlightColor: 0x38b09c,
-    //   midtoneColor: 0x121e47,
-    //   lowlightColor: 0x6f0a36,
-    //   baseColor: 0x0a011f,
-    //   blurFactor: 0.90,
-    //   zoom: 0.3,
-    //   speed: 1.00
-    // })
     this.effect = window.VANTA.FOG({
       el: '#background',
       highlightColor: 0x666666,
@@ -42,8 +32,6 @@ class IndexPage extends React.Component {
       speed: 2.00,
       zoom: 0.50
     })
-
-
   }
   
   componentWillUnmount() {
@@ -62,20 +50,9 @@ class IndexPage extends React.Component {
           
           <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
             <div className="cardsGroup">
-              {Object.keys(staticdata.works).map(key => ( staticdata.works[key].selected ?
-                <Work 
-                  image={require("../images/"+(staticdata.works[key].id==="#"?"default":staticdata.works[key].id)+"-cover.png")}
-                  gradient_start={staticdata.works[key].gradient_start}
-                  gradient_end={staticdata.works[key].gradient_end}
-                  id={staticdata.works[key].id}
-                  title={staticdata.works[key].title}
-                  sub={staticdata.works[key].sub}
-                  subtitle={staticdata.works[key].subtitle}
-                  text={staticdata.works[key].text}
-                  year={staticdata.works[key].year}
-                  list="selected"
-                /> : null
-              ))}
+              {staticdata.cats.selected.map(name => 
+                <Work data={staticdata.works[name]} fromList="selected" /> 
+              )}
             </div>
           </div>
         </div>

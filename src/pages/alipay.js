@@ -1,24 +1,15 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import Next from '../components/next'
+import WorkPage from '../components/workpage'
+
 import { ChapterTitle, SectionForImages, SectionForImagesFlex, ImageText, NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import DeviceMockUp from '../components/devicemockup'
 
-const workTitle = 'Alipay'
 
-const Alipay = () => (
-  <div>
-    <Helmet
-      title= {"zander.wang - " + workTitle}
-    />
 
-    <BannerGroup image={require("../images/alipay-cover.png")} gradient_start="#153c88" gradient_end="#3068e8">
-      <TitleGroup>
-        <Title>Alipay</Title>
-        <Subtitle>Next to connected city service era - <br/> What high-level view I learned <br/> from working for Alipay in Ant Financial</Subtitle>
-      </TitleGroup>
-    </BannerGroup>
+const workId = 'alipay' 
 
+const Alipay = ({ location }) => (
+  <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
     <InfoPanelGroup>
         <InfoGroup>
           <InfoTitle>Internship</InfoTitle>
@@ -42,7 +33,6 @@ const Alipay = () => (
           Work with government, researchers, and developers to launch the project and establish evaluation methods.<br/>
           Spend my free time working on motion design and usability testing on a cross-device prototype.
         </MainText>
-
         <NoteText>
           Due to NDA, I can't reveal all my work details.
         </NoteText>
@@ -50,12 +40,10 @@ const Alipay = () => (
 
     <Image src={require("../images/alipay-timeline.png")} /> 
 
-
     <Section>
       <ChapterTitle>Project one</ChapterTitle>
       <SectionTitle>Social Insurance Payment Platform: worked with senoir designers, developers, governments, and other teams, we launched this project at August 2018. Citizens in several cities to register their social insurance and pay the bills online - no need to wait in line or talk with agencies.</SectionTitle>
     </Section>
-
 
     <SectionForImagesFlex lesspadding>
       <DeviceMockUp iphonex video={require("../images/alipay-ins2.mp4")} text="Entrance - Citizens can register and change their insurance plan in the app by several clicks."/>
@@ -75,7 +63,6 @@ const Alipay = () => (
         Powered by <a href="https://whimsical.com">Whimsical<span className="linkarrow">></span></a> .
       </ImageText>
     </SectionForImages>
-
 
     <Section>
       <ChapterTitle>Other Projects</ChapterTitle>
@@ -115,8 +102,7 @@ const Alipay = () => (
       <MainText>If you want more details about my internship experience, please contact me and I am happy to share! </MainText>
     </Section>
 
-    <Next left_id="#" left_name="#" right_id="sihunt" right_name="SI Hunt"/>
-  </div>
+  </WorkPage>
 )
 
 export default Alipay

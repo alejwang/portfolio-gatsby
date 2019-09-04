@@ -1,4 +1,10 @@
 {
+    "cats": {
+        "selected":["si-hunt", "alipay", "sketch-clip", "tide-mobile", "smartpill", "inforest"],
+        "story":["alipay"],
+        "ux":["si-hunt", "sketch-clip", "tide-mobile", "smartpill"],
+        "arch":["inforest"]
+    },
     "works": {
         "si-hunt": {
             "title": "SI Hunt",
@@ -23,7 +29,8 @@
             "selected": true
         },
         "sketch-clip": {
-            "title": "S Clip",
+            "title": "Sketch Clip",
+            "title_short": "S Clip",
             "id": "sketch-clip",
             "gradient_start": "#1929E4",
             "gradient_end": "#FF8029",

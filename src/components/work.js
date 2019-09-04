@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Link } from "gatsby"
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { progressPercentage } from 'style-value-types';
 
@@ -111,8 +110,6 @@ const Subtitle = styled.p`
     position: absolute;
 
     font-family: 'Barlow';
-    // font-weight: 400;
-    // font-style: italic;
     font-size: 1.5em;
     text-transform: lowercase;
     color: white;
@@ -204,10 +201,19 @@ const No = styled.p`
 
 const Work = props => (
     <WorkCardGroup>
-        <AniLink cover to={'/'+props.id} state={{list: props.list}} direction="down" bg="#111111" duration={1}>
-            <Title><No>{props.year % 100}</No>{props.title}<Sub>{props.sub}</Sub></Title>
-            <Subtitle>{props.subtitle}</Subtitle>
-            <Image image={props.image} gradient_start={props.gradient_start} gradient_end={props.gradient_end} />
+        <AniLink cover 
+                 to={'/' + props.data.id} 
+                 state={{ fromList: props.fromList }}
+                 direction="down" 
+                 bg="#111111" 
+                 duration={1}>
+            <Title>
+                <No>{props.data.year % 100}</No>
+                {props.data.title_short ? props.data.title_short : props.data.title}
+                <Sub>{props.data.sub}</Sub>
+            </Title>
+            <Subtitle>{props.data.subtitle}</Subtitle>
+            <Image image={require("../images/"+(props.data.id==="#"?"default":props.data.id)+"-cover.png")} gradient_start={props.data.gradient_start} gradient_end={props.data.gradient_end} />
         </AniLink>
     </WorkCardGroup>
 )

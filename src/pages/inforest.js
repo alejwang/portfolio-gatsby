@@ -1,18 +1,16 @@
 import React from 'react'
+import WorkPage from '../components/workpage'
+
 import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template'
 import pdf from "../files/Zhen_Wang_Inforest.pdf"
-import Next from '../components/next'
 
-const Inforest = () => (
-  <div>
-    <BannerGroup image={require("../images/inforest-cover.png")}
-          gradient_start="#365B41"
-          gradient_end="#596235">
-      <TitleGroup>
-        <Title>Inforest Space</Title>
-        <Subtitle>Next to non-touch interaction - <br /> Invoke deep dreams of forest <br/>in heavy city mist by a beatiful heart travel</Subtitle>
-      </TitleGroup>
-    </BannerGroup>
+
+
+const workId = 'inforest' 
+
+const InForest = ({ location }) => (
+  <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
+
     <InfoPanelGroup>
       <InfoGroup>
         <InfoTitle>Amateur</InfoTitle>
@@ -33,7 +31,6 @@ const Inforest = () => (
     </InfoPanelGroup>
 
     <hr/>
-    
     <Section>
       <ChapterTitle>background</ChapterTitle>
       <SectionTitle>The forest is disappearing and the urban citizens are lost. <br/>People need the forest. For people who forgot already, we should let them remember the feeling of nature.</SectionTitle>
@@ -53,7 +50,6 @@ const Inforest = () => (
     </Section>
 
     <hr/>
-
     <Section>
       <ChapterTitle>interactive technology research</ChapterTitle>
       <SectionTitle>We use technology from Disney + CMU to inspire us <br/>to capture small signals created by touching the plants.</SectionTitle>
@@ -80,7 +76,6 @@ const Inforest = () => (
     </Section>
 
     <hr/>
-
     <Section>
       <ChapterTitle>design conception</ChapterTitle>
       <SectionTitle>By designing different interaction on different height, <br/> Inforest tend to simulate the nature's feeling:</SectionTitle>
@@ -121,8 +116,7 @@ const Inforest = () => (
       <MainText>Our team also patented our work (Patent Number: CN205508389U and CN201610178497.5) to provide the possibility to convert Inforest into commercial products in the future.</MainText>
     </Section>
 
-    <Next left_id="smartpill" left_name="SmartPill" right_id="#" right_name="#"/>
-  </div>
+  </WorkPage>
 )
 
-export default Inforest
+export default InForest

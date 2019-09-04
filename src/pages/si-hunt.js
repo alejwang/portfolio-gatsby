@@ -1,22 +1,15 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import Next from '../components/next'
+import WorkPage from '../components/workpage'
+
 import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Section, SectionTitle, MainText } from '../components/template';
 
-const workTitle = 'SI Hunt'
 
-const UatMich = () => (
-  <div>
-    <Helmet
-      title= {"zander.wang - " + workTitle}
-    />
 
-    <BannerGroup image={require("../images/si-hunt-cover.png")} gradient_start="#032859" gradient_end="#16319D">
-      <TitleGroup>
-        <Title>SI Hunt</Title>
-        <Subtitle>Next to LBS educational social -<br/>Discovery app agile development <br /> for U of Mich freshmen</Subtitle>
-      </TitleGroup>
-    </BannerGroup>
+const workId = 'si-hunt' 
+
+const SIHunt = ({ location }) => (
+  <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
+
     <InfoPanelGroup>
       <InfoGroup>
         <InfoTitle>Course</InfoTitle>
@@ -37,7 +30,8 @@ const UatMich = () => (
         Act as scrum master to push the agile progress. Conduct user and technology research. Develop iOS application using Swift and back-end script in Python/Flask + MySQL.
       </MainText>
     </InfoPanelGroup>
-    <hr></hr>
+
+    <hr/>
     <Section>
       <ChapterTitle>sprint 1 - for 4 weeks</ChapterTitle>
       <SectionTitle>Research, tech spikes, database and minimal Prototype</SectionTitle>
@@ -63,9 +57,7 @@ const UatMich = () => (
       <SectionTitle>UMSI Expo, general solution, visual implement</SectionTitle>
       <MainText>Still working on it... Waiting to be updated.</MainText>
     </Section>
-
-    <Next left_id="alipay" left_name="Alipay" right_id="sketch-clip" right_name="Sketch Clip"/>
-  </div>
+  </WorkPage>
 )
 
-export default UatMich
+export default SIHunt

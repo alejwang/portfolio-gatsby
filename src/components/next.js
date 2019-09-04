@@ -68,54 +68,38 @@ const Hr = styled.hr`
 `
 
 class NextNav extends React.Component {
-    constructor(props) {
-        super(props)
-
-        for (let i = 0; i < 10; i++) {
-            this.setState({ labelCounter: ++this.state.labelCounter })
-
-            console.log(this.state.labelCounter)
-        }
-
-        this.state = {
-          isScrolled: false,
-          isExpanded: false,
-        }
-      }
     render() {
+        const workList = staticdata.cats[(this.props.fromList)]
+        console.log('workList:' + workList)
+        const indexInList = workList.indexOf(this.props.currentPage)
+        console.log('indexInList:' + indexInList)
+        const isFirst = (indexInList === 0)
+        const isLast = (indexInList === workList.length - 1)
+        
         return(
             <div>
-                {/* <Hr/>
+                <Hr/>
                 <NextContainer>
                     <NextGroup>
-                        { props.left_id === '#' ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
-                        { props.left_id === '#' ? "" : <AniLink cover to={'/'+props.left_id} direction="right" bg="#111"><NextWork> &lt; {props.left_name}</NextWork></AniLink> } 
+                        { isFirst ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
+                        { isFirst ||
+                            <AniLink cover to={'/'+staticdata.works[workList[indexInList - 1]].id} direction="right" bg="#111">
+                                <NextWork> &lt; {staticdata.works[workList[indexInList - 1]].title}</NextWork>
+                            </AniLink> 
+                        } 
                     </NextGroup>
                     <NextGroupRight>
-                        { props.right_id === '#' ? (<NextName>this is the last one</NextName>) : <NextName>next</NextName> }
-                        { props.right_id === '#' ? "" :<AniLink cover to={'/'+props.right_id} direction="left" bg="#111"><NextWork> {props.right_name} &gt; </NextWork></AniLink> }
+                        { isLast ? (<NextName>this is the last one</NextName>) : <NextName>next {this.props.fromList} project</NextName> }
+                        { isLast ||
+                            <AniLink cover to={'/'+staticdata.works[workList[indexInList + 1]].id} direction="left" bg="#111">
+                                <NextWork> {staticdata.works[workList[indexInList + 1]].title} &gt; </NextWork>
+                            </AniLink> 
+                        }
                     </NextGroupRight>
-                </NextContainer> */}
+                </NextContainer>
             </div>
         )
     }
 }
 
-const Next = props => (
-    <div>
-        <Hr/>
-        <NextContainer>
-            <NextGroup>
-                { props.left_id === '#' ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
-                { props.left_id === '#' ? "" : <AniLink cover to={'/'+props.left_id} direction="right" bg="#111"><NextWork> &lt; {props.left_name}</NextWork></AniLink> } 
-            </NextGroup>
-            <NextGroupRight>
-                { props.right_id === '#' ? (<NextName>this is the last one</NextName>) : <NextName>next</NextName> }
-                { props.right_id === '#' ? "" :<AniLink cover to={'/'+props.right_id} direction="left" bg="#111"><NextWork> {props.right_name} &gt; </NextWork></AniLink> }
-            </NextGroupRight>
-        </NextContainer>
-    </div>
-)
-
-
-export default Next
+export default NextNav

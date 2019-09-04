@@ -1,8 +1,13 @@
 import React from 'react'
+import WorkPage from '../components/workpage'
+
 import styled from 'styled-components'
 import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template'
 import pdf from "../files/Zhen_Wang_SmartPill.pdf"
-import Next from '../components/next'
+
+
+
+const workId = 'smartpill' 
 
 const SectionForImageWhite2 = styled.div`
   width: 100%;
@@ -21,19 +26,15 @@ const SectionForImageWhite2 = styled.div`
   background: #fff;
   background-clip: padding-box;
 `
+
 const Image2 = styled.img`
   width: 40%;
   display: inline-block;
 `
 
-const SmartPill = () => (
-  <div>
-    <BannerGroup image={require("../images/smartpill-cover.png")} gradient_start="#0C9D6A" gradient_end="#3BD3AF">
-      <TitleGroup>
-        <Title>SmartPill</Title>
-        <Subtitle>Next to pharmacy business mode - <br /> Fulfill the urgent need of patients and lacking resources<br/> in China in alternative ways</Subtitle>
-      </TitleGroup>
-    </BannerGroup>
+const SmartPill = ({ location }) => (
+  <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
+
     <InfoPanelGroup>
       <InfoGroup>
         <InfoTitle>Course</InfoTitle>
@@ -56,7 +57,6 @@ const SmartPill = () => (
     </InfoPanelGroup>
 
     <hr/>
-    
     <Section>
       <ChapterTitle>background</ChapterTitle>
       <SectionTitle>China's hospital resource is scarce. <br/>The young generation go to hospital less frequently. <br/>Instead, they seek help from pharmacists.</SectionTitle>
@@ -68,7 +68,6 @@ const SmartPill = () => (
     </Section>
 
     <hr/>
-
     <Section>
       <ChapterTitle>market analysis</ChapterTitle>
       <SectionTitle>We applied the PEST to invest in the potential market, <br/> and then dig in who can we serve, <br/> and what can Smartpill do in capability</SectionTitle>
@@ -95,7 +94,6 @@ const SmartPill = () => (
     </Section>
 
     <hr/>
-
     <Section>
       <ChapterTitle>service design</ChapterTitle>
       <SectionTitle>We designed a service strategy in 4P frame to examine if SmartPill targets the accurate user group, and to classify our users into more groups.</SectionTitle>
@@ -125,8 +123,7 @@ const SmartPill = () => (
       <MainText> However, when the personal/mobile medical tool is becoming a trend, our designers need to think ahead - How to get users' trust? Can we use emotion design? Is our design accessible to the elders and disabilities? These are places for design to make values.</MainText>
     </Section>
 
-    <Next left_id="tide-mobile" left_name="Tide Mobile" right_id="inforest" right_name="Inforest Space"/>
-  </div>
+  </WorkPage>
 )
 
 export default SmartPill
