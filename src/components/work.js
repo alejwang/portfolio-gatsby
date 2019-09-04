@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import { progressPercentage } from 'style-value-types';
+
+
 
 const WorkCardGroup = styled.div`
     margin:0 6.5em 0 0;
@@ -10,7 +11,7 @@ const WorkCardGroup = styled.div`
     position: relative;
     // width: 100%;
 
-    // transition: 0.8s;
+    transition: 0 0;
     cursor: pointer;
 
     @media (max-width: 1224px) {
@@ -41,7 +42,7 @@ const Title = styled.p`
     opacity: 0.4;
 
     z-index: -2;
-    transition: 0.2s;
+    transition: 0.2s 0;
 
     &:after {
         content: " ";
@@ -58,7 +59,7 @@ const Title = styled.p`
         transition: 0.6s;
 
         background: #fff;
-        opacity: 0.1;
+        opacity: 0.2;
 
         @media (max-width: 768px) {
             transition: none;
@@ -80,7 +81,7 @@ const Title = styled.p`
         @media (min-width: 768px) {
             z-index: 100;
             opacity: 1;
-            transform: translateX(-20px);
+            transform: translateX(-30px);
         }
     }
         
@@ -104,20 +105,21 @@ const Sub = styled.span`
 `
 
 const Subtitle = styled.p`
-    width: 380px;
-    margin: -25px 0 0 0;
+    width: 250px;
+    margin: 0 0 0 42px;
     padding-left: 1.5px;
     position: absolute;
 
     font-family: 'Barlow';
-    font-size: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.2em;
     text-transform: lowercase;
     color: white;
     opacity: 0;
 
     display: none;
     z-index: -2;
-    transition: 0.2s;
+    transition: 0.2s 0;
 
     @media (max-width: 1224px) {
         margin: -15px 0 0 0;
@@ -131,8 +133,9 @@ const Subtitle = styled.p`
     @media (min-width: 768px) {
         ${WorkCardGroup}:hover & {
             z-index: 0;
-            opacity: 0.7;
-            transform: translateY(-15px);
+            opacity: 0.9;
+            transform: translateX(-15px);
+            transition: 0.2s 1s;
         }        
     }
 `
@@ -151,7 +154,7 @@ const Image = styled.div`
     background-repeat: no-repeat;
     background-position: 52% 50%;
     object-fit: cover;
-    transition: 0.4s;
+    transition: 0.5s;
     opacity: 0;
 
     @media (max-width: 1224px) {

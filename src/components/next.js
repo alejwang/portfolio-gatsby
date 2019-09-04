@@ -70,9 +70,7 @@ const Hr = styled.hr`
 class NextNav extends React.Component {
     render() {
         const workList = staticdata.cats[(this.props.fromList)]
-        console.log('workList:' + workList)
         const indexInList = workList.indexOf(this.props.currentPage)
-        console.log('indexInList:' + indexInList)
         const isFirst = (indexInList === 0)
         const isLast = (indexInList === workList.length - 1)
         
