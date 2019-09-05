@@ -213,9 +213,9 @@ const Work = (props) => (
             <Title>
                 <No>{props.data.year % 100}</No>
                 {props.data.title_short ? props.data.title_short : props.data.title}
-                <Sub>{props.data.sub}</Sub>
+                {/* <Sub>{props.data.sub}</Sub> */}
             </Title>
-            <Subtitle>{props.data.subtitle}</Subtitle>
+            {/* <Subtitle>{props.data.subtitle}</Subtitle> */}
             <Image image={require("../images/"+(props.data.id==="#"?"default":props.data.id)+"-cover.png")} gradient_start={props.data.gradient_start} gradient_end={props.data.gradient_end} />
         </AniLink>
     </WorkCardGroup>
