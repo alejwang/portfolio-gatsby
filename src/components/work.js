@@ -5,7 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
 const WorkCardGroup = styled.div`
-    margin:0 6.5em 0 0;
+    margin:0 7em 0 0;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
@@ -33,13 +33,13 @@ const Title = styled.p`
     display: inline-block;
     white-space: nowrap;
 
-    font-family: 'Barlow';
+    font-family: 'Aktiv Grotesk';
     font-weight: 600;
     text-transform: lowercase;
-    font-size: 9em;
+    font-size: 9.5em;
     line-height: 1.3em;
     color: white;
-    opacity: 0.4;
+    opacity: 0.7;
 
     z-index: -2;
     transition: 0.2s 0;
@@ -213,9 +213,9 @@ const Work = (props) => (
             <Title>
                 <No>{props.data.year % 100}</No>
                 {props.data.title_short ? props.data.title_short : props.data.title}
-                {/* <Sub>{props.data.sub}</Sub> */}
+                <Sub>{props.data.sub}</Sub>
             </Title>
-            {/* <Subtitle>{props.data.subtitle}</Subtitle> */}
+            <Subtitle>{props.data.subtitle}</Subtitle>
             <Image image={require("../images/"+(props.data.id==="#"?"default":props.data.id)+"-cover.png")} gradient_start={props.data.gradient_start} gradient_end={props.data.gradient_end} />
         </AniLink>
     </WorkCardGroup>
