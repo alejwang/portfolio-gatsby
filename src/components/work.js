@@ -202,7 +202,7 @@ const No = styled.p`
     writing-mode: tb-rl;
 `
 
-const Work = props => (
+const Work = (props) => (
     <WorkCardGroup>
         <AniLink cover 
                  to={'/' + props.data.id} 
