@@ -1,14 +1,41 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Image, Section,  StepContainerGroup, StepTitle, StepText } from '../components/template';
 import pdf from "../files/Zhen_Wang_resume_2019.pdf"
+
+const AboutInfo = styled.h1`
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+
+    margin: 0 0 2.5em 0;
+  
+    font-weight: 500;
+    font-size: 1.5em; 
+    line-height: 1.3;
+
+    color: #ddd;
+
+    // @media (max-width: 1224px) {
+    //     margin:0 6em 0.6em 0;
+    // }
+    // @media (max-width: 768px) {
+    //     width: 100%;
+    //     height: 220px;
+    //     display: block;
+    //     margin:0 0 12px 0;
+    //     padding-top: 170px;
+    // }
+`
 
 const AboutPage = () => (
 
   <div className="container">
     <div className="containerGroupShort">
-      <h1>hey, I am Zhen - an UX Designer studying at the University of Michigan, <br /> specializing in human-computer interaction.</h1>
-      <h1>besides work, you may find me swimming 🏊 , <br />listening to pop/classic music  🎵, and grazing at bubble tea shops 🍶.</h1>
-      <h1><a href={pdf}>check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">let's talk! <span className="linkarrow">></span></a></h1>
+      <AboutInfo>Hey, I am Zhen - an UX Designer from University of Michigan, specializing in human-computer interaction.
+      <br />Besides work, you may find me swimming 🏊, listening to pop/classic music 🎵, and grazing at bubble tea shops 🍶.
+      <br /><a href={pdf}>check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">let's talk! <span className="linkarrow">></span></a>
+      </AboutInfo>
     </div>
 
     <Image src={require("../images/about-me.jpg")} alt="My portrait"/>

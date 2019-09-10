@@ -150,7 +150,7 @@ hr {
   max-width: 1440px;
   min-height: 150px;
   margin: 0 auto;
-  padding: calc(100vh - 400px) 0 0 calc(48px + 2em);
+  padding: 50px 0 0 calc(48px + 2em);
   box-sizing: border-box;
   /* padding: calc(100px + 22vh) 0 0 0; */
   /* text-align: center; */
@@ -181,27 +181,27 @@ hr {
 }
 
 .containerGroup h1, .containerGroupShort h1 {
-  margin: 1em 0 2.5em 0;
+  /* margin: 1em 0 2.5em 0; */
   /* padding-left: 80px; */
 
-  font-weight: 400;
-  font-size: 1.5em;
+  /* font-weight: 500;
+  font-size: 2em; */
   /* font-style: italic; */
-  line-height: 1.5;
+  /* line-height: 1.3;
   color: white;
-  opacity: 0.7;
+  opacity: 0.7; */
 }
 
 .containerGroupShort h1 a{
   margin-right: 2em;
 
-  font-weight: 300;
-  font-style: italic;
+  /* font-weight: 300; */
+  /* font-style: italic; */
 
 }
 
 .containerGroup h2, .containerGroupShort h2 {
-  margin: 0;
+  margin: 1.5em 0;
   font-weight: 400;
   font-size: 0.9em;
   font-style: normal;
@@ -223,9 +223,9 @@ hr {
 
 
 .cardsGroup {
-  width: 105%;
-  margin: 2em 2em 2em 0;
-  display: inline-flex;
+  width: 100%;
+  /* margin: 2em 2em 2em 0; */
+  /* display: inline-flex; */
   flex-wrap: wrap;
 }
 

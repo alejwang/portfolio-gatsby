@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
 
-import { ChapterTitle, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Section, SectionTitle, MainText } from '../components/template';
+import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Section, SectionTitle, MainText } from '../components/template';
 
 
 

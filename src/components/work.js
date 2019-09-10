@@ -5,14 +5,14 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
 const WorkCardGroup = styled.div`
-    margin:0 6.5em 0 0;
+    margin:0 7em 0 0;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    // width: 100%;
+    width: auto;
 
     transition: 0 0;
-    cursor: pointer;
+    cursor: url(${require("../images/cursor.png")}), pointer;
 
     @media (max-width: 1224px) {
         margin:0 6em 0.6em 0;
@@ -21,8 +21,8 @@ const WorkCardGroup = styled.div`
         width: 100%;
         height: 220px;
         display: block;
-        margin:0 0 12px 0;
         padding-top: 170px;
+        margin-bottom: 24px;
     }
 `
 
@@ -32,49 +32,54 @@ const Title = styled.p`
     position: relative;
     display: inline-block;
     white-space: nowrap;
+    cursor: url(${require("../images/cursor.png")}), pointer;
 
-    font-family: 'Barlow';
+    font-family: 'Aktiv Grotesk';
     font-weight: 600;
     text-transform: lowercase;
-    font-size: 9em;
+    font-size: 8.5em;
     line-height: 1.3em;
     color: white;
-    opacity: 0.4;
+    opacity: 0.75;
 
     z-index: -2;
-    transition: 0.2s 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
 
-    &:after {
-        content: " ";
-        width: 0;
-        height:0.2em;
-        bottom: 0.35em;
-        left: 0;
-        margin: 0;
+    // &:after {
+    //     content: " ";
+    //     border-radius: 8px;
+    //     width: 0;
+    //     height:0.2em;
+    //     bottom: 0.35em;
+    //     left: 0;
+    //     margin: 0;
 
-        position: absolute;
-        z-index: -1;
-        display: inline-block;
-        vertical-align: middle;
-        transition: 0.6s;
+    //     position: absolute;
+    //     z-index: -1;
+    //     display: inline-block;
+    //     vertical-align: middle;
+    //     transition: 0.6s;
 
-        background: #fff;
-        opacity: 0.2;
+    //     background: #fff;
+    //     opacity: 0.2;
 
-        @media (max-width: 768px) {
-            transition: none;
-            width: calc(100% + 20px);
-        }
-    }
+    //     @media (max-width: 768px) {
+    //         transition: none;
+    //         width: calc(100% + 25px);
+    //     }
+    // }
 
     @media (max-width: 1224px) {
         font-size: 6em;
     }
 
     @media (max-width: 768px) {
-        font-size: 2.5em;
+        font-size: 2em;
+        padding-left: 24px;
         opacity: 1;
         z-index: 100;
+        text-transform: none;
     }
 
     ${WorkCardGroup}:hover & {
@@ -87,13 +92,13 @@ const Title = styled.p`
         
     ${WorkCardGroup}:hover &:after {
         @media (min-width: 768px) {
-            width: calc(100% + 48px);
+            width: calc(100% + 60px);
         }
     }
 `
 
 const Sub = styled.span`
-    font-family: 'Barlow';
+    // font-family: 'Barlow';
     font-weight: 300;
     font-style: italic;
     font-size: 0.5em;
@@ -144,8 +149,9 @@ const Subtitle = styled.p`
 const Image = styled.div`
     width: 500px;
     height: 750px;
-    left: 24px;
+    right: -64px;
     top: -100px;
+    border-radius: 24px;
     position: absolute;
     z-index: -2;
 
@@ -160,17 +166,18 @@ const Image = styled.div`
     @media (max-width: 1224px) {
         width: 400px;
         height: 600px;
-        left: 16px;
+        right: -64px;
         top: -69px;
         background-size: cover;
         
     }
     @media (max-width: 768px) {
-        width: 100vw;
+        width: 100%;
         height: 220px;
+        border-radius: 16px;
         left: 0;
         top: 0;
-        margin: 10px 0 50px calc(-500%/90);
+        // margin: 10px 0 50px calc(-500%/90);
         z-index: 0;
         opacity: 1;   
     }
@@ -200,6 +207,10 @@ const No = styled.p`
     color: white;
     opacity: 0.6;
     writing-mode: tb-rl;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 const Work = (props) => (
@@ -212,10 +223,10 @@ const Work = (props) => (
                  duration={1}>
             <Title>
                 <No>{props.data.year % 100}</No>
-                {props.data.title_short ? props.data.title_short : props.data.title}
-                {/* <Sub>{props.data.sub}</Sub> */}
+                {props.data.title}
+                <Sub>{props.data.sub}</Sub>
             </Title>
-            {/* <Subtitle>{props.data.subtitle}</Subtitle> */}
+            <Subtitle>{props.data.subtitle}</Subtitle>
             <Image image={require("../images/"+(props.data.id==="#"?"default":props.data.id)+"-cover.png")} gradient_start={props.data.gradient_start} gradient_end={props.data.gradient_end} />
         </AniLink>
     </WorkCardGroup>

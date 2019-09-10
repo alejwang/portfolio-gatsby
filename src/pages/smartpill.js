@@ -2,7 +2,7 @@ import React from 'react'
 import WorkPage from '../components/workpage'
 
 import styled from 'styled-components'
-import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template'
+import { NoteText, ChapterTitle, SectionForImages, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText } from '../components/template'
 import pdf from "../files/Zhen_Wang_SmartPill.pdf"
 
 

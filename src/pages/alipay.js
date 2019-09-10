@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
 
-import { ChapterTitle, SectionForImages, SectionForImagesFlex, ImageText, NoteText, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, SectionForImages, SectionForImagesFlex, ImageText, NoteText, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import DeviceMockUp from '../components/devicemockup'
 
 
