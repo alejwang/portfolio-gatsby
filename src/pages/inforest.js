@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
 
-import { NoteText, ChapterTitle, SectionForImages, TitleGroup, BannerGroup, Title, Subtitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template'
+import { NoteText, ChapterTitle, SectionForImages, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template'
 import pdf from "../files/Zhen_Wang_Inforest.pdf"
 
 

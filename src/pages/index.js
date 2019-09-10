@@ -8,27 +8,24 @@ const MyInfo = styled.h1`
     box-sizing: border-box;
     position: relative;
 
-    margin: 1em 0 2.5em 0;
-    padding: 25px; 
+    margin: 1em 0 2em 0;
+    padding: 24px; 
   
     font-weight: 500;
-    font-size: 1.6em; 
+    font-size: 1.5em; 
     line-height: 1.3;
 
     color: #ddd;
-    background: #333;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
 
     // @media (max-width: 1224px) {
     //     margin:0 6em 0.6em 0;
     // }
-    // @media (max-width: 768px) {
-    //     width: 100%;
-    //     height: 220px;
-    //     display: block;
-    //     margin:0 0 12px 0;
-    //     padding-top: 170px;
-    // }
+    @media (max-width: 768px) {
+        margin:1em 0 24px 0;
+        background: rgba(255, 255, 255, 0.1);
+    }
 `
 
 class IndexPage extends React.Component {
@@ -74,8 +71,8 @@ class IndexPage extends React.Component {
         <div className="container">
           <div className="containerGroup">
             <MyInfo>
-              I am Zander / Zhen - a newgrad UX designer + engineer 
-              <br/>into engaging design, bold solutions & elegant craftmanship.
+              Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
+              <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
               <br/>Check my recent works below 👇</MyInfo>
           </div>
           
