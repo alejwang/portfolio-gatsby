@@ -23,8 +23,22 @@ const MyInfo = styled.h1`
     //     margin:0 6em 0.6em 0;
     // }
     @media (max-width: 768px) {
+        font-size: 1.3em; 
         margin:1em 0 24px 0;
         background: rgba(255, 255, 255, 0.1);
+    }
+`
+
+const Secondary = styled(MyInfo)`
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    font-size: 1em; 
+    color: #888;
+    background: none;
+    @media (max-width: 768px) {
+      font-size: 1em; 
+      margin: 0.8em 0 0 0;
+      background: none;
     }
 `
 
@@ -73,7 +87,7 @@ class IndexPage extends React.Component {
             <MyInfo>
               Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
               <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
-              <br/>Check my recent works below 👇</MyInfo>
+              <Secondary>Check my recent works below 👇</Secondary></MyInfo>
           </div>
           
           <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>

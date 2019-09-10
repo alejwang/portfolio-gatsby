@@ -162,6 +162,7 @@ const Image = styled.div`
     object-fit: cover;
     transition: 0.5s;
     opacity: 0;
+    overflow: hidden;
 
     @media (max-width: 1224px) {
         width: 400px;
@@ -226,7 +227,7 @@ const Work = (props) => (
                 {props.data.title}
                 <Sub>{props.data.sub}</Sub>
             </Title>
-            <Subtitle>{props.data.subtitle}</Subtitle>
+            {/* <Subtitle>{props.data.subtitle}</Subtitle> */}
             <Image image={require("../images/"+(props.data.id==="#"?"default":props.data.id)+"-cover.png")} gradient_start={props.data.gradient_start} gradient_end={props.data.gradient_end} />
         </AniLink>
     </WorkCardGroup>

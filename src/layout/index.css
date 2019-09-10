@@ -138,9 +138,10 @@ hr {
 .container {
   width: 100%;
   min-height: 100vh;
-  padding: 100px 0 500px 0;
+  padding: 100px 0 480px 0;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 .containerGroup {
