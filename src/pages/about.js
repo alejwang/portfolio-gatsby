@@ -34,7 +34,7 @@ const AboutPage = () => (
     <div className="containerGroupShort">
       <AboutInfo>Hey, I am Zhen - an UX Designer from University of Michigan, specializing in human-computer interaction.
       <br />Besides work, you may find me swimming 🏊, listening to pop/classic music 🎵, and grazing at bubble tea shops 🍶.
-      <br /><a href={pdf}>check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">let's talk! <span className="linkarrow">></span></a>
+      <br /><a href={pdf}>Check my resume <span className="linkarrow">></span></a> <a href="mailto:me@alej.wang?subject=alej.wang — Website Inquiry&body=Hey Zhen! It's nice to know you...">Let's talk! <span className="linkarrow">></span></a>
       </AboutInfo>
     </div>
 

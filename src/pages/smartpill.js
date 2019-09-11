@@ -33,6 +33,7 @@ const Image2 = styled.img`
 `
 
 const SmartPill = ({ location }) => (
+  // eslint-disable-next-line
   <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
 
     <InfoPanelGroup>

@@ -8,7 +8,7 @@ const MyInfo = styled.h1`
     box-sizing: border-box;
     position: relative;
 
-    margin: 1em 0 2em 0;
+    margin: 1em 0 4em 0;
     padding: 24px; 
   
     font-weight: 500;
@@ -19,9 +19,6 @@ const MyInfo = styled.h1`
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
 
-    // @media (max-width: 1224px) {
-    //     margin:0 6em 0.6em 0;
-    // }
     @media (max-width: 768px) {
         font-size: 1.3em; 
         margin:1em 0 24px 0;
@@ -79,6 +76,7 @@ class IndexPage extends React.Component {
   }
   
   render() {
+    
     return (
       <div>
         <div id="background"> </div>
@@ -87,7 +85,7 @@ class IndexPage extends React.Component {
             <MyInfo>
               Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
               <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
-              <Secondary>Check my recent works below 👇</Secondary></MyInfo>
+              <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary></MyInfo>
           </div>
           
           <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>

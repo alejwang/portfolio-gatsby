@@ -9,6 +9,7 @@ import DeviceMockUp from '../components/devicemockup'
 const workId = 'sketch-clip' 
 
 const SketchClip = ({ location }) => (
+  // eslint-disable-next-line
   <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
 
       <InfoPanelGroup>

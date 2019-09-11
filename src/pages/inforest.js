@@ -9,6 +9,7 @@ import pdf from "../files/Zhen_Wang_Inforest.pdf"
 const workId = 'inforest' 
 
 const InForest = ({ location }) => (
+  // eslint-disable-next-line
   <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
 
     <InfoPanelGroup>

@@ -24,6 +24,7 @@ export const ImageEnd = styled.img`
 `
 
 const TideMobile = ({ location }) => (
+  // eslint-disable-next-line
   <WorkPage id={workId} fromList={(location.state && location.state.fromList) != undefined ? location.state.fromList : "selected"}> 
     
     <InfoPanelGroup>
@@ -138,8 +139,7 @@ const TideMobile = ({ location }) => (
     <Section>
       <ChapterTitle>after release</ChapterTitle>
       <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. <br/>
-        We feel very proud to help almost 61% undergraduate student <br/>
-        at Zhejiang University to have an easy and joyful life. <br/>
+        We feel very proud to help almost 61% undergraduate student at Zhejiang University to have an easy and joyful life. <br/>
         Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">></span></a>.</SectionTitle>
     </Section>
 

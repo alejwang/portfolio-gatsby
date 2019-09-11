@@ -1,6 +1,6 @@
 {
     "cats": {
-        "selected":["si-hunt", "alipay", "sketch-clip", "tide-mobile", "smartpill", "inforest"],
+        "selected":["si-hunt", "alipay", "sketch-clip", "tide-mobile", "smartpill", "inforest", "edge-shelter"],
         "story":["alipay"],
         "ux":["si-hunt", "sketch-clip", "tide-mobile", "smartpill"],
         "arch":["inforest"]
@@ -14,8 +14,7 @@
             "subtitle": "Next to LBS educational social",
             "text": "Discovery app agile development for U of Mich freshmen", 
             "year": 2019,
-            "cat": "ux",
-            "selected": true
+            "cat": "ux"
         },
         "alipay": {
             "title": "Alipay",
@@ -25,8 +24,7 @@
             "subtitle": "Mobile payments in the city service era - what I learned from working for Alipay in Ant Financial.",
             "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
             "year": 2018,
-            "cat": "story",
-            "selected": true
+            "cat": "story"
         },
         "sketch-clip": {
             "title": "Sketch Clip",
@@ -37,8 +35,7 @@
             "subtitle": "Next to lazy designers",
             "text": "What will Git for Designer look like... What? OK... You don't know Git...",
             "year": 2018,
-            "cat": "ux",
-            "selected": true
+            "cat": "ux"
         },
         "tide-mobile": {
             "title": "Tide Mobile",
@@ -48,8 +45,7 @@
             "subtitle": "Next to campus lifestyle",
             "text": "Redefine how college students gath information and have fun, accessible for everyone in one touch",
             "year": 2017,
-            "cat": "ux",
-            "selected": true
+            "cat": "ux"
         },
         "smartpill": {
             "title": "SmartPill",
@@ -59,8 +55,7 @@
             "subtitle": "Next to pharmacy business mode",
             "text": "Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways",
             "year": 2016,
-            "cat": "ux",
-            "selected": true
+            "cat": "ux"
         },
         "inforest": {
             "title": "InForest",
@@ -70,20 +65,17 @@
             "subtitle": "Next to non-touch interaction",
             "text": "Invoke deep dreams of forest in heavy city mist by a beatiful heart travel",
             "year": 2016,
-            "cat": "arch",
-            "selected": true
+            "cat": "arch"
         },
-        "tbd1": {
-            "title": "Edge Shelter",
-            "sub": "/tba",
-            "id": "#",
-            "gradient_start": "#000",
-            "gradient_end": "#000",
+        "edge-shelter": {
+            "title": "The Edge Shelter",
+            "id": "edge-shelter",
+            "gradient_start": "#AFC6DC",
+            "gradient_end": "#AFC6DC",
             "subtitle": "Next to homeless animals",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
-            "year": 2016,
-            "cat": "arch",
-            "selected": true
+            "year": 2015,
+            "cat": "arch"
         },
         "tbd2": {
             "title": "Int. Education",
@@ -94,8 +86,7 @@
             "subtitle": "Next to intro coding education",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2016,
-            "cat": "story",
-            "selected": true
+            "cat": "story"
         }
     }
 }

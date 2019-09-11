@@ -26,7 +26,7 @@ const WorkCardGroup = styled.div`
     }
 `
 
-const Title = styled.p`
+const Title = styled.h1`
     margin: -0.2em 0 0 -0.1em;
     padding-left: 1.5px;
     position: relative;
@@ -34,13 +34,13 @@ const Title = styled.p`
     white-space: nowrap;
     cursor: url(${require("../images/cursor.png")}), pointer;
 
-    font-family: 'Aktiv Grotesk';
+    // font-family: 'Aktiv Grotesk';
     font-weight: 600;
     text-transform: lowercase;
     font-size: 8.5em;
     line-height: 1.3em;
     color: white;
-    opacity: 0.75;
+    opacity: 0.5;
 
     z-index: -2;
     transition: 0.2s;
@@ -85,6 +85,7 @@ const Title = styled.p`
     ${WorkCardGroup}:hover & {
         @media (min-width: 768px) {
             z-index: 100;
+            color: white;
             opacity: 1;
             transform: translateX(-30px);
         }
@@ -109,41 +110,41 @@ const Sub = styled.span`
     }
 `
 
-const Subtitle = styled.p`
-    width: 250px;
-    margin: 0 0 0 42px;
-    padding-left: 1.5px;
-    position: absolute;
+// const Subtitle = styled.p`
+//     width: 250px;
+//     margin: 0 0 0 42px;
+//     padding-left: 1.5px;
+//     position: absolute;
 
-    font-family: 'Barlow';
-    font-size: 1.2em;
-    line-height: 1.2em;
-    text-transform: lowercase;
-    color: white;
-    opacity: 0;
+//     font-family: 'Barlow';
+//     font-size: 1.2em;
+//     line-height: 1.2em;
+//     text-transform: lowercase;
+//     color: white;
+//     opacity: 0;
 
-    display: none;
-    z-index: -2;
-    transition: 0.2s 0;
+//     display: none;
+//     z-index: -2;
+//     transition: 0.2s 0;
 
-    @media (max-width: 1224px) {
-        margin: -15px 0 0 0;
-        font-size: 1.2em;
-    }
+//     @media (max-width: 1224px) {
+//         margin: -15px 0 0 0;
+//         font-size: 1.2em;
+//     }
 
-    @media (max-width: 768px) {
-        display: none;
-    }
+//     @media (max-width: 768px) {
+//         display: none;
+//     }
 
-    @media (min-width: 768px) {
-        ${WorkCardGroup}:hover & {
-            z-index: 0;
-            opacity: 0.9;
-            transform: translateX(-15px);
-            transition: 0.2s 1s;
-        }        
-    }
-`
+//     @media (min-width: 768px) {
+//         ${WorkCardGroup}:hover & {
+//             z-index: 0;
+//             opacity: 0.9;
+//             transform: translateX(-15px);
+//             transition: 0.2s 1s;
+//         }        
+//     }
+// `
 
 
 const Image = styled.div`
@@ -193,20 +194,21 @@ const Image = styled.div`
     }
 `
 
-const No = styled.p`
+const No = styled.h4`
     margin: 0;
+    padding:0 0 0.2em 0;
     position: relative;
     height: 1em;
     text-align: right;
 
     display: inline-block;
 
-    font-family: 'Barlow';
+    // font-family: 'Barlow';
     text-transform: lowercase;
     font-size: 0.2em;
     
     color: white;
-    opacity: 0.6;
+    opacity: 0.5;
     writing-mode: tb-rl;
 
     @media (max-width: 768px) {

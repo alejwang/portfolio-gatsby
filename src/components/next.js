@@ -49,7 +49,7 @@ const NextWork = styled.p`
     margin: 0;
 
     font-size: 2em;
-    font-family: 'Barlow';
+    font-family: 'Aktiv Grotesk';
     font-weight: 600;
     // font-style: italic;
     color: #999;
@@ -79,7 +79,7 @@ class NextNav extends React.Component {
                 <Hr/>
                 <NextContainer>
                     <NextGroup>
-                        { isFirst ? (<NextName>this is the first one</NextName>) : <NextName>prev</NextName> }
+                        { isFirst ? (<NextName>this is the first {this.props.fromList} project</NextName>) : <NextName>prev</NextName> }
                         { isFirst ||
                             <AniLink cover to={'/'+staticdata.works[workList[indexInList - 1]].id} direction="right" bg="#111">
                                 <NextWork> &lt; {staticdata.works[workList[indexInList - 1]].title}</NextWork>
@@ -87,7 +87,7 @@ class NextNav extends React.Component {
                         } 
                     </NextGroup>
                     <NextGroupRight>
-                        { isLast ? (<NextName>this is the last one</NextName>) : <NextName>next {this.props.fromList} project</NextName> }
+                        { isLast ? (<NextName>this is the last {this.props.fromList} project</NextName>) : <NextName>next {this.props.fromList} project</NextName> }
                         { isLast ||
                             <AniLink cover to={'/'+staticdata.works[workList[indexInList + 1]].id} direction="left" bg="#111">
                                 <NextWork> {staticdata.works[workList[indexInList + 1]].title} &gt; </NextWork>
