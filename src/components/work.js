@@ -161,7 +161,7 @@ const Image = styled.div`
     background-repeat: no-repeat;
     background-position: 52% 50%;
     object-fit: cover;
-    transition: 0.5s;
+    transition: 0.4s;
     opacity: 0;
     overflow: hidden;
 

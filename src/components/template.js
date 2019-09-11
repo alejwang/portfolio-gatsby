@@ -8,7 +8,7 @@ export const InfoPanelGroup = styled.div`
   margin: 150px auto;
   padding-left: calc(48px + 2em);
   box-sizing: border-box;
-  overflow:auto;
+  overflow:hidden;
 
   @media (max-width: 1224px) {
     padding-left: 0;
@@ -56,15 +56,19 @@ export const Image = styled.img`
 export const InlineImage = styled(Image)`
   width: 100%;
   margin: 150px auto;
+  @media (max-width: 768px) {
+    margin: 80px auto;
+  }
 `
 
 export const Section = styled.div`
   width: 90%;
+  height: auto;
   max-width: 1440px;
   margin: 200px auto;
   box-sizing: border-box;
   padding-left: calc(48px + 2em);
-  overflow: auto;
+  // overflow: auto;
   @media (max-width: 1224px) {
     padding-left: 0;
     margin: 150px auto; 
@@ -81,7 +85,7 @@ export const SectionTitle = styled.h4`
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5em;
+    font-size: 1.7em;
     margin-bottom: 80px;
   }
 `
@@ -178,6 +182,7 @@ export const SmallTitle = styled.h5`
     width: 30%;
   }
   @media (max-width: 768px) {
+    font-size: 1.3em;
     clear: left;
     margin-bottom: 50px;
     width:100%;
@@ -189,7 +194,7 @@ export const MainText = styled.p`
   display: block;
   width: 50%;
   height: auto;
-  margin: 0 0 150px 50%;
+  margin: 0 0 140px 50%;
 
   & + & {
     margin-top: -100px;

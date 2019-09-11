@@ -1,6 +1,6 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
-import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, InlineImage, Section, SectionForImages, ImageText, SmallTitle, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, InlineImage, Section, SectionForImages, SmallTitle, SectionTitle, MainText } from '../components/template';
 
 
 

@@ -20,7 +20,7 @@ body {
 /* ------ text ------ */
 
 p {
-  font-size: 1.05em;
+  font-size: 1.1em;
   font-weight: 400;
   line-height: 1.6em;
   color: #ccc;
@@ -86,7 +86,7 @@ h3 {
 
 h4 {
   margin: 0 0 150px 0;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1.4em;
   font-weight: 600;
   color: #ccc;
@@ -198,7 +198,8 @@ hr {
 }
 
 .containerGroupShort h1 a{
-  margin-right: 2em;
+  display: inline-block;
+  margin:0.5em 3em 0 0;
 
   /* font-weight: 300; */
   /* font-style: italic; */
@@ -306,6 +307,12 @@ video:fullscren {
   -webkit-transform: none;
 }
 
+
+@media (max-width: 768px) {
+  .video-mockupx {
+    top: 49.9%;
+  }
+}
 
 
 

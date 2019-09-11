@@ -90,7 +90,7 @@ header {
     font-weight: 500;
     letter-spacing: 1px;
     color: white;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .Links {
@@ -108,7 +108,7 @@ header {
     display: block;
     padding-left: 2em;
     color: white;
-    opacity: 0.4;
+    opacity: 0.6;
     
     /* font-family: 'DIN'; */
     font-weight: 400;
@@ -170,7 +170,7 @@ header {
         position: absolute;
         z-index: -1;
         
-        background-color: #111;
+        background-color: #222;
         display: block;
         transition: 0.3s;
         opacity: 1;
