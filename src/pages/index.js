@@ -19,8 +19,12 @@ const MyInfo = styled.h1`
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
 
+    @media (max-width: 1224px)  {
+      font-size: 1.2em; 
+    }
+
     @media (max-width: 768px) {
-        font-size: 1.3em; 
+        font-size: 1.2em; 
         margin:1em 0 24px 0;
         background: rgba(255, 255, 255, 0.1);
     }
@@ -32,6 +36,9 @@ const Secondary = styled(MyInfo)`
     font-size: 1em; 
     color: #888;
     background: none;
+    @media (max-width: 1224px)  {
+      font-size: 1em; 
+    }
     @media (max-width: 768px) {
       font-size: 1em; 
       margin: 0.8em 0 0 0;

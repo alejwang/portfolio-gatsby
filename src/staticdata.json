@@ -3,7 +3,7 @@
         "selected":["si-hunt", "alipay", "sketch-clip", "tide-mobile", "smartpill", "inforest", "edge-shelter"],
         "story":["alipay"],
         "ux":["si-hunt", "sketch-clip", "tide-mobile", "smartpill"],
-        "arch":["inforest"]
+        "arch":["inforest", "edge-shelter"]
     },
     "works": {
         "si-hunt": {
@@ -86,6 +86,16 @@
             "subtitle": "Next to intro coding education",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2016,
+            "cat": "story"
+        },
+        "civicrm-nz": {
+            "title": "CiviCRM-nz",
+            "id": "civicrm-nz",
+            "gradient_start": "#000",
+            "gradient_end": "#000",
+            "subtitle": "Next to intro coding education",
+            "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
+            "year": 2017,
             "cat": "story"
         }
     }

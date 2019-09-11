@@ -1,6 +1,6 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
-import { ChapterTitle, NoteText, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, Section, SectionForImages, SectionForImagesFlex, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, Image, InlineImage, Section, SectionForImages, ImageText, SmallTitle, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 
 
 
@@ -29,92 +29,67 @@ const EdgeShelter = ({ location }) => (
 
     </InfoPanelGroup>
 
-    <Image src={require("../images/edge-shelter-header.png")} /> 
-
     <Section>
       <ChapterTitle>overview</ChapterTitle>
       <SectionTitle>The purpose is not only to design a shelter for animals to live, but also to facilitate adoption by dialogue with the urban areas.</SectionTitle>
-    </Section>
-
-    {/* <Section>
-      <ChapterTitle>key problems</ChapterTitle>
-      <SectionTitle>Before, life in my school wasn't easy and fun <br/>because of some major problems.</SectionTitle>
-      <StepContainerGroup>
-        <StepNo>01</StepNo>
-        <StepTitle>Isolated useful resources</StepTitle>
-        <StepText>Students waste lots of time on checking plenty of information including courses, exams, homework, labs, financial aids and school bus from several places. It spends time, but students don't want to miss things.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>02</StepNo>
-        <StepTitle>Information overload</StepTitle>
-        <StepText>Students also get information passively outside their academic life from tons of posters, paper ads, outdoor banners or SMS/email sent by departments and student clubs. But those ways are not attractive for students, also imprecise and expensive for the sender.</StepText>
-      </StepContainerGroup>
-      <StepContainerGroup>
-        <StepNo>03</StepNo>
-        <StepTitle>Tide Mobile 2.0 can't fulfill the changing user needs</StepTitle>
-        <StepText>Tide Mobile's old version designed by <a href="http://ruolan.design">Ruolan Xia<span className="linkarrow">></span></a> was published in 2014. Cards with different information showed on the Home screen and users can click cards to see more and do actions. However, students are having increasing negative feedback on this app.</StepText>
-      </StepContainerGroup>
-    </Section>
-
-    <hr/>
-    <Section>
-      <ChapterTitle>design critique + research</ChapterTitle>
-      <SectionTitle>We started from design critique on the previous version 2.0 base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
-    </Section>
-    <Image src={require("../images/tide-mobile-research.png")} /> 
-    <Section>
+      <InlineImage src={require("../images/edge-shelter-environment.png")} />
       <MainText>
-        Conclusion: a new information structure needed
-      </MainText>
-      <MainText>
-        Although the previous design created a unique (fancy!) experience by cards view, some interactions are still hard to understand. The card didn't work as we thought because the needed information is not shown enough while useless details showed a lot. 
-      </MainText>
-      <MainText>
-        We also noticed the big differences in how user use it depending on when and where. In different scenarios, users want to focus on only a few things without noises.
+      Located on the bank of Qian Tang river in Hangzhou, which is away from the downtown area, the site can be defined as an ‘’Isolated island “. Based on the existed low-grade adoption, the location is undeniable add difficulty to the operation of animal shelter. Therefore, the purpose of design is to facilitate adoption by creating efficient dialogue with the urban area by building systematic relationship with the outside public.
       </MainText>
     </Section>
 
     <hr/>
     <Section>
-      <ChapterTitle>design thinking</ChapterTitle>
-      <SectionTitle>Our goal is to redefine the "easy + joyful" experience on Mobile. <br/> 
-      "Easy" is designing for situations and tasks to let users gather information quickly and "joyful" is a sense of surprise.</SectionTitle>
+      <ChapterTitle>systematic analysis</ChapterTitle>
+      <SectionTitle>We decide to design this building as we do on a product or service. By site analysis and program diagram, we could understand the need of animal in spaces.</SectionTitle>
+
+      <InlineImage src={require("../images/edge-shelter-site.png")} />
+      <SmallTitle>City boundry</SmallTitle>
+      <MainText>
+          Harmonious society is not only the harmony between people but also about man and animals. Animals, just like humans, crave happiness and fear for death. With the acceleration of urbanization, the number of pets is increasing, and the number of stray animals is increasing at the same time. More and more stray animals have brought about a series of social, environmental and health problems. At present, only a part of the economically developed areas in China have government-set-up shelters. However, these institutions are often encountered operating crisis due to the low occupancy rate, difficulty on funds, lack of social concerns and other problems.Since the site is located on the edge of the city, away from the city center, there is no doubt that it increases the difficulty on the operation of the shelter.
+      </MainText>
+
+      <InlineImage src={require("../images/edge-shelter-program.png")} />
+      <SmallTitle>Program diagram</SmallTitle>
+      <MainText>
+          It reveals that most of the three streamline is organized linearly with a substantial intersection between each other, according to the analysis of the flow line. Thus, it is possible to create different kinds of space, producing a variety of node effect, and obtain the most convenient streamline organization mode by researching the form of the intersection of the three linear streamlines by means of typology.
+      </MainText>
+
+      <InlineImage src={require("../images/edge-shelter-shape.png")} />
+      <SmallTitle>Inside realization</SmallTitle>
+      <MainText>Based on the diagram, we tried to generate a shape for the shelter where every activities can be made without interruptions.</MainText>
+      
+
+      <InlineImage src={require("../images/edge-shelter-flow.png")} />
+      <SmallTitle>Outside eco-system</SmallTitle>
+      <MainText>The goal of promoting animal shelter cannot be achieved through internal system design. Although the main users of animal shelter are the stray animals, the real operator is human being. Consequently, it is necessary for human beings to help them contact with external social organizations where the holding area, the medical district and the volunteer club will play important roles with.</MainText>
+
+      <SectionTitle>Instead of an elegant place to live in, what we think as animals is to make the service running well in the shelter place.</SectionTitle>
     </Section>
 
-    <Image src={require("../images/tide-mobile-scenario.png")} /> 
+    <hr/>
     <Section>
-      <MainText>
-      In our consideration, the most important information for one situation should be specially designed to support users to finish related tasks quickly. Users don't want everything. They just want one thing at a time.
-      </MainText>
-      <MainText>
-      For instance, when users want to check the timetable on the bed or before sleep, they wish to a full calendar for a day. While an anxious boy standing near a building touching his phone, he wants to know only the classroom number where he should be in there in 30 sec.
-      </MainText>
-      <MainText>
-      To increase productivity, we double-checked our existing IA to see the current workflows and resources.
-      </MainText>
+      <ChapterTitle>plan</ChapterTitle>
+      <SectionTitle>With public space in the intersection joints, the spaces are dynamic for both animals and people.</SectionTitle>
     </Section>
 
-    <Image src={require("../images/tide-mobile-ia.png")} /> 
-    <Section>
-      <MainText>
-      Scenario-based design provide an extreme clear IA where useful information can be accessible in a fewer level.
-      </MainText>
-      <MainText>
-      We reorganize the information architecture to make sure elements have the right priority, so users can get them in easier.
-      </MainText>
-    </Section>
-
+    <SectionForImages white>
+      <Image src={require("../images/edge-shelter-plan1.png")} /> 
+      <Image src={require("../images/edge-shelter-plan2.png")} /> 
+    </SectionForImages>
     
+    <hr/>
     <Section>
-      <ChapterTitle>after release</ChapterTitle>
-      <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. <br/>
-        We feel very proud to help almost 61% undergraduate student <br/>
-        at Zhejiang University to have an easy and joyful life. <br/>
-        Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">></span></a>.</SectionTitle>
+      <ChapterTitle>showcase</ChapterTitle>
+    </Section>
+    <Image src={require("../images/edge-shelter-render.png")} /> 
+    <Section>
+      <MainText>The second floor of the building is released to the public as a Qiantang River sightseeing stand. Every year millions of visitors will be attracted by the Qian Tang River tide, therefore the sightseeing stand will attract huge crowds and potential customers for animal shelter. Walking on the trail, the sight will be effectively interacted with the hospitals on the third floor and the shelter space on the ground. Besides, the tide season, the public space is still a good choice for local residents to relax and take a walk.</MainText>
+      <SectionTitle>We hope our in-and-out design can help the public realize every activity is a part of the social system, shelters without considering about adoption could only solve the problems on the surface.</SectionTitle>
+      <MainText>With the increasing number of stray animals, relying solely on the expansion of the size and number of shelters is no longer plausible to solve the problem. Seeming like provide a comfortable home for the stray, it is actually increase the social burden, as well as excuse for the animal abandoners. We propose to take adoption as the ultimate goal, aiming to promote virtuous circulation among human and resources, and it contributes to, and finally will, create a lasting and eternal wonderland for the stray animals.</MainText>
     </Section>
 
-
-    <Image src={require("../images/tide-mobile-love.png")} />  */}
+    <Image src={require("../images/edge-shelter-final.png")} /> 
   </WorkPage>
 )
 
