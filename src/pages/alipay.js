@@ -21,7 +21,7 @@ const Alipay = ({ location }) => (
           <InfoText><a href="https://www.antfin.com/index.htm?locale=en_US">Ant Financial<span className="linkarrow">></span></a><br/> <a href="https://global.alipay.com/index.htm">Alipay App<span className="linkarrow">></span></a> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
         </InfoGroup>
         <MainText>
-          Mobile payments in the city service era - what I learned from working for Alipay in Ant Financial.
+          Mobile payments in the city service era - what I learned from working for Alipay in Ant Financial, the highest valued TechFin company in the world.
         </MainText>
         <MainText>
           In the 2018 summer, I spent a wonderful time in Ant Financial (Alibaba). 

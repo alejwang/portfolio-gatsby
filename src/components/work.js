@@ -37,7 +37,7 @@ const Title = styled.h1`
     // font-family: 'Aktiv Grotesk';
     font-weight: 600;
     text-transform: lowercase;
-    font-size: 8.5em;
+    font-size: 9em;
     line-height: 1.3em;
     color: white;
     opacity: 0.5;
@@ -69,6 +69,7 @@ const Title = styled.h1`
     //         width: calc(100% + 25px);
     //     }
     // }
+    
 
     @media (max-width: 1224px) {
         font-size: 6em;
@@ -151,7 +152,7 @@ const Image = styled.div`
     width: 500px;
     height: 750px;
     right: -64px;
-    top: -100px;
+    top: -150px;
     border-radius: 24px;
     position: absolute;
     z-index: -2;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const InfoPanelGroup = styled.div`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1600px;
   height:auto;
   margin: 150px auto;
   padding-left: calc(48px + 2em);
@@ -42,7 +42,7 @@ export const InfoText = styled.p`
 
 export const Image = styled.img`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1600px;
   // height: 80%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -64,7 +64,7 @@ export const InlineImage = styled(Image)`
 export const Section = styled.div`
   width: 90%;
   height: auto;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 200px auto;
   box-sizing: border-box;
   padding-left: calc(48px + 2em);
@@ -286,3 +286,4 @@ export const ImageText = styled.p`
     margin-left: 0;
   }
 `
+

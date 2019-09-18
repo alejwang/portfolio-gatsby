@@ -152,7 +152,7 @@ hr {
   width: 90%;
   position: relative;
   z-index: 1;
-  max-width: 1440px;
+  max-width: 1600px;
   min-height: 150px;
   margin: 0 auto;
   padding: 50px 0 0 calc(48px + 2em);
@@ -170,7 +170,7 @@ hr {
 
 .containerGroupShort {
   width: 90%;
-  max-width: 1440px;
+  max-width: 1600px;
   min-height: 150px;
   margin: 0 auto;
   padding: calc(100px + 10vh) 0 0 calc(48px + 2em);

@@ -5,7 +5,7 @@ import staticdata from '../staticdata.json'
 
 const NextContainer = styled.div`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1600px;
   padding-bottom: 100px;
   margin: 0 auto;
   box-sizing: border-box;

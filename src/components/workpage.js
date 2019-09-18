@@ -34,7 +34,7 @@ const BannerGroup = styled.div`
 
 const TitleGroup = styled.div`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
   padding-left: calc(48px + 2em);
   // padding-top: 120px;
