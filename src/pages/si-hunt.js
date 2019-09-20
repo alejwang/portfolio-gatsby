@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
 
-import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, InlineImage, SmallTitle, Section, NoteText, SectionTitle, MainText } from '../components/template';
+import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, InlineImage, SmallTitle, Section, NoteText, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
 import IFrameVideo from '../components/iframe'
 
 
@@ -75,38 +75,61 @@ const SIHunt = ({ location }) => (
 
       {/* <InlineImage src={require("../images/si-hunt-tech.png")} /> */}
       <SmallTitle>Develop: Tech Spike For Wayfinding</SmallTitle>
-      <MainText>In order to locate our user and provide information based on geolocation, SI Hunt required some technology for indoor navigation. In the end, we chose to use an image recognition lib in ARKit 2 since it can be integreted easier and be customized or trained by CoreML if needed. The second choice would be wifi locating combining beacons which can provide a list of users nearby by bluetooth for social needs.</MainText>
+      <MainText>In order to locate our user and provide routes, SI Hunt required some technology for indoor navigation. In the end, we chose to use an image recognition lib in ARKit 2 since it can be integreted easier and be customized or trained by CoreML if needed. The second choice would be wifi locating combining beacons which can provide a list of users nearby by bluetooth for social needs.</MainText>
+      <NoteText>You can check our decision and the reason in the introducing video.</NoteText>
     </Section>
 
     <hr/>
     <Section>
       <ChapterTitle>sprint 2 of 3</ChapterTitle>
-      <SectionTitle>Key Features + Lo-fi Prototype + Algorithm</SectionTitle>
+      <SectionTitle>MVP Features + Prototypes + Routing Algorithm</SectionTitle>
       <MainText>Things we done in this sprint:
         <br/>- Desicion on MVP features
         <br/>- A testable lo-fi prototype anytime :)
         <br/>- Data populating, API design and algorithm for shortest path
         <br/>- More user research and more ideas as new stories</MainText>
 
-      {/* <SmallTitle>Design: MVP Features</SmallTitle>
-      <MainText>...</MainText>
+      <InlineImage src={require("../images/si-hunt-key-features.png")} />
+      <SmallTitle>Design: MVP Features</SmallTitle>
+      <MainText>At this sprint, we created a list called MVP - must-haves features must finish for this project. As shown above, we decrease the design scope to focus on events and locations, because these would be the most frequently used features based on the personas and their needs. These could also be technology limitations and privacy concerns for social features, that's why we put it in could-haves. </MainText>
 
       <SmallTitle>Develop: Data, Documents, Improvements</SmallTitle>
-      <MainText>...</MainText>
+      <MainText>During we finishing the tasks and user stories, we updated the interface for SI Hunt - we made it simple and easy-to-use, while it became more visually appearing. We want to keep ourselves focus on must-haves and should-haves first. But we left spaces and connectivities for future features.</MainText>
 
-      <SmallTitle>Testing: User Testings</SmallTitle>
+      {/* <StepContainerGroup>
+        <StepNo>01</StepNo>
+        <StepTitle>A new flat structure for events and the navigation</StepTitle>
+        <StepText>In the first sprint, the event list </StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>02</StepNo>
+        <StepTitle>Give me a fulcrum <br /> and I will convince the stakeholders</StepTitle>
+        <StepText>The fulcrum is design decisions driven by research, company culture or big data. We are not convincing ourselves and be a fancy guy on Dribbble. Instead, we are facing huge external resistance - from clients and different developer teams (project team, API team, security team in one project maybe!). I learned to make the right design decisions and use it to convince other people - how our design goals can inheritance from business goals, how we will track the design quality, how many potential users one feature is facing, etc. Sometimes, to finish a convincing draft efficiently with stakeholders is way more important than keeping your sketch file not dirty.</StepText>
+      </StepContainerGroup>
+      <StepContainerGroup>
+        <StepNo>03</StepNo>
+        <StepTitle>Breakthrough the mindset <br /> and chase for excellence</StepTitle>
+        <StepText>"If you work in a textbook style, you may never reach excellence in a limited time". - my mentor <br/><br/>
+        It's necessary to always be creative and not be limited by tools. I worked on flexible card prototyping for complex IA designs, paper prototyping for motion designs, and made developer-must-love-it pseudo-algorithm flowcharts for an institution solution project. You know what... they loved it!</StepText>
+      </StepContainerGroup> */}
+
+      {/* <SmallTitle>Testing: User Testings</SmallTitle>
       <MainText>...</MainText> */}
     </Section>
 
     <hr/>
     <Section>
       <ChapterTitle>sprint 3 of 3</ChapterTitle>
-      <SectionTitle>UMSI Expo + Public Testings + Iterations</SectionTitle>
+      <SectionTitle>UMSI Expo + Public Testings + More Iterations...</SectionTitle>
       <MainText>Things we done in this sprint:
-        <br/>- Attend UMSI Expo
-        <br/>- Release a public beta version in TestFlight
-        <br/>- Finish all MVP features
-        <br/>- More design iterations...</MainText>
+        <br/>- Attend UMSI Expo and release a public beta version in TestFlight
+        <br/>- Finish all MVP features with much more design iterations
+        <br/>- Review our project</MainText>
+        
+      <SmallTitle>Testing: Public Beta Release</SmallTitle>
+      <MainText>SI Hunt (beta) was released from UMSI Expo at <a href="https://testflight.apple.com/join/0JEbTPd4">TestFlight<span className="linkarrow">></span></a>. We already received more than 20 feedbacks from our students and visitors. If you want to have a try, we invited you to <a href="https://sites.google.com/umich.edu/sihunt/home">give us your feedback here.<span className="linkarrow">></span></a></MainText>
+      <InlineImage src={require("../images/si-hunt-expo.jpg")} />
+      <InlineImage src={require("../images/si-hunt-trello.png")} />
     </Section>
   </WorkPage>
 )
