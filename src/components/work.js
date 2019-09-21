@@ -40,7 +40,7 @@ const Title = styled.h1`
     font-size: 9em;
     line-height: 1.3em;
     color: white;
-    opacity: 0.5;
+    opacity: 0.4;
 
     z-index: -2;
     transition: 0.2s;
@@ -160,7 +160,7 @@ const Image = styled.div`
     background: ${props => props.gradient_start};
     background-image: url(${props => props.image}), linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
     background-repeat: no-repeat;
-    background-position: 52% 50%;
+    background-position: 54% 50%;
     object-fit: cover;
     transition: 0.4s;
     opacity: 0;
@@ -188,7 +188,7 @@ const Image = styled.div`
     ${WorkCardGroup}:hover & {
         @media (min-width: 768px) {
             z-index: -1;
-            transform: translate(20px, 30px);
+            transform: translate(30px, 45px);
             background-position: center;
             opacity: 1;
         }
@@ -217,6 +217,7 @@ const No = styled.h4`
     }
 `
 
+
 const Work = (props) => (
     <WorkCardGroup>
         <AniLink cover 
@@ -227,6 +228,7 @@ const Work = (props) => (
                  duration={1}>
             <Title>
                 <No>{props.data.year % 100}</No>
+                {/* {props.data.title_short ? props.data.title_short : props.data.title} */}
                 {props.data.title}
                 <Sub>{props.data.sub}</Sub>
             </Title>

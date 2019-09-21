@@ -7,6 +7,8 @@ const MyInfo = styled.h1`
     display: block;
     box-sizing: border-box;
     position: relative;
+    width: auto;
+    // max-width: 960px;
 
     margin: 1em 0 4em 0;
     padding: 24px; 
@@ -92,7 +94,7 @@ class IndexPage extends React.Component {
             <MyInfo>
               Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
               <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
-              <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary></MyInfo>
+            <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary></MyInfo>
           </div>
           
           <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
