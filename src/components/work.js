@@ -5,7 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 
 const WorkCardGroup = styled.div`
-    margin:0 7em 0 0;
+    margin:1em 7em 1em 0;
     display: inline-block;
     box-sizing: border-box;
     position: relative;
@@ -15,7 +15,7 @@ const WorkCardGroup = styled.div`
     cursor: url(${require("../images/cursor.png")}), pointer;
 
     @media (max-width: 1224px) {
-        margin:0 6em 0.6em 0;
+        margin:0.6em 3em 0.6em 0;
     }
     @media (max-width: 768px) {
         width: 100%;
@@ -38,7 +38,7 @@ const Title = styled.h1`
     font-weight: 600;
     text-transform: lowercase;
     font-size: 9em;
-    line-height: 1.3em;
+    line-height: 1em;
     color: white;
     opacity: 0.4;
 
@@ -152,7 +152,7 @@ const Image = styled.div`
     width: 500px;
     height: 750px;
     right: -64px;
-    top: -150px;
+    top: -140px;
     border-radius: 24px;
     position: absolute;
     z-index: -2;
@@ -169,7 +169,7 @@ const Image = styled.div`
     @media (max-width: 1224px) {
         width: 400px;
         height: 600px;
-        right: -64px;
+        right: -44px;
         top: -69px;
         background-size: cover;
         

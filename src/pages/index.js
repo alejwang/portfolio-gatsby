@@ -34,12 +34,14 @@ const MyInfo = styled.h1`
     }
 `
 
-const Secondary = styled(MyInfo)`
+const Secondary = styled.span`
     margin: 0.5em 0 0 0;
     padding: 0;
     font-size: 1em; 
+    font-weight: 400;
     color: #888;
     background: none;
+    display: block;
     @media (max-width: 1224px)  {
       font-size: 1em; 
     }
@@ -50,17 +52,37 @@ const Secondary = styled(MyInfo)`
     }
 `
 
+const Loader = styled.div`
+    &:empty {
+      position: absolute;
+      top: calc(50% - 4em);
+      left: calc(50% - 4em);
+      width: 6em;
+      height: 6em;
+      border: 1.1em solid rgba(0, 0, 0, 0.2);
+      border-left: 1.1em solid #000000;
+      border-radius: 50%;
+    }
+`
+
+function asyncCall() {
+  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+}
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isMounted: false,
       isScrolled: false,
-      prevOffsetY: window.pageYOffset,
+      prevOffsetY: 0,
       isScrollDown: true,
       lastAppearIndex: 0,
       lastDisappearIndex: 0
     }
+  }
+  authenticate(){
+    return new Promise(resolve => setTimeout(resolve, 500)) // 0.5 seconds
   }
 
   handleScroll = (event) => {
@@ -82,9 +104,10 @@ class IndexPage extends React.Component {
         isScrollDown
       })
     }
-
-    console.log(offsetY, prevOffsetY, isScrollDown);
+    // console.log(offsetY, prevOffsetY, isScrollDown);
   }
+
+  
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -98,7 +121,7 @@ class IndexPage extends React.Component {
       speed: 2.00,
       zoom: 0.50
     });
-    this.setState({ isMounted: true });
+    asyncCall().then(() => this.setState({ isMounted: true }));
   }
   
   componentWillUnmount() {
@@ -106,25 +129,30 @@ class IndexPage extends React.Component {
   }
   
   render() {
-    
+    const { isMounted } = this.state;
+    // if(!isMounted) { // if your component doesn't have to wait for an async action, remove this block 
+    //   return null; // render null when app is not ready
+    // }
     return (
-      <div>
+      <Loader>
         <div id="background"> </div>
         <div className="container">
           <div className="containerGroup">
             <MyInfo>
               Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
               <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
-            <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary></MyInfo>
+              {isMounted ? <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary> : <Secondary>Loading... <span role="img" aria-label="yeah">✨</span></Secondary>}
+            </MyInfo>
           </div>
           
-          {this.state.isMounted && 
+          {isMounted && 
             <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
               <div className="cardsGroup">
                 {staticdata.cats.selected.map((name, index) => 
                   <ScrollAnimation 
+                    key={index}
                     duration={0.6}
-                    offset={50}
+                    offset={10}
                     animateIn={this.state.isScrollDown ? "fadeInUp" : "fadeInDown"} 
                     animateOut={this.state.isScrollDown ? "fadeOutUp" : "fadeOutDown"}  
                     // delay={Math.abs(index - (this.state.visibleIndex[0] ? this.state.visibleIndex[0] : 0 + (this.state.visibleIndex.length / 2))) * 200} 
@@ -148,7 +176,7 @@ class IndexPage extends React.Component {
             </div>
           }
         </div>
-      </div>
+      </Loader>
   )
   }
 } 

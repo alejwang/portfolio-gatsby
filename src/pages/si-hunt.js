@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkPage from '../components/workpage'
 
-import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, InlineImage, SmallTitle, Section, NoteText, SectionTitle, MainText, StepContainerGroup, StepTitle, StepNo, StepText } from '../components/template';
+import { ChapterTitle, InfoPanelGroup, InfoGroup, InfoTitle, InfoText, InlineImage, SmallTitle, Section, NoteText, SectionTitle, MainText } from '../components/template';
 import IFrameVideo from '../components/iframe'
 
 

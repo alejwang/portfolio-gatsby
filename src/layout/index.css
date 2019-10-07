@@ -231,7 +231,7 @@ hr {
 .cardsGroup {
   width: 100%;
   /* margin: 2em 2em 2em 0; */
-  /* display: inline-flex; */
+  display: inline-flex;
   flex-wrap: wrap;
 }
 
@@ -246,13 +246,18 @@ hr {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .container {
     /* margin-bottom: 100px; */
     padding-bottom: 200px;
   }
   #background {
     display: none;
+  }
+  .cardsGroup {
+    width: 100%;
+    /* margin: 2em 2em 2em 0; */
+    display: block;
   }
 }
 
