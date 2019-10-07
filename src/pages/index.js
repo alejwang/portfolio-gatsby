@@ -2,6 +2,8 @@ import React from 'react'
 import Work from '../components/work'
 import staticdata from '../staticdata.json'
 import styled from 'styled-components'
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const MyInfo = styled.h1`
     display: block;
@@ -52,22 +54,40 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      isMounted: false,
       isScrolled: false,
+      prevOffsetY: window.pageYOffset,
+      isScrollDown: true,
+      lastAppearIndex: 0,
+      lastDisappearIndex: 0
     }
   }
 
   handleScroll = (event) => {
-    const offsetY = window.pageYOffset
+    const { prevOffsetY } = this.state;
+
+    const offsetY = window.pageYOffset;
+    const isScrollDown = offsetY >= prevOffsetY;
 
     if (offsetY > 5) {
-      this.setState({ isScrolled: true })
+      this.setState({ 
+        isScrolled: true,
+        prevOffsetY: offsetY,
+        isScrollDown
+      })
     } else {
-      this.setState({ isScrolled: false })
+      this.setState({ 
+        isScrolled: false,
+        prevOffsetY: offsetY,
+        isScrollDown
+      })
     }
+
+    console.log(offsetY, prevOffsetY, isScrollDown);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
     this.effect = window.VANTA.FOG({
       el: '#background',
       highlightColor: 0x222222,
@@ -77,7 +97,8 @@ class IndexPage extends React.Component {
       blurFactor: 0.90,
       speed: 2.00,
       zoom: 0.50
-    })
+    });
+    this.setState({ isMounted: true });
   }
   
   componentWillUnmount() {
@@ -97,13 +118,35 @@ class IndexPage extends React.Component {
             <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary></MyInfo>
           </div>
           
-          <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
-            <div className="cardsGroup">
-              {staticdata.cats.selected.map(name => 
-                <Work data={staticdata.works[name]} fromList="selected" /> 
-              )}
+          {this.state.isMounted && 
+            <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
+              <div className="cardsGroup">
+                {staticdata.cats.selected.map((name, index) => 
+                  <ScrollAnimation 
+                    duration={0.6}
+                    offset={50}
+                    animateIn={this.state.isScrollDown ? "fadeInUp" : "fadeInDown"} 
+                    animateOut={this.state.isScrollDown ? "fadeOutUp" : "fadeOutDown"}  
+                    // delay={Math.abs(index - (this.state.visibleIndex[0] ? this.state.visibleIndex[0] : 0 + (this.state.visibleIndex.length / 2))) * 200} 
+                    // delay={Math.abs(index - (this.state.lastAppearIndex + this.state.lastDisappearIndex )) * 200}
+                    delay={Math.abs(index - (((this.state.isScrollDown ? 1 : -1) * (this.state.lastAppearIndex - this.state.lastDisappearIndex) > 0) ? this.state.lastAppearIndex : this.state.lastDisappearIndex)) * 50}
+                    animateOnce={false}
+                    afterAnimatedIn={() => {
+                      this.setState({ lastAppearIndex: index });
+                      console.log("lastAppearIndex:", this.state.lastAppearIndex);
+                    }}
+                    afterAnimatedOut={() => {
+                      this.setState({ lastDisappearIndex: index });
+                      console.log("lastDisappearIndex:", this.state.lastDisappearIndex);
+                    }}
+                  >
+                    <Work data={staticdata.works[name]} fromList="selected" /> 
+                    {/* <p>{index}</p> */}
+                  </ScrollAnimation>
+                )}
+              </div>
             </div>
-          </div>
+          }
         </div>
       </div>
   )

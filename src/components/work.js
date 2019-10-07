@@ -195,11 +195,13 @@ const Image = styled.div`
     }
 `
 
-const No = styled.h4`
+const No = styled.span`
     margin: 0;
-    padding:0 0 0.2em 0;
+    padding:0 0.5em 0.2em 0;
     position: relative;
     height: 1em;
+    width: 1em;
+    line-height: 1em;
     text-align: right;
 
     display: inline-block;
