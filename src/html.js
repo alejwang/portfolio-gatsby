@@ -13,6 +13,7 @@ export default function HTML(props) {
         />
         <script  src="https://cdn.jsdelivr.net/gh/tengbao/vanta/vendor/three.r92.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta/dist/vanta.fog.min.js"></script>
+        <script src="https://kit.fontawesome.com/d511f72faa.js" crossOrigin="anonymous"></script>
         {/* <script
             dangerouslySetInnerHTML={{
                 __html: `

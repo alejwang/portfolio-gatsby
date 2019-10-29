@@ -1,22 +1,24 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400');
+/* @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400'); */
+/* @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,600&display=swap'); */
 
 
 @font-face {
-  font-family: "Aktiv Grotesk";
-  font-weight: 500;
-  src: url("../fonts/AktivGrotesk-Medium.otf") format("opentype")
+  font-family: "Helvetica Now Display";
+  font-weight: 400;
+  src: url("../fonts/HelveticaNowDisplay-Regular.ttf") format("truetype")
 }
 
 @font-face {
-  font-family: "Aktiv Grotesk";
-  font-weight: 600;
-  src: url("../fonts/AktivGrotesk-Bold.otf") format("opentype")
+  font-family: "Helvetica Now Display";
+  font-weight: 700;
+  src: url("../fonts/HelveticaNowDisplay-Bold.ttf") format("truetype")
 }
 
 * {
   color:white;
-  font-family: "IBM Plex Sans", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-family: "Helvetica Now Display", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 
 /* h1, h1 span, h2, h2 sup, .WorkCard p, h4, h4 a, h5 {
@@ -24,5 +26,5 @@
 } */
 
 h1, h1 span, h1 a, h2, h2 sup, .WorkCard p, h4, h4 a, h5, .Logo a, .Links a {
-  font-family: "Aktiv Grotesk", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-family: "Helvetica Now Display", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }

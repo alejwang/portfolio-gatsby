@@ -133,10 +133,11 @@ hr {
 /* ------ container ------ */
 
 #background {
-  width: 100%;
+  width: 50vw;
   height: 100vh;
   overflow: hidden;
   position: fixed;
+  /* filter: grayscale(); */
 }
 
 .container {
@@ -230,9 +231,12 @@ hr {
 
 .cardsGroup {
   width: 100%;
-  /* margin: 2em 2em 2em 0; */
-  display: inline-flex;
-  flex-wrap: wrap;
+  height: 120vh;
+  padding: 10vh auto;
+  margin: 0 0 0 50vw;
+  /* display: inline-flex;
+  flex-wrap: wrap; */
+  text-align: left;
 }
 
 

@@ -40,7 +40,7 @@ const SIHunt = ({ location }) => (
       <SectionTitle>SI Hunt is a combination of event finder and indoor navigator for freshmen and visitors. Using image recognition, users can get immediate help when and where they need.</SectionTitle>
       <IFrameVideo src="https://www.youtube.com/embed/390XqFp6IV4"/>
       <SmallTitle>Problem Statement</SmallTitle>
-      <MainText>Students, especially freshmen, have trouble accessing useful resources they need - finding events, prints, or just a space to meet new friends. The current ways to get resources, like orientations provided by the school, can't fit in how they solve the issues.</MainText>
+      <MainText>Students, especially freshmen, have trouble accessing useful resources they need - finding events, printers, or just a space for meeting new friends. While the current ways to get resources, like orientations provided by the school can not help them, they will get lost in the campus or inside a building.</MainText>
     </Section>
 
 

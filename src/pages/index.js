@@ -65,8 +65,24 @@ const Loader = styled.div`
     }
 `
 
+const Image = styled.img`
+  width: 50vw;
+  // max-width: 1600px;
+  height: auto;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  display:block;
+  overflow:auto;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
+
 function asyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  return new Promise((resolve) => setTimeout(() => resolve(), 500));
 }
 
 class IndexPage extends React.Component {
@@ -78,11 +94,9 @@ class IndexPage extends React.Component {
       prevOffsetY: 0,
       isScrollDown: true,
       lastAppearIndex: 0,
-      lastDisappearIndex: 0
+      lastDisappearIndex: 0,
+      hoverOnIndex: -1
     }
-  }
-  authenticate(){
-    return new Promise(resolve => setTimeout(resolve, 500)) // 0.5 seconds
   }
 
   handleScroll = (event) => {
@@ -92,13 +106,13 @@ class IndexPage extends React.Component {
     const isScrollDown = offsetY >= prevOffsetY;
 
     if (offsetY > 5) {
-      this.setState({ 
+      this.setState({
         isScrolled: true,
         prevOffsetY: offsetY,
         isScrollDown
       })
     } else {
-      this.setState({ 
+      this.setState({
         isScrolled: false,
         prevOffsetY: offsetY,
         isScrollDown
@@ -107,27 +121,30 @@ class IndexPage extends React.Component {
     // console.log(offsetY, prevOffsetY, isScrollDown);
   }
 
-  
+  handleHover = (index) => {
+    this.setState({hoverOnIndex: index});
+    console.log('hover', index);
+    console.log('image', (this.state.hoverOnIndex==-1?"default":staticdata.cats.selected[this.state.hoverOnIndex])+"-cover.png");
+  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     this.effect = window.VANTA.FOG({
       el: '#background',
-      highlightColor: 0x222222,
-      midtoneColor: 0x0,
-      lowlightColor: 0x111111,
-      baseColor: 0x0,
-      blurFactor: 0.90,
-      speed: 2.00,
-      zoom: 0.50
+      highlightColor: 0x3446ca,
+      midtoneColor: 0x54bcdc,
+      lowlightColor: 0xf09f2d,
+      baseColor: 0xeb7ba9,
+      speed: 1.40,
+      zoom: 0.40
     });
     asyncCall().then(() => this.setState({ isMounted: true }));
   }
-  
+
   componentWillUnmount() {
     if (this.effect) this.effect.destroy()
   }
-  
+
   render() {
     const { isMounted } = this.state;
     // if(!isMounted) { // if your component doesn't have to wait for an async action, remove this block 
@@ -135,30 +152,34 @@ class IndexPage extends React.Component {
     // }
     return (
       <Loader>
-        <div id="background"> </div>
+        {/* <div id="background"> </div> */}
+        {/* <div id="image"> */}
+        {/* </div> */}
+        {/* <Image src={require("../images/"+(this.state.hoverOnIndex==-1?"default":staticdata.cats.selected[this.state.hoverOnIndex])+"-cover.png")}/> */}
+
         <div className="container">
-          <div className="containerGroup">
+
+          {/* <div className="containerGroup">
             <MyInfo>
-              Hey, I am Zander / Zhen - a newgrad UX designer + engineer. 
-              <br/>I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
+              Hey, I am Zander / Zhen - a newgrad UX designer + engineer.
+              <br />I am interested in impacting communities through engaging design, bold solutions & elegant craftmanship.
               {isMounted ? <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary> : <Secondary>Loading... <span role="img" aria-label="yeah">✨</span></Secondary>}
             </MyInfo>
-          </div>
-          
-          {isMounted && 
-            <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
+          </div> */}
+
+          {isMounted &&
+            // <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
               <div className="cardsGroup">
-                {staticdata.cats.selected.map((name, index) => 
-                  <ScrollAnimation 
+                {staticdata.cats.selected.map((name, index) =>
+                  <ScrollAnimation
                     key={index}
-                    duration={0.6}
+                    duration={1.5}
                     offset={10}
-                    animateIn={this.state.isScrollDown ? "fadeInUp" : "fadeInDown"} 
-                    animateOut={this.state.isScrollDown ? "fadeOutUp" : "fadeOutDown"}  
-                    // delay={Math.abs(index - (this.state.visibleIndex[0] ? this.state.visibleIndex[0] : 0 + (this.state.visibleIndex.length / 2))) * 200} 
-                    // delay={Math.abs(index - (this.state.lastAppearIndex + this.state.lastDisappearIndex )) * 200}
-                    delay={Math.abs(index - (((this.state.isScrollDown ? 1 : -1) * (this.state.lastAppearIndex - this.state.lastDisappearIndex) > 0) ? this.state.lastAppearIndex : this.state.lastDisappearIndex)) * 50}
-                    animateOnce={false}
+                    animateIn={this.state.isScrollDown ? "fadeInUpBig" : "fadeInDownBig"}
+                    animateOut={this.state.isScrollDown ? "fadeOutUpBig" : "fadeOutDownBig"}
+                    // animateIn={"fadeInRight"}                    
+                    delay={Math.abs(index - (((this.state.isScrollDown ? 1 : -1) * (this.state.lastAppearIndex - this.state.lastDisappearIndex) > 0) ? this.state.lastAppearIndex : this.state.lastDisappearIndex)) * 40}
+                    animateOnce={true}
                     afterAnimatedIn={() => {
                       this.setState({ lastAppearIndex: index });
                       console.log("lastAppearIndex:", this.state.lastAppearIndex);
@@ -167,18 +188,21 @@ class IndexPage extends React.Component {
                       this.setState({ lastDisappearIndex: index });
                       console.log("lastDisappearIndex:", this.state.lastDisappearIndex);
                     }}
+                    
                   >
-                    <Work data={staticdata.works[name]} fromList="selected" /> 
+                    {/* <div className="hoverTrigger" > */}
+                      <Work onHoverHandler={this.handleHover} index={index} data={staticdata.works[name]} fromList="selected" />
+                    {/* </div> */}
                     {/* <p>{index}</p> */}
                   </ScrollAnimation>
                 )}
               </div>
-            </div>
+            // </div>
           }
         </div>
       </Loader>
-  )
+    )
   }
-} 
+}
 
 export default IndexPage
