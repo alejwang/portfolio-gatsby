@@ -1,8 +1,8 @@
 {
     "cats": {
-        "selected":["si-hunt", "alipay", "sketch-clip", "tide-mobile", "smartpill", "inforest", "edge-shelter"],
-        "story":["alipay"],
-        "ux":["si-hunt", "sketch-clip", "tide-mobile", "smartpill"],
+        "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "smartpill", "inforest", "edge-shelter"],
+        "mobile":["alipay", "si-hunt", "tide-mobile", "smartpill"],
+        "web":["sketch-clip"],
         "arch":["inforest", "edge-shelter"]
     },
     "works": {
@@ -11,20 +11,20 @@
             "id": "si-hunt",
             "gradient_start": "#032859",
             "gradient_end": "#16319D",
-            "subtitle": "Next to LBS educational social",
+            "subtitle": "Event and place discovery using ARKit",
             "text": "Discovery app agile development for U of Mich freshmen", 
             "year": 2019,
-            "cat": "ux"
+            "cat": "mobile"
         },
         "alipay": {
-            "title": "Ant Finanial",
+            "title": "Alipay",
             "id": "alipay",
             "gradient_start": "#153c88",
             "gradient_end": "#3068e8",
-            "subtitle": "Mobile payments in the city service era - what I learned from working for Alipay in Ant Financial.",
+            "subtitle": "Mobile payments and city service - works in Ant Financial, a TechFin company",
             "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
             "year": 2018,
-            "cat": "story"
+            "cat": "mobile"
         },
         "sketch-clip": {
             "title": "Sketch Clip",
@@ -32,47 +32,48 @@
             "id": "sketch-clip",
             "gradient_start": "#1929E4",
             "gradient_end": "#FF8029",
-            "subtitle": "Next to lazy designers",
+            "subtitle": "Version control tool for Sketch designers",
             "text": "What will Git for Designer look like... What? OK... You don't know Git...",
             "year": 2018,
-            "cat": "ux"
+            "cat": "web"
         },
         "tide-mobile": {
-            "title": "Tide Mobile",
+            "title": "Tide Mobile 3.0",
             "id": "tide-mobile",
             "gradient_start": "#E77826",
             "gradient_end": "#F6C38F",
-            "subtitle": "Next to campus lifestyle",
+            "subtitle": "Everyday calendar for college students",
             "text": "Redefine how college students gath information and have fun, accessible for everyone in one touch",
             "year": 2017,
-            "cat": "ux"
+            "cat": "mobile",
+            "usingVideoAsCover": true
         },
         "smartpill": {
-            "title": "SmartPill",
+            "title": "DocPill",
             "id": "smartpill",
-            "gradient_start": "#0C9D6A",
+            "gradient_start": "#102B21",
             "gradient_end": "#3BD3AF",
-            "subtitle": "Next to pharmacy business mode",
+            "subtitle": "Pharmacy business bound to IoT",
             "text": "Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways",
             "year": 2016,
-            "cat": "ux"
+            "cat": "mobile"
         },
         "inforest": {
-            "title": "InForest",
+            "title": "InForest Place",
             "id": "inforest",
             "gradient_start": "#365B41",
             "gradient_end": "#596235",
-            "subtitle": "Next to non-touch interaction",
+            "subtitle": "Invoke deep dreams of forest in city mist by a heart travel",
             "text": "Invoke deep dreams of forest in heavy city mist by a beatiful heart travel",
             "year": 2016,
             "cat": "arch"
         },
         "edge-shelter": {
-            "title": "Edge Shelter",
+            "title": "The Edge Shelter For Animals",
             "id": "edge-shelter",
             "gradient_start": "#AFC6DC",
             "gradient_end": "#AFC6DC",
-            "subtitle": "Next to homeless animals",
+            "subtitle": "Product design for homeless animals",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2015,
             "cat": "arch"
@@ -86,7 +87,7 @@
             "subtitle": "Next to intro coding education",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2016,
-            "cat": "story"
+            "cat": "web"
         },
         "civicrm-nz": {
             "title": "CiviCRM-nz",
@@ -96,7 +97,7 @@
             "subtitle": "Next to intro coding education",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2017,
-            "cat": "story"
+            "cat": "web"
         }
     }
 }

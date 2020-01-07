@@ -7,14 +7,32 @@ html {
 
 body {
   margin: 0;
-  background-color: #000;
+  background-color: #16171B;
   font-size: 100%;
 }
+
 
 @media (max-width: 768px) {
   * {
     font-size: 100%;
   }
+}
+
+/* ------ scroll bar ------ */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: none;
+  border-left: dotted 2px #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+  border-left: solid 2px #999;
 }
 
 /* ------ text ------ */
@@ -29,7 +47,7 @@ p {
 a {
   /* background-color: transparent; */
   /* -webkit-text-decoration-skip: objects; */
-  color: #ED9849;
+  color: #eee;
   font-weight: 400;
   text-decoration: none;
 }
@@ -37,7 +55,7 @@ a:active,
 a:hover {
   outline-width: 0;
   /* color: black; */
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
   /* background: #ED9849; */
 
 }

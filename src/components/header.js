@@ -37,18 +37,17 @@ class Header extends React.Component {
     return (
       <header className={this.state.isScrolled ? 'HeaderScrolled' : 'Header'}>
         <div className={this.state.isExpanded ? 'HeaderGroup Expanded' : 'HeaderGroup'}>
-          <div className="blurrer"></div>
+          {/* <div className="blurrer"></div> */}
           <div className="Logo">
-            <AniLink cover to="/" direction="down" bg="#111"><img width="48" height="48" src={require('../images/aw-logo-black-6x.png')} alt="Logo"/></AniLink>
-            <AniLink cover to="/" direction="down" bg="#111" className="LogoText">zander.wang</AniLink>
+            <AniLink cover to="/" direction="down" bg="#111"><img width="18" height="20" src={require('../images/logo.png')} alt="Logo"/></AniLink>
+            <AniLink cover to="/" direction="down" bg="#111" className="LogoText">Zander Wang</AniLink>
           </div>
-          <div className="Links">
-            <AniLink cover to="/works" direction="down" bg="#111">work.</AniLink>
-            {/* <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink> */}
-            <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
+          {/* <div className="Links">
+            <AniLink cover to="/works" direction="down" bg="#111">Project</AniLink>
+            <AniLink cover to="/about" direction="down" bg="#111">About</AniLink>
             <img className={this.state.isExpanded ? 'MenuIcon Hidden' : 'MenuIcon'} onClick={this.openExpand} src={require('../images/header-menu.svg')} alt="Open Menu"/>
             <img className={this.state.isExpanded ? 'MenuIcon' : 'MenuIcon Hidden'} onClick={this.closeExpand} src={require('../images/header-cross.svg')} alt="Close Menu"/>
-          </div>
+          </div> */}
         </div>
         <div className={this.state.isExpanded ? 'HeaderExpanded' : 'HeaderExpanded Hidden'} onClick={this.closeExpand} >
             <AniLink cover to="/" direction="down" bg="#111">home.</AniLink>
