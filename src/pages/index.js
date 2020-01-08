@@ -23,10 +23,11 @@ const Landing = styled.div`
     margin: 0;
     padding: 36px; 
 
-    transition: 0.4s;
+    transition: 0.5s;
+    will-change: opacity, top;
     opacity: ${props => props.isScrolled ? "0" : "1"};
     pointer-events: ${props => props.isScrolled ? "none" : "auto"};
-    transform: ${props => props.isScrolled ? "translateY(-30vh)" : "none"};
+    top: ${props => props.isScrolled ? "-20vh" : "0"};
 
     @media (max-width: 768px) {
       padding: 18px;
@@ -71,7 +72,8 @@ const BigText = styled.img`
     left: 0;
     width: 102%;
     opacity: 0.75;
-    animation: goaround 30s infinite linear;
+    animation: goaround 60s infinite linear;
+    animation-play-state: ${props => props.isScrolled ? "paused" : "running"};
 
     @keyframes goaround {
       0% {
@@ -115,24 +117,6 @@ const ScrollIndicator = styled.p`
     @media (max-width: 768px) {
       padding-left: 18px;
       opacity: 0.8;
-    }
-`
-
-const Secondary = styled.span`
-    margin: 0.5em 0 0 0;
-    padding: 0;
-    font-size: 1em; 
-    font-weight: 400;
-    color: #888;
-    background: none;
-    display: block;
-    @media (max-width: 1224px)  {
-      font-size: 1em; 
-    }
-    @media (max-width: 768px) {
-      font-size: 1em; 
-      margin: 0.8em 0 0 0;
-      background: none;
     }
 `
 
@@ -334,8 +318,8 @@ class IndexPage extends React.Component {
             {/* TODO: RESUME */}
           </MyInfo>
           <ScrollIndicator>Scroll down to see my projects</ScrollIndicator>
-          <BigText src={require("../images/big-text.svg")} />
-          <BigText2 src={require("../images/big-text.svg")} />
+          <BigText isScrolled={isScrolled} src={require("../images/big-text.svg")} />
+          <BigText2 isScrolled={isScrolled} src={require("../images/big-text.svg")} />
         </Landing>
         <Blurrer isScrolled={isScrolled}/>
         <HeaderSecondary isScrolled={isScrolled}>

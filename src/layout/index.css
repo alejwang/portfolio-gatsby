@@ -12,7 +12,7 @@ body {
 }
 
 .tl-edges {
-  overflow-x: visible;
+  overflow: visible;
 }
 
 @media (max-width: 768px) {
@@ -23,20 +23,26 @@ body {
 
 /* ------ scroll bar ------ */
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px;
+  -webkit-appearance: none;
   background: none;
   border-left: dotted 2px #222;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background: none;
   border-left: solid 2px #999;
 }
+
+::-webkit-scrollbar-thumb {
+  background: none;
+  border-left: solid 2px white;
+} */
 
 /* ------ text ------ */
 

@@ -33,15 +33,15 @@ header {
     padding: 0;
     overflow: hidden;
     transition: 1s;
+    opacity: 1;
 }
 
 .HeaderScrolled .Expanded .LogoText {
-    width: 200px;
+    opacity: 1;
 }
 
 .HeaderScrolled .LogoText {
-    width: 0;
-    padding: 0;
+    opacity: 0;
 }
 
 
