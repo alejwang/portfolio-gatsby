@@ -66,28 +66,7 @@ const MyInfo = styled.p`
     }
 `
 
-const BigText = styled.img`
-    position: absolute;
-    bottom: -4vw;
-    left: 0;
-    width: 102%;
-    opacity: 0.75;
-    animation: goaround 60s infinite linear;
-    animation-play-state: ${props => props.isScrolled ? "paused" : "running"};
 
-    @keyframes goaround {
-      0% {
-        left: 0;
-      }
-      100% {
-        left: -102%;
-      }
-    }
-`
-
-const BigText2 = styled(BigText)`
-    margin-left: 102%;
-`
 
 const ScrollIndicator = styled.p`
     position: absolute;
@@ -145,7 +124,7 @@ const Grid = styled.div`
 
 const Preloader = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: black url(${require("../images/logo-preload.svg")}) no-repeat fixed center;
   position: fixed;
   z-index: 2000;
@@ -159,7 +138,7 @@ const Preloader = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background: black url(${require("../images/logo-preload-finish.svg")}) no-repeat fixed center;
+    background: url(${require("../images/logo-preload-finish.svg")}) no-repeat fixed center;
     position: fixed;
     z-index: 3000;
 
@@ -187,7 +166,7 @@ const HeaderSecondary = styled.div`
   @media (max-width: 768px) {
     padding: 18px;
     text-align: right;
-    margin-bottom: 40vh;
+    margin-bottom: 20vh;
     background: rgba(22, 23, 27, 0.5);
   }
 `
@@ -215,6 +194,7 @@ const ViewBy = styled.div`
   width: calc(16.6% - 42px);
   color: #888;
   padding-left:36px;
+  font-size: 0.85em;
   line-height: 1.6em;
 
   transition: 0.4s opacity;
@@ -310,7 +290,9 @@ class IndexPage extends React.Component {
     return (
       
       <Loader>
-        <Preloader isMounted={isMounted}/>
+        <Preloader isMounted={isMounted}>
+          <ScrollIndicator>Loading resources</ScrollIndicator>
+        </Preloader>
         <Landing isScrolled={isScrolled}>
           <MyInfo>
             I am a new grad UX designer + engineer crafting engaging design, elegant solutions & playful enjoyments. Past stints include CRN, Ant Financial, QSC & Zhimou Tech. Currently, I work for myself. <br/><br/>
@@ -318,8 +300,7 @@ class IndexPage extends React.Component {
             {/* TODO: RESUME */}
           </MyInfo>
           <ScrollIndicator>Scroll down to see my projects</ScrollIndicator>
-          <BigText isScrolled={isScrolled} src={require("../images/big-text.svg")} />
-          <BigText2 isScrolled={isScrolled} src={require("../images/big-text.svg")} />
+          
         </Landing>
         <Blurrer isScrolled={isScrolled}/>
         <HeaderSecondary isScrolled={isScrolled}>

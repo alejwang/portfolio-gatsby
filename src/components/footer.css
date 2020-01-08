@@ -1,11 +1,13 @@
 footer {
     width: 100%;
     box-sizing: border-box;
-    margin: 0;
-    height: 100px;
+    height: 240px;
     padding: 36px;
     z-index: 1000;
     position: relative;
+    overflow: hidden;
+
+    border-top: solid 1px rgba(255,255,255,0.1);
 
     display: -webkit-box;
     display: -moz-box;
@@ -15,7 +17,7 @@ footer {
 
     -webkit-flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     background-color: transparent;
 }
@@ -24,6 +26,7 @@ footer {
     color: #333;
     font-size: 1em;
     font-weight: 400;
+    margin: 0;
 }
 
 .PersonalLinks {
@@ -33,7 +36,7 @@ footer {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-flow: row wrap;
 }
 
@@ -55,5 +58,7 @@ footer {
 @media (max-width: 768px) {
     footer {
         padding: 18px;
+        height: 120px;
+        border-top: none;
     }
 }
