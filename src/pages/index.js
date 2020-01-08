@@ -127,7 +127,7 @@ const Preloader = styled.div`
   height: 100vh;
   background: black url(${require("../images/logo-preload.svg")}) no-repeat fixed center;
   position: fixed;
-  z-index: 2000;
+  z-index: 9999;
   pointer-events: none;
 
   transition: 0.4s 1s;
