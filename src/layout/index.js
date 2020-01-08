@@ -6,9 +6,6 @@ import './normalize.css'
 import './index.css'
 import './fonts.css'
 
-import FontUrl1 from "../fonts/AktivGrotesk-Medium.otf"
-import FontUrl2 from "../fonts/AktivGrotesk-Bold.otf"
-
 
 
 const Layout = ({ children }) => (
@@ -16,20 +13,10 @@ const Layout = ({ children }) => (
    <Helmet
       title="zander.wang"
       meta={[
-        { name: 'description', content: 'Zander Zhen Wang Portfolio' },
+        { name: 'description', content: 'Zander Wang Portfolio' },
         { name: 'keywords', content: 'UX Designer Engineer Design Portfolio UMSI GoBlue' }
       ]}
     >
-      <link rel="preload"
-            as="font"
-            href={FontUrl1}
-            type="font/opentype"
-            crossOrigin="anonymous" />
-      <link rel="preload"
-            as="font"
-            href={FontUrl2}
-            type="font/opentype"
-            crossOrigin="anonymous" />
     </Helmet>
     <Header/>
     {children}

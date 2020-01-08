@@ -2,49 +2,89 @@ import React from 'react'
 import Work from '../components/work'
 import staticdata from '../staticdata.json'
 import styled from 'styled-components'
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import resumePdf from "../files/Zander_Wang_Resume.pdf"
 
+
+
+const Loader = styled.div`
+  background: #16171B;
+  position: relative;
+`
 
 const Landing = styled.div`
     display: block;
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     min-height: 500px;
     margin: 0;
     padding: 36px; 
-    background: rgba(255, 255, 255, 0.05);
+
+    transition: 0.4s;
+    opacity: ${props => props.isScrolled ? "0" : "1"};
+    pointer-events: ${props => props.isScrolled ? "none" : "auto"};
+    transform: ${props => props.isScrolled ? "translateY(-30vh)" : "none"};
+
+    @media (max-width: 768px) {
+      padding: 18px;
+      margin-bottom: 5px;
+    }
+`
+
+const Blurrer = styled.div`
+    display: block;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0.6) 100%);
+
+    transition: 1s linear;
+    opacity: ${props => props.isScrolled ? "0" : "1"};
+    pointer-events: ${props => props.isScrolled ? "none" : "auto"};
 `
 
 const MyInfo = styled.p`
     position: relative;
     padding-left: calc(50% + 18px);
     margin: 0;
+    
     font-weight: 400;
     font-size: 1em; 
     line-height: 1.5;
     letter-spacing: 0.1px;
-
     color: #888;
-
-    @media (max-width: 1224px)  {
-      font-size: 1.2em; 
-    }
 
     @media (max-width: 768px) {
         padding-left: 0;
-        margin-top: 100px;
+        margin-top: 64px;
     }
 `
 
 const BigText = styled.img`
     position: absolute;
-    bottom: 0;
-    left: -5px;
+    bottom: -4vw;
+    left: 0;
     width: 102%;
     opacity: 0.75;
+    animation: goaround 30s infinite linear;
+
+    @keyframes goaround {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -102%;
+      }
+    }
+`
+
+const BigText2 = styled(BigText)`
+    margin-left: 102%;
 `
 
 const ScrollIndicator = styled.p`
@@ -71,6 +111,11 @@ const ScrollIndicator = styled.p`
       margin-left: 10px;
       border-top: 1px solid white;
     }
+
+    @media (max-width: 768px) {
+      padding-left: 18px;
+      opacity: 0.8;
+    }
 `
 
 const Secondary = styled.span`
@@ -91,39 +136,9 @@ const Secondary = styled.span`
     }
 `
 
-const Loader = styled.div`
-  &:empty {
-    position: absolute;
-    top: calc(50% - 4em);
-    left: calc(50% - 4em);
-    width: 6em;
-    height: 6em;
-    border: 1.1em solid rgba(0, 0, 0, 0.2);
-    border-left: 1.1em solid #000000;
-    border-radius: 50%;
-  }
-`
-
-const Image = styled.img`
-  width: 50vw;
-  // max-width: 1600px;
-  height: auto;
-  margin: 0 auto;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  box-sizing: border-box;
-  display:block;
-  overflow:auto;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`
-
 const Grid = styled.div`
   width: 100%;
-  padding: 18px;
-  margin-bottom: 200px;
+  padding: 18px 18px 120px 18px;
   box-sizing: border-box;
 
   display: flex;
@@ -131,8 +146,122 @@ const Grid = styled.div`
   justify-content: space-between;
   align-content: flex-start;
 
+  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.2s cubic-bezier(0.23, 1, 0.32, 1)" };
+  -webkit-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
+  -o-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
+  -moz-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
+  -ms-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
+  filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
+  transform: ${props => props.isScrolled ? "scale3d(1,1,1) translate3d(0px, 0px, 0px)" : "scale3d(0.9, 0.9, 0.9) translate3d(0px, 150px, 0px)"};;
+
   @media (max-width:768px) {
     padding: 0;
+  }
+`
+
+const Preloader = styled.div`
+  width: 100%;
+  height: 100%;
+  background: black url(${require("../images/logo-preload.svg")}) no-repeat fixed center;
+  position: fixed;
+  z-index: 2000;
+  pointer-events: none;
+
+  transition: 0.4s 1s;
+  opacity: ${props => props.isMounted ? "0" : "1" };
+
+  &:before {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: black url(${require("../images/logo-preload-finish.svg")}) no-repeat fixed center;
+    position: fixed;
+    z-index: 3000;
+
+    transition: 1s cubic-bezier(0.86, 0, 0.07, 1);
+    height: ${props => props.isMounted ? "calc(50vh + 120px)" : "calc(50vh - 120px)" };
+  }
+`
+
+const HeaderSecondary = styled.div`
+  display: block;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 500;
+  padding: 36px 36px 36px calc(16.6% + 30px);
+  margin: 0 0 30vh 0;
+
+
+  transition: 0.4s opacity;
+  opacity: ${props => props.isScrolled ? "1" : "0"};
+
+  @media (max-width: 1600px) {
+    padding: 36px 36px 36px calc(25% + 27px);
+  }
+  @media (max-width: 768px) {
+    padding: 18px;
+    text-align: right;
+    margin-bottom: 40vh;
+    background: rgba(22, 23, 27, 0.5);
+  }
+`
+
+const Nav = styled.p`
+  display: inline-block;
+  margin: 0;
+  padding-right: 16px;
+  line-height: 1em;
+
+  a {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #eee;
+  } 
+
+  @media (max-width: 768px) {
+    padding: 0 0 0 16px;
+  }
+`
+
+const ViewBy = styled.div`
+  display: inline-block;
+  width: calc(16.6% - 42px);
+  color: #888;
+  padding-left:36px;
+  line-height: 1.6em;
+
+  transition: 0.4s opacity;
+  opacity: ${props => props.isScrolled ? "1" : "0.1"};
+
+  @media (max-width: 1600px) {
+    width: calc(25% - 45px);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding:18px;
+    & + & {
+      padding-bottom: 36px;
+    }
+  }
+`
+
+const Option = styled.p`
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  line-height: 1em;
+
+  &:after {
+    content: "/";
+    padding: 0 8px;
+  }
+
+  &:last-child:after {
+    content: "";
   }
 `
 
@@ -160,7 +289,7 @@ class IndexPage extends React.Component {
     const offsetY = window.pageYOffset;
     const isScrollDown = offsetY >= prevOffsetY;
 
-    if (offsetY > 5) {
+    if (offsetY > 20) {
       this.setState({
         isScrolled: true,
         prevOffsetY: offsetY,
@@ -173,7 +302,7 @@ class IndexPage extends React.Component {
         isScrollDown
       })
     }
-    // console.log(offsetY, prevOffsetY, isScrollDown);
+    console.log(offsetY, prevOffsetY, isScrollDown);
   }
 
   // handleHover = (index) => {
@@ -183,16 +312,7 @@ class IndexPage extends React.Component {
   // }
 
   componentDidMount() {
-    // window.addEventListener('scroll', this.handleScroll);
-    // this.effect = window.VANTA.FOG({
-    //   el: '#background',
-    //   highlightColor: 0x3446ca,
-    //   midtoneColor: 0x54bcdc,
-    //   lowlightColor: 0xf09f2d,
-    //   baseColor: 0xeb7ba9,
-    //   speed: 1.40,
-    //   zoom: 0.40
-    // });
+    window.addEventListener('scroll', this.handleScroll);
     asyncCall().then(() => this.setState({ isMounted: true }));
   }
 
@@ -201,32 +321,45 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    const { isMounted } = this.state;
+    const { isMounted, isScrolled } = this.state;
 
     return (
+      
       <Loader>
-          {/* {isMounted ? <Secondary>Check my recent works below <span role="img" aria-label="look down">👇</span></Secondary> : <Secondary>Loading... <span role="img" aria-label="yeah">✨</span></Secondary>} */}
-        <Landing>
+        <Preloader isMounted={isMounted}/>
+        <Landing isScrolled={isScrolled}>
           <MyInfo>
-            I am a newgrad UX designer + engineer crafting engaging design, elegant solutions & playful enjoyments. Past stints include CRN, Ant Financial, QSC & Zhimou Tech. Currently I work for myself. <br/><br/>
-            Besides work, you may find me writing, grazing at bubble tea shops, and acting stupid. If you want to tell your story or hear some of mine, don’t hesitate to find me via <a href="mailto:me@zander.wang?Subject=Hello%20Zander" target="_top">Email</a>, <a href="https://www.instagram.com/alejwang/" target="_top">Instagram</a> or <a href="https://www.linkedin.com/in/alejwang/">LinkedIn</a>. Alternatively, click to get my resume.
+            I am a new grad UX designer + engineer crafting engaging design, elegant solutions & playful enjoyments. Past stints include CRN, Ant Financial, QSC & Zhimou Tech. Currently, I work for myself. <br/><br/>
+            Besides work, you may find me writing, grazing at bubble tea shops, and acting stupid. If you want to tell your story or hear some of mine, don’t hesitate to find me via <a href="mailto:me@zander.wang?Subject=Hello%20Zander" target="_top">Email</a>, <a href="https://www.instagram.com/alejwang/" target="_top">Instagram</a> or <a href="https://www.linkedin.com/in/alejwang/">LinkedIn</a>. Alternatively, click to <a href={resumePdf}>get my resume</a>.
             {/* TODO: RESUME */}
           </MyInfo>
           <ScrollIndicator>Scroll down to see my projects</ScrollIndicator>
           <BigText src={require("../images/big-text.svg")} />
+          <BigText2 src={require("../images/big-text.svg")} />
         </Landing>
-
-        {isMounted &&
-          // <div className={this.state.isScrolled ? 'containerGroup' : 'containerGroup containerGroupDeactivated'}>
-          <Grid>
-            {staticdata.cats.selected.map((name, index) =>
-              <Work onHoverHandler={this.handleHover} index={index} data={staticdata.works[name]} fromList="selected" />
-            )}
-          </Grid>
-          // </div>
-        }
-
-      </Loader >
+        <Blurrer isScrolled={isScrolled}/>
+        <HeaderSecondary isScrolled={isScrolled}>
+          <Nav><AniLink cover to="/about" direction="down" bg="#111">About</AniLink></Nav>
+          <Nav><a href={resumePdf}>Resume</a></Nav>
+        </HeaderSecondary>
+        <ViewBy isScrolled={isScrolled}>
+          View: <br/>  
+          <Option>Selected</Option>
+          <Option>All</Option>
+        </ViewBy>
+        <ViewBy isScrolled={isScrolled}>
+          Filtered By: <br/>  
+          <Option>All</Option>
+          <Option>Web</Option>
+          <Option>Mobile</Option>
+          <Option>Arch</Option>
+        </ViewBy>
+        <Grid isScrolled={isScrolled}>
+          {staticdata.cats.selected.map((name, index) =>
+            <Work onHoverHandler={this.handleHover} index={index} data={staticdata.works[name]} fromList="selected" />
+          )}
+        </Grid>
+      </Loader>
     )
   }
 }

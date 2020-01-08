@@ -2,15 +2,18 @@ html {
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #111;
+  background-color: #000;
 }
 
 body {
   margin: 0;
-  background-color: #16171B;
+  /* background-color: #16171B; */
   font-size: 100%;
 }
 
+.tl-edges {
+  overflow-x: visible;
+}
 
 @media (max-width: 768px) {
   * {

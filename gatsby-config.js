@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'alejandro.wang',
-    description: 'meet alejandro wang - ux designer/engineer',
+    title: 'Zander Wang',
+    description: 'Meet Zander Wang - UX designer/engineer',
   },
   plugins: [
     'gatsby-plugin-ngrok-tunneling',
@@ -38,15 +38,5 @@ module.exports = {
         layout: require.resolve(`./src/layout`),
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-nprogress`,
-    //   options: {
-    //     // Setting a color is optional.
-    //     color: `tomato`,
-    //     // Disable the loading spinner.
-    //     showSpinner: false,
-    //   },
-    // }
-    // 'gatsby-plugin-transition-link',
   ],
 }

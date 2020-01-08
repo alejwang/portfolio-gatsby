@@ -18,7 +18,7 @@ class Header extends React.Component {
   handleScroll = (event) => {
     const offsetY = window.pageYOffset
 
-    if (offsetY > 50) {
+    if (offsetY > 20) {
       this.setState({ isScrolled: true })
     } else {
       this.setState({ isScrolled: false })
@@ -43,8 +43,8 @@ class Header extends React.Component {
             <AniLink cover to="/" direction="down" bg="#111" className="LogoText">Zander Wang</AniLink>
           </div>
           {/* <div className="Links">
-            <AniLink cover to="/works" direction="down" bg="#111">Project</AniLink>
             <AniLink cover to="/about" direction="down" bg="#111">About</AniLink>
+            <AniLink cover to="/works" direction="down" bg="#111">Resume</AniLink>
             <img className={this.state.isExpanded ? 'MenuIcon Hidden' : 'MenuIcon'} onClick={this.openExpand} src={require('../images/header-menu.svg')} alt="Open Menu"/>
             <img className={this.state.isExpanded ? 'MenuIcon' : 'MenuIcon Hidden'} onClick={this.closeExpand} src={require('../images/header-cross.svg')} alt="Close Menu"/>
           </div> */}

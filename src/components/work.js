@@ -32,8 +32,9 @@ const Info = styled.div`
 
     @media (max-width: 768px) {
         position: absolute;
-        bottom: 16px;
-        left: 12px;
+        padding: 18px;
+        bottom: 0;
+        left: 0;
         z-index: 1000;
     }
 `
@@ -77,7 +78,7 @@ const Icon = styled.img`
     opacity: 0.1;
 
     ${WorkCardGroup}:hover & {
-        opacity: 0.3;
+        opacity: 0.2;
     }
 `
 
@@ -106,14 +107,18 @@ const Image = styled.img`
     background-size:1px 300%;  
 
 
-    -webkit-filter: grayscale(50%);
-    -moz-filter: grayscale(50%);
-    -ms-filter: grayscale(50%);
-    -o-filter: grayscale(50%);
-    filter: grayscale(50%);
-    transition: 0.3s;
+    -webkit-filter: grayscale(25%);
+    -moz-filter: grayscale(25%);
+    -ms-filter: grayscale(25%);
+    -o-filter: grayscale(25%);
+    filter: grayscale(25%);
+    transition: 0.2s;
 
     @media (max-width: 768px) {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        -o-filter: none;
         filter: none;
         background-position: 300%;  
     }
@@ -133,12 +138,12 @@ const Video = styled.video`
     margin: 0;
     padding: 0;
 
-    -webkit-filter: grayscale(75%);
-    -moz-filter: grayscale(75%);
-    -ms-filter: grayscale(75%);
-    -o-filter: grayscale(75%);
-    filter: grayscale(75%);
-    transition: filter 0.3s;
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+    filter: grayscale(50%);
+    transition: filter 0.2s;
 
     @media (max-width: 768px) {
         filter: none;

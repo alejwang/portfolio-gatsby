@@ -77,7 +77,6 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.h2`
-  // display: block;
   display: none;
   @media (max-width: 768px) {
     display: none;
@@ -89,8 +88,9 @@ const WorkPage = props => (
       <Helmet title= {"zander.wang - " + staticdata.works[props.id].title} />
       <BannerGroup image={require("../images/"+props.id+"-cover.png")} gradient_start={staticdata.works[props.id].gradient_start} gradient_end={staticdata.works[props.id].gradient_end}>
         <TitleGroup>
-          <Title>{staticdata.works[props.id].title}</Title>
           <Subtitle>{staticdata.works[props.id].cat}</Subtitle>
+
+          <Title>{staticdata.works[props.id].title}</Title>
         </TitleGroup>
       </BannerGroup>
       {props.children}

@@ -3,13 +3,12 @@ header {
     width: 100%;
     box-sizing: border-box;
     height: 36px;
-    z-index: 100;
+    z-index: 10;
 }
 
 .HeaderGroup {
     width: 100%;
-    padding: 36px;
-    height: 20px;
+    padding: 18px;
     margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
@@ -18,36 +17,15 @@ header {
     display: flex;
     z-index: 1000;
     
+    pointer-events: none;
     -webkit-flex-flow: row wrap;
     /* justify-content: space-between; */
     align-items: center;
 
 }
 
-
-.blurrer {
-    height: 150px;
-    top: -30px;
-    left: -30px;
-    right: -30px;
-    position: absolute;
-    /* overflow: hidden; */
-    /* -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -o-filter: blur(20px);
-    -ms-filter: blur(20px); */
-    z-index: -500;
-    /* background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 80%); */
-    background-size: cover;
-    opacity: 0;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
-}
-
-
 .HeaderScrolled .blurrer{
     opacity: 1;
-    
 }
 
 .LogoText {
@@ -68,6 +46,10 @@ header {
 
 
 .Logo {
+    /* width: 25%; */
+    box-sizing: border-box;
+    padding: 18px;
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -83,31 +65,36 @@ header {
     display: inline-block;
     padding-right: 12px;
     font-weight: 700;
+    line-height: 20px;
     letter-spacing: 0.1px;
     color: white;
     white-space: nowrap;
+    pointer-events: auto;
 }
 
 .Links {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 18px;
+
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-flow: row wrap;
 }
 
 .Links a {
-    display: block;
-    padding-left: 2em;
-    color: white;
-    opacity: 0.6;
-    
-    /* font-family: 'DIN'; */
-    font-weight: 400;
-    letter-spacing: 1px;
+    display: inline-block;
+    padding-right: 20px;
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
 }
 
 .MenuIcon {
@@ -129,17 +116,17 @@ header {
 
 
 @media (max-width: 768px) {
-    header {
+    /* header {
         height: 75px;
+    } */
+    .Logo {
+        padding: 0;
     }
-    .Logo a {
-        padding-right: 0;
-    }
-    .Logo a img {
+    /* .Logo a img {
         height: 32px;
         width: 32px;
         margin-right: 16px;
-    }
+    } */
     .Links a{
         display: none;
     }
