@@ -147,11 +147,9 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  width: 200%;
-  border-top: 2px solid #fff;
-  opacity: 0.15;
-  /* margin-left: calc(5% + 48px + 2em); */
-  /* overflow: auto; */
+  width: 100%;
+  border-top: 1px solid #333;
+  overflow-x: hidden;
 }
 
 @media (max-width: 720px) {
@@ -173,7 +171,7 @@ hr {
 .container {
   width: 100%;
   min-height: 100vh;
-  padding: 100px 0 480px 0;
+  padding: 100px 0 100px 0;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -183,10 +181,10 @@ hr {
   width: 90%;
   position: relative;
   z-index: 1;
-  max-width: 1600px;
+  max-width: 1000px;
   min-height: 150px;
   margin: 0 auto;
-  padding: 50px 0 0 calc(48px + 2em);
+  padding: 50px 0 0 0;
   box-sizing: border-box;
   /* padding: calc(100px + 22vh) 0 0 0; */
   /* text-align: center; */
@@ -201,10 +199,10 @@ hr {
 
 .containerGroupShort {
   width: 90%;
-  max-width: 1600px;
+  max-width: 1000px;
   min-height: 150px;
   margin: 0 auto;
-  padding: calc(100px + 10vh) 0 0 calc(48px + 2em);
+  padding: calc(100px + 10vh) 0 0 0;
   box-sizing: border-box;
 }
 

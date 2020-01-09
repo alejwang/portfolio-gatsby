@@ -104,8 +104,7 @@ const TideMobile = ({ location }) => (
     <hr/>
     <Section>
       <ChapterTitle>design thinking</ChapterTitle>
-      <SectionTitle>Our goal is to redefine the "easy + joyful" experience on Mobile. <br/> 
-      "Easy" is designing for situations and tasks to let users gather information quickly and "joyful" is a sense of surprise.</SectionTitle>
+      <SectionTitle>Our goal is to redefine the easy and joyful experience on Tide Mobile. "Easy" is designing for situations and tasks to let users gather information quickly and "Joyful" is a sense of surprise.</SectionTitle>
     </Section>
 
     <Image src={require("../images/tide-mobile-scenario.png")} /> 
@@ -138,8 +137,8 @@ const TideMobile = ({ location }) => (
     
     <Section>
       <ChapterTitle>after release</ChapterTitle>
-      <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. <br/>
-        We feel very proud to help almost 61% undergraduate student at Zhejiang University to have an easy and joyful life. <br/>
+      <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. 
+        We feel very proud to help almost 61% undergraduate student at Zhejiang University to have an easy and joyful life. 
         Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">></span></a>.</SectionTitle>
     </Section>
 

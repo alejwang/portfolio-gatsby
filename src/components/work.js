@@ -9,8 +9,11 @@ const WorkCardGroup = styled.div`
     max-width: 33.3%;
     box-sizing: border-box;
     padding: 18px;
-    cursor: pointer;
     position: relative;
+
+    cursor:  ${props => props.isClickable ? "pointer" : "auto"};
+    pointer-events:  ${props => props.isClickable ? "auto" : "none"};   
+    opacity: ${props => props.isClickable ? "1" : "0.25"};
 
     @media (max-width: 1600px) {
         flex: 0 1 50%;
@@ -106,20 +109,9 @@ const Image = styled.img`
     background: linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
     background-size:1px 300%;  
 
-
-    // -webkit-filter: grayscale(25%);
-    // -moz-filter: grayscale(25%);
-    // -ms-filter: grayscale(25%);
-    // -o-filter: grayscale(25%);
-    // filter: grayscale(25%);
     transition: 0.2s;
 
     @media (max-width: 768px) {
-        // -webkit-filter: none;
-        // -moz-filter: none;
-        // -ms-filter: none;
-        // -o-filter: none;
-        // filter: none;
         background-position: 300%;  
     }
 
@@ -166,9 +158,11 @@ class Work extends React.Component {
   }
   render() {
     return (
-      <WorkCardGroup>
+      <WorkCardGroup isClickable={!this.props.data.tbd}>
+          
+
         <AniLink cover
-          to={'/' + this.props.data.id}
+          to={ this.props.data.tbd ? '#' : '/' + this.props.data.id } 
           state={{ fromList: this.props.fromList }}
           direction="down"
           bg="#111111"
@@ -179,7 +173,7 @@ class Work extends React.Component {
                 <Image src={require("../images/"+(this.props.data.id==="#"?"default":this.props.data.id)+"-cover-v5.png")} gradient_start={this.props.data.gradient_start} gradient_end={this.props.data.gradient_end} />
             }
             <Info>
-                <Title>{this.props.data.title} </Title>
+                <Title>{this.props.data.tbd && 'Coming Soon -'} {this.props.data.title} </Title>
                 <Icon src={require("../images/icons/"+(this.props.data.cat)+".png")}/>
                 <Sub>{this.props.data.subtitle}</Sub>
             </Info>

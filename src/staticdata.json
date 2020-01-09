@@ -1,11 +1,22 @@
 {
     "cats": {
-        "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "smartpill", "inforest", "edge-shelter"],
+        "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
         "mobile":["alipay", "si-hunt", "tide-mobile", "smartpill"],
         "web":["sketch-clip"],
         "arch":["inforest", "edge-shelter"]
     },
     "works": {
+        "seniortalk": {
+            "title": "SeniorTalk",
+            "id": "seniortalk",
+            "gradient_start": "#222",
+            "gradient_end": "#222",
+            "subtitle": "Learn, connect, and express your feeling",
+            "text": "...", 
+            "year": 2019,
+            "cat": "web",
+            "tbd": true
+        },
         "si-hunt": {
             "title": "SI Hunt",
             "id": "si-hunt",
@@ -90,14 +101,15 @@
             "cat": "web"
         },
         "civicrm-nz": {
-            "title": "CiviCRM-nz",
+            "title": "CIVICRM + NZ",
             "id": "civicrm-nz",
             "gradient_start": "#000",
             "gradient_end": "#000",
-            "subtitle": "Next to intro coding education",
+            "subtitle": "Teen school management and engagement",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2017,
-            "cat": "web"
+            "cat": "web",
+            "tbd": true
         }
     }
 }
