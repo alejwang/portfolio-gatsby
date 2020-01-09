@@ -71,9 +71,10 @@ const MyInfo = styled.p`
 const ScrollIndicator = styled.p`
     position: absolute;
     width: 100%;
-    bottom: 3vw;
+    bottom: 5vw;
     left: 0;
     padding: 0 36px 0 calc(50% + 54px);
+    box-sizing: border-box;
     margin: 0;
     font-weight: 400;
     font-size: 1em; 
@@ -145,29 +146,54 @@ const Preloader = styled.div`
     transition: 1s cubic-bezier(0.86, 0, 0.07, 1);
     height: ${props => props.isMounted ? "calc(50vh + 120px)" : "calc(50vh - 120px)" };
   }
+
+  @media (max-width:768px) {
+    display: none;
+  }
 `
 
 const HeaderSecondary = styled.div`
   display: block;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: calc(16.6% - 42px);
   top: 0;
   z-index: 500;
-  padding: 36px 36px 36px calc(16.6% + 30px);
-  margin: 0 0 30vh 0;
-
+  padding: 36px 0 36px calc(16.6% + 30px);
 
   transition: 0.4s opacity;
   opacity: ${props => props.isScrolled ? "1" : "0"};
 
-  @media (max-width: 1600px) {
-    padding: 36px 36px 36px calc(25% + 27px);
+  &:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    right: calc(50% - 18px);
+    bottom: 50%;
+    height: 1px;
+    vertical-align: bottom;
+    width: calc(50% - 50px);
+    border-bottom: 1px solid white;
+
+    transition: 0.4s opacity;
+    opacity: ${props => props.isScrolledAlot ? "0.2" : "0"};
   }
+
+  @media (max-width: 1600px) {
+    width: calc(25% - 45px);
+    padding: 36px 0 36px calc(25% + 27px);
+  }
+
   @media (max-width: 768px) {
+    width: 100%;
+    box-sizing: border-box;
     padding: 18px;
     text-align: right;
     margin-bottom: 20vh;
     background: rgba(22, 23, 27, 0.5);
+
+    &:before {
+      display: none;
+    }
   }
 `
 
@@ -193,7 +219,7 @@ const ViewBy = styled.div`
   display: inline-block;
   width: calc(16.6% - 42px);
   color: #888;
-  padding-left:36px;
+  padding: 300px 0 0 36px;
   font-size: 0.85em;
   line-height: 1.6em;
 
@@ -206,9 +232,9 @@ const ViewBy = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding:18px;
+    padding:300px 18px 18px 18px;
     & + & {
-      padding-bottom: 36px;
+      padding: 18px;
     }
   }
 `
@@ -239,56 +265,40 @@ class IndexPage extends React.Component {
     this.state = {
       isMounted: false,
       isScrolled: false,
-      prevOffsetY: 0,
-      isScrollDown: true,
-      lastAppearIndex: 0,
-      lastDisappearIndex: 0,
-      hoverOnIndex: -1
+      isScrolledAlot: false
     }
   }
 
   handleScroll = (event) => {
-    const { prevOffsetY } = this.state;
-
     const offsetY = window.pageYOffset;
-    const isScrollDown = offsetY >= prevOffsetY;
 
-    if (offsetY > 20) {
+    if (offsetY > 400) {
       this.setState({
         isScrolled: true,
-        prevOffsetY: offsetY,
-        isScrollDown
+        isScrolledAlot: true
+      })
+    } else if (offsetY > 10) {
+      this.setState({
+        isScrolled: true,
+        isScrolledAlot: false
       })
     } else {
       this.setState({
         isScrolled: false,
-        prevOffsetY: offsetY,
-        isScrollDown
+        isScrolledAlot: false
       })
     }
-    console.log(offsetY, prevOffsetY, isScrollDown);
   }
-
-  // handleHover = (index) => {
-  //   this.setState({ hoverOnIndex: index });
-  //   console.log('hover', index);
-  //   console.log('image', (this.state.hoverOnIndex == -1 ? "default" : staticdata.cats.selected[this.state.hoverOnIndex]) + "-cover.png");
-  // }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     asyncCall().then(() => this.setState({ isMounted: true }));
   }
 
-  componentWillUnmount() {
-    if (this.effect) this.effect.destroy()
-  }
-
   render() {
-    const { isMounted, isScrolled } = this.state;
+    const { isMounted, isScrolled, isScrolledAlot } = this.state;
 
     return (
-      
       <Loader>
         <Preloader isMounted={isMounted}>
           <ScrollIndicator>Loading resources</ScrollIndicator>
@@ -303,7 +313,7 @@ class IndexPage extends React.Component {
           
         </Landing>
         <Blurrer isScrolled={isScrolled}/>
-        <HeaderSecondary isScrolled={isScrolled}>
+        <HeaderSecondary isScrolled={isScrolled} isScrolledAlot={isScrolledAlot} >
           <Nav><AniLink cover to="/about" direction="down" bg="#111">About</AniLink></Nav>
           <Nav><a href={resumePdf}>Resume</a></Nav>
         </HeaderSecondary>

@@ -22,7 +22,7 @@
             "gradient_start": "#153c88",
             "gradient_end": "#3068e8",
             "subtitle": "Mobile payments and city service - works in Ant Financial, a TechFin company",
-            "text": "What high-level view I learned from working for Alipay in Ant Finiancial",
+            "text": "Learned from designing mobile payments and city service in Ant Finiancial",
             "year": 2018,
             "cat": "mobile"
         },
@@ -33,7 +33,7 @@
             "gradient_start": "#1929E4",
             "gradient_end": "#FF8029",
             "subtitle": "Version control tool for Sketch designers",
-            "text": "What will Git for Designer look like... What? OK... You don't know Git...",
+            "text": "What will Git for Designer look like...",
             "year": 2018,
             "cat": "web"
         },
@@ -43,7 +43,7 @@
             "gradient_start": "#E77826",
             "gradient_end": "#F6C38F",
             "subtitle": "Everyday calendar for college students",
-            "text": "Redefine how college students gath information and have fun, accessible for everyone in one touch",
+            "text": "Redefine how college students gather information and have fun, accessible for everyone in one touch",
             "year": 2017,
             "cat": "mobile",
             "usingVideoAsCover": true

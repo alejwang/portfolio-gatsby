@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const DeviceMockUpGroup = styled.div`
   width: ${props => props.macbook ? "100%" : "35%"};
   max-width: ${props => props.macbook ? "1440px" : "350px"};
-  margin: 50px 80px;
+  margin: 50px 50px;
   display: block;
   position: relative;
   @media (max-width: 768px) {

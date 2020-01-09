@@ -12,9 +12,9 @@ const workId = 'tide-mobile'
 
 export const ImageEnd = styled.img`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1200px;
   height: 80%;
-  margin: 150px auto -150px auto;
+  margin: 100px auto -100px auto;
   box-sizing: border-box;
   display:block;
   overflow:auto;

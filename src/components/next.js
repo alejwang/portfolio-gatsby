@@ -4,12 +4,10 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import staticdata from '../staticdata.json'
 
 const NextContainer = styled.div`
-  width: 90%;
-  max-width: 1600px;
-  padding-bottom: 100px;
-  margin: 0 auto;
+  width: 100%;
   box-sizing: border-box;
-  padding-left: calc(48px + 2em);
+  padding: 200px 36px 36px 36px;
+  margin: 0;
   
   display: -webkit-box;
   display: -moz-box;
@@ -19,43 +17,35 @@ const NextContainer = styled.div`
   
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
-  @media (max-width: 1224px) {
-    padding-left: 0;
-  }
+
+  @media (max-width: 768px) {
+    padding: 100px 18px 18px 18px;
+    }
 `
 
 const NextGroup = styled.div`
-    @media (max-width: 768px) {
-        max-width: 50%;
-    }
+    
 `
 
 const NextGroupRight = styled.div`
     text-align: right;
-    @media (max-width: 768px) {
-        max-width: 50%;
-    }
+    flex: 1 1 auto;
 `
 
 const NextName = styled.p`
     margin: 0;
-
     font-size: 0.9em;
-    color: #999;
-
+    color: #666;
 `
 
 const NextWork = styled.p`
     margin: 0;
-
-    font-size: 2em;
-    font-family: 'Aktiv Grotesk';
+    font-size: 1.6em;
     font-weight: 600;
-    // font-style: italic;
     color: #999;
 
     @media (max-width: 768px) {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     &:hover {
@@ -76,7 +66,7 @@ class NextNav extends React.Component {
         
         return(
             <div>
-                <Hr/>
+                {/* <Hr/> */}
                 <NextContainer>
                     <NextGroup>
                         { isFirst ? (<NextName>this is the first {this.props.fromList} project</NextName>) : <NextName>prev</NextName> }

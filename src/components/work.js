@@ -107,29 +107,29 @@ const Image = styled.img`
     background-size:1px 300%;  
 
 
-    -webkit-filter: grayscale(25%);
-    -moz-filter: grayscale(25%);
-    -ms-filter: grayscale(25%);
-    -o-filter: grayscale(25%);
-    filter: grayscale(25%);
+    // -webkit-filter: grayscale(25%);
+    // -moz-filter: grayscale(25%);
+    // -ms-filter: grayscale(25%);
+    // -o-filter: grayscale(25%);
+    // filter: grayscale(25%);
     transition: 0.2s;
 
     @media (max-width: 768px) {
-        -webkit-filter: none;
-        -moz-filter: none;
-        -ms-filter: none;
-        -o-filter: none;
-        filter: none;
+        // -webkit-filter: none;
+        // -moz-filter: none;
+        // -ms-filter: none;
+        // -o-filter: none;
+        // filter: none;
         background-position: 300%;  
     }
 
     ${WorkCardGroup}:hover & {
         background-position: 300%;  
-        -webkit-filter: grayscale(0); 
-        -moz-filter: grayscale(0); 
-        -ms-filter: grayscale(0); 
-        -o-filter: grayscale(0); 
-        filter: grayscale(0); 
+        // -webkit-filter: grayscale(0); 
+        // -moz-filter: grayscale(0); 
+        // -ms-filter: grayscale(0); 
+        // -o-filter: grayscale(0); 
+        // filter: grayscale(0); 
     }
 `
 
@@ -138,11 +138,11 @@ const Video = styled.video`
     margin: 0;
     padding: 0;
 
-    -webkit-filter: grayscale(50%);
-    -moz-filter: grayscale(50%);
-    -ms-filter: grayscale(50%);
-    -o-filter: grayscale(50%);
-    filter: grayscale(50%);
+    -webkit-filter: grayscale(20%);
+    -moz-filter: grayscale(20%);
+    -ms-filter: grayscale(20%);
+    -o-filter: grayscale(20%);
+    filter: grayscale(20%);
     transition: filter 0.2s;
 
     @media (max-width: 768px) {
