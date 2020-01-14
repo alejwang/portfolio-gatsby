@@ -53,9 +53,9 @@ const NextWork = styled.p`
     }
 ` 
 
-const Hr = styled.hr`
-    margin: 200px 0 50px 0;
-`
+// const Hr = styled.hr`
+//     margin: 200px 0 50px 0;
+// `
 
 class NextNav extends React.Component {
     render() {

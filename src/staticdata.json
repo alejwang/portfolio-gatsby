@@ -1,4 +1,4 @@
-{
+{   
     "cats": {
         "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
         "mobile":["alipay", "si-hunt", "tide-mobile", "smartpill"],
@@ -6,27 +6,6 @@
         "arch":["inforest", "edge-shelter"]
     },
     "works": {
-        "seniortalk": {
-            "title": "SeniorTalk",
-            "id": "seniortalk",
-            "gradient_start": "#222",
-            "gradient_end": "#222",
-            "subtitle": "Learn, connect, and express your feeling",
-            "text": "...", 
-            "year": 2019,
-            "cat": "web",
-            "tbd": true
-        },
-        "si-hunt": {
-            "title": "SI Hunt",
-            "id": "si-hunt",
-            "gradient_start": "#032859",
-            "gradient_end": "#16319D",
-            "subtitle": "Event and place discovery using ARKit",
-            "text": "Discovery app agile development for U of Mich freshmen", 
-            "year": 2019,
-            "cat": "mobile"
-        },
         "alipay": {
             "title": "Alipay",
             "id": "alipay",
@@ -35,18 +14,8 @@
             "subtitle": "Mobile payments and city service - works in Ant Financial, a TechFin company",
             "text": "Learned from designing mobile payments and city service in Ant Finiancial",
             "year": 2018,
-            "cat": "mobile"
-        },
-        "sketch-clip": {
-            "title": "Sketch Clip",
-            "title_short": "S Clip",
-            "id": "sketch-clip",
-            "gradient_start": "#1929E4",
-            "gradient_end": "#FF8029",
-            "subtitle": "Version control tool for Sketch designers",
-            "text": "What will Git for Designer look like...",
-            "year": 2018,
-            "cat": "web"
+            "cat": "mobile",
+            "selected": true
         },
         "tide-mobile": {
             "title": "Tide Mobile 3.0",
@@ -57,7 +26,34 @@
             "text": "Redefine how college students gather information and have fun, accessible for everyone in one touch",
             "year": 2017,
             "cat": "mobile",
-            "usingVideoAsCover": true
+            "usingVideoAsCover": true,
+            "selected": true
+
+        },
+        "si-hunt": {
+            "title": "SI Hunt",
+            "id": "si-hunt",
+            "gradient_start": "#032859",
+            "gradient_end": "#16319D",
+            "subtitle": "Event and place discovery using ARKit",
+            "text": "Discovery app agile development for U of Mich freshmen", 
+            "year": 2019,
+            "cat": "mobile",
+            "selected": true
+
+        },
+        "sketch-clip": {
+            "title": "Sketch Clip",
+            "title_short": "S Clip",
+            "id": "sketch-clip",
+            "gradient_start": "#1929E4",
+            "gradient_end": "#FF8029",
+            "subtitle": "Version control tool for Sketch designers",
+            "text": "What will Git for Designer look like...",
+            "year": 2018,
+            "cat": "web",
+            "selected": true
+
         },
         "smartpill": {
             "title": "DocPill",
@@ -67,7 +63,8 @@
             "subtitle": "Pharmacy business bound to IoT",
             "text": "Fulfill the urgent need of busy patients and chronic disease patients in China in alternative ways",
             "year": 2016,
-            "cat": "mobile"
+            "cat": "mobile",
+            "selected": true
         },
         "inforest": {
             "title": "InForest Place",
@@ -77,7 +74,9 @@
             "subtitle": "Invoke deep dreams of forest in city mist by a heart travel",
             "text": "Invoke deep dreams of forest in heavy city mist by a beatiful heart travel",
             "year": 2016,
-            "cat": "arch"
+            "cat": "arch",
+            "selected": true
+
         },
         "edge-shelter": {
             "title": "The Edge Shelter For Animals",
@@ -89,16 +88,16 @@
             "year": 2015,
             "cat": "arch"
         },
-        "tbd2": {
-            "title": "Int. Education",
-            "sub": "/tba",
-            "id": "#",
-            "gradient_start": "#000",
-            "gradient_end": "#000",
-            "subtitle": "Next to intro coding education",
-            "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
-            "year": 2016,
-            "cat": "web"
+        "seniortalk": {
+            "title": "SeniorTalk",
+            "id": "seniortalk",
+            "gradient_start": "#222",
+            "gradient_end": "#222",
+            "subtitle": "Learn, connect, and express your feeling",
+            "text": "...", 
+            "year": 2019,
+            "cat": "web",
+            "tbd": true
         },
         "civicrm-nz": {
             "title": "CIVICRM + NZ",
@@ -110,6 +109,18 @@
             "year": 2017,
             "cat": "web",
             "tbd": true
+        },
+        "tbd2": {
+            "title": "Int. Education",
+            "sub": "/tba",
+            "id": "#",
+            "gradient_start": "#000",
+            "gradient_end": "#000",
+            "subtitle": "Next to intro coding education",
+            "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
+            "year": 2016,
+            "cat": "web",
+            "hidden": true
         }
     }
 }

@@ -49,12 +49,11 @@ class Header extends React.Component {
             <img className={this.state.isExpanded ? 'MenuIcon' : 'MenuIcon Hidden'} onClick={this.closeExpand} src={require('../images/header-cross.svg')} alt="Close Menu"/>
           </div> */}
         </div>
-        <div className={this.state.isExpanded ? 'HeaderExpanded' : 'HeaderExpanded Hidden'} onClick={this.closeExpand} >
+        {/* <div className={this.state.isExpanded ? 'HeaderExpanded' : 'HeaderExpanded Hidden'} onClick={this.closeExpand} >
             <AniLink cover to="/" direction="down" bg="#111">home.</AniLink>
             <AniLink cover to="/works" direction="down" bg="#111">work.</AniLink>
-            {/* <AniLink cover to="/lab" direction="down" bg="#111">lab.</AniLink> */}
             <AniLink cover to="/about" direction="down" bg="#111">about.</AniLink>
-        </div>
+        </div> */}
       </header>
     )
   }

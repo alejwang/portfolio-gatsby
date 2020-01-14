@@ -110,13 +110,16 @@ const Grid = styled.div`
   justify-content: space-between;
   align-content: flex-start;
 
-  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.2s cubic-bezier(0.23, 1, 0.32, 1)" };
+  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.2s cubic-bezier(0.23, 1, 0.32, 1)" };  
   -webkit-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -o-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -moz-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -ms-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   transform: ${props => props.isScrolled ? "scale3d(1,1,1) translate3d(0px, 0px, 0px)" : "scale3d(0.9, 0.9, 0.9) translate3d(0px, 150px, 0px)"};;
+
+  transition: opacity 0.3s;
+  opacity: ${props => props.isReloading ? "0" : "1"};
 
   @media (max-width:768px) {
     padding: 0;
@@ -244,9 +247,13 @@ const Option = styled.p`
   margin: 0;
   cursor: pointer;
   line-height: 1em;
+  color: ${props => props.isActive ? '#ddd' : '#666'};
+  // font-weight: ${props => props.isActive ? '700' : '400'};
 
   &:after {
     content: "/";
+    // font-weight: 400;
+    color: #666;
     padding: 0 8px;
   }
 
@@ -255,9 +262,6 @@ const Option = styled.p`
   }
 `
 
-function asyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 500));
-}
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -265,38 +269,45 @@ class IndexPage extends React.Component {
     this.state = {
       isMounted: false,
       isScrolled: false,
-      isScrolledAlot: false
+      isScrolledAlot: false,
+      isViewSelected: false,
+      filteredByOption: "all",
+      isReloading: false
     }
   }
 
   handleScroll = (event) => {
     const offsetY = window.pageYOffset;
-
     if (offsetY > 400) {
-      this.setState({
-        isScrolled: true,
-        isScrolledAlot: true
-      })
+      this.setState( { isScrolled: true, isScrolledAlot: true })
     } else if (offsetY > 10) {
-      this.setState({
-        isScrolled: true,
-        isScrolledAlot: false
-      })
+      this.setState( { isScrolled: true, isScrolledAlot: false })
     } else {
-      this.setState({
-        isScrolled: false,
-        isScrolledAlot: false
-      })
+      this.setState( { isScrolled: false, isScrolledAlot: false })
     }
+  }
+
+  handleFilter(type, value) {
+    this.setState({ isReloading: true });
+    new Promise((resolve) => setTimeout(() => resolve(), 400)).then(
+      () => {
+        if (type === 'selected') {
+          this.setState({ isViewSelected: value })
+        } else if (type === 'cat') {
+          this.setState({ filteredByOption: value })
+        }
+        this.setState({ isReloading: false });
+      })
+
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    asyncCall().then(() => this.setState({ isMounted: true }));
+    new Promise((resolve) => setTimeout(() => resolve(), 500)).then(() => this.setState({ isMounted: true }));
   }
 
   render() {
-    const { isMounted, isScrolled, isScrolledAlot } = this.state;
+    const { isMounted, isScrolled, isScrolledAlot, isViewSelected, filteredByOption, isReloading } = this.state;
 
     return (
       <Loader>
@@ -319,19 +330,21 @@ class IndexPage extends React.Component {
         </HeaderSecondary>
         <ViewBy isScrolled={isScrolled}>
           View: <br/>  
-          <Option>Selected</Option>
-          <Option>All</Option>
+          <Option isActive={!isViewSelected} onClick={(e) => this.handleFilter('selected', false)}>All</Option>
+          <Option isActive={isViewSelected} onClick={(e) => this.handleFilter('selected', true)}>Selected</Option>
         </ViewBy>
         <ViewBy isScrolled={isScrolled}>
           Filtered By: <br/>  
-          <Option>All</Option>
-          <Option>Web</Option>
-          <Option>Mobile</Option>
-          <Option>Arch</Option>
+          <Option isActive={ filteredByOption==='all' } onClick={(e) => this.handleFilter('cat', 'all')}>All</Option>
+          <Option isActive={ filteredByOption==='web' } onClick={(e) => this.handleFilter('cat', 'web')}>Web</Option>
+          <Option isActive={ filteredByOption==='mobile' } onClick={(e) => this.handleFilter('cat', 'mobile')}>Mobile</Option>
+          <Option isActive={ filteredByOption==='arch' } onClick={(e) => this.handleFilter('cat', 'arch')}>Arch</Option>
         </ViewBy>
-        <Grid isScrolled={isScrolled}>
-          {staticdata.cats.selected.map((name, index) =>
-            <Work onHoverHandler={this.handleHover} index={index} data={staticdata.works[name]} fromList="selected" />
+        <Grid isScrolled={isScrolled} isReloading={isReloading}>
+          {Object.keys(staticdata.works).map((id, index) => staticdata.works[id].hidden ||
+            <Work index={index} data={staticdata.works[id]} 
+            isFiltered={((staticdata.works[id].selected === isViewSelected) || !isViewSelected) && (staticdata.works[id].cat === filteredByOption || filteredByOption === "all")} 
+            fromList="selected" />
           )}
         </Grid>
       </Loader>

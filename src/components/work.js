@@ -1,22 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import styled from 'styled-components'
 
 
 
 const WorkCardGroup = styled.div`
-    flex: 0 1 33.3%;
+    flex: 0 1 auto;
     max-width: 33.3%;
+
     box-sizing: border-box;
     padding: 18px;
     position: relative;
 
     cursor:  ${props => props.isClickable ? "pointer" : "auto"};
     pointer-events:  ${props => props.isClickable ? "auto" : "none"};   
-    opacity: ${props => props.isClickable ? "1" : "0.25"};
 
-    @media (max-width: 1600px) {
-        flex: 0 1 50%;
+    opacity: ${props => props.isFiltered ? "1" : "0"};
+    height: ${props => props.isFiltered ? "auto" : "0"};
+    order: ${props => props.isFiltered ? "1" : "99"};
+
+    @media (max-width: 1600px) {;
         max-width: 50%;
     }
 
@@ -110,6 +113,8 @@ const Image = styled.img`
     background-size:1px 300%;  
 
     transition: 0.2s;
+    filter:  ${props => props.isClickable ? "none" : "grayscale(100%)"};
+    opacity:  ${props => props.isClickable ? "1" : "0.5"};
 
     @media (max-width: 768px) {
         background-position: 300%;  
@@ -117,11 +122,6 @@ const Image = styled.img`
 
     ${WorkCardGroup}:hover & {
         background-position: 300%;  
-        // -webkit-filter: grayscale(0); 
-        // -moz-filter: grayscale(0); 
-        // -ms-filter: grayscale(0); 
-        // -o-filter: grayscale(0); 
-        // filter: grayscale(0); 
     }
 `
 
@@ -158,9 +158,7 @@ class Work extends React.Component {
   }
   render() {
     return (
-      <WorkCardGroup isClickable={!this.props.data.tbd}>
-          
-
+      <WorkCardGroup isClickable={!this.props.data.tbd} isFiltered={this.props.isFiltered}>
         <AniLink cover
           to={ this.props.data.tbd ? '#' : '/' + this.props.data.id } 
           state={{ fromList: this.props.fromList }}
@@ -170,12 +168,12 @@ class Work extends React.Component {
             {this.props.data.usingVideoAsCover ? 
                 <Video src={require("../videos/"+this.props.data.id+"-cover.mp4")} preload="auto" autoPlay muted loop playsinline webkit-playsinline></Video> 
             :
-                <Image src={require("../images/"+(this.props.data.id==="#"?"default":this.props.data.id)+"-cover-v5.png")} gradient_start={this.props.data.gradient_start} gradient_end={this.props.data.gradient_end} />
+                <Image isClickable={!this.props.data.tbd} src={require("../images/"+(this.props.data.id==="#"?"default":this.props.data.id)+"-cover-v5.png")} gradient_start={this.props.data.gradient_start} gradient_end={this.props.data.gradient_end} />
             }
             <Info>
                 <Title>{this.props.data.tbd && 'Coming Soon -'} {this.props.data.title} </Title>
                 <Icon src={require("../images/icons/"+(this.props.data.cat)+".png")}/>
-                <Sub>{this.props.data.subtitle}</Sub>
+                <Sub>{this.props.data.subtitle}</Sub> 
             </Info>
         </AniLink>
       </WorkCardGroup>
