@@ -110,7 +110,7 @@ const Grid = styled.div`
   justify-content: space-between;
   align-content: flex-start;
 
-  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.2s cubic-bezier(0.23, 1, 0.32, 1)" };  
+  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.3s cubic-bezier(0.23, 1, 0.32, 1)" };  
   -webkit-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -o-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -moz-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
@@ -118,7 +118,7 @@ const Grid = styled.div`
   filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   transform: ${props => props.isScrolled ? "scale3d(1,1,1) translate3d(0px, 0px, 0px)" : "scale3d(0.9, 0.9, 0.9) translate3d(0px, 150px, 0px)"};;
 
-  transition: opacity 0.3s;
+  // transition: opacity 0.3s;
   opacity: ${props => props.isReloading ? "0" : "1"};
 
   @media (max-width:768px) {
@@ -289,7 +289,7 @@ class IndexPage extends React.Component {
 
   handleFilter(type, value) {
     this.setState({ isReloading: true });
-    new Promise((resolve) => setTimeout(() => resolve(), 400)).then(
+    new Promise((resolve) => setTimeout(() => resolve(), 500)).then(
       () => {
         if (type === 'selected') {
           this.setState({ isViewSelected: value })
