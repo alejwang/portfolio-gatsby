@@ -164,9 +164,9 @@ class Work extends React.Component {
           state={{ fromList: this.props.fromList }}
           direction="down"
           bg="#111111"
-          duration={1}>
+          duration={1.5}>
             {this.props.data.usingVideoAsCover ? 
-                <Video src={require("../videos/"+this.props.data.id+"-cover.mp4")} preload="auto" autoPlay muted loop playsinline webkit-playsinline></Video> 
+                <Video src={require("../videos/"+this.props.data.id+"-cover-v5.mp4")} preload="auto" autoPlay muted loop playsinline webkit-playsinline></Video> 
             :
                 <Image isClickable={!this.props.data.tbd} src={require("../images/"+(this.props.data.id==="#"?"default":this.props.data.id)+"-cover-v5.png")} gradient_start={this.props.data.gradient_start} gradient_end={this.props.data.gradient_end} />
             }

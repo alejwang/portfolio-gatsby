@@ -1,9 +1,10 @@
 {   
     "cats": {
-        "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
+        "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "dof", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
         "mobile":["alipay", "si-hunt", "tide-mobile", "smartpill"],
         "web":["sketch-clip"],
-        "arch":["inforest", "edge-shelter"]
+        "arch":["inforest", "edge-shelter"],
+        "vis": ["dof"]
     },
     "works": {
         "alipay": {
@@ -28,7 +29,6 @@
             "cat": "mobile",
             "usingVideoAsCover": true,
             "selected": true
-
         },
         "si-hunt": {
             "title": "SI Hunt",
@@ -53,7 +53,18 @@
             "year": 2018,
             "cat": "web",
             "selected": true
-
+        },
+        "dof": {
+            "title": "Interactive Learning for DoF",
+            "id": "dof",
+            "gradient_start": "#004C90",
+            "gradient_end": "#88B077",
+            "subtitle": "Learning experience design using playable visualization",
+            "text": "Design how newbie photographers play and learn depth of field calculation",
+            "year": 2018,
+            "cat": "vis",
+            "usingVideoAsCover": true,
+            "selected": true
         },
         "smartpill": {
             "title": "DocPill",
@@ -76,7 +87,6 @@
             "year": 2016,
             "cat": "arch",
             "selected": true
-
         },
         "edge-shelter": {
             "title": "The Edge Shelter For Animals",
