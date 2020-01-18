@@ -338,6 +338,7 @@ class IndexPage extends React.Component {
           <Option isActive={ filteredByOption==='all' } onClick={(e) => this.handleFilter('cat', 'all')}>All</Option>
           <Option isActive={ filteredByOption==='web' } onClick={(e) => this.handleFilter('cat', 'web')}>Web</Option>
           <Option isActive={ filteredByOption==='mobile' } onClick={(e) => this.handleFilter('cat', 'mobile')}>Mobile</Option>
+          <Option isActive={ filteredByOption==='vis' } onClick={(e) => this.handleFilter('cat', 'vis')}>Vis</Option>
           <Option isActive={ filteredByOption==='arch' } onClick={(e) => this.handleFilter('cat', 'arch')}>Arch</Option>
         </ViewBy>
         <Grid isScrolled={isScrolled} isReloading={isReloading}>
