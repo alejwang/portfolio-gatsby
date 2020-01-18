@@ -229,6 +229,10 @@ const ViewBy = styled.div`
   transition: 0.4s opacity;
   opacity: ${props => props.isScrolled ? "1" : "0.1"};
 
+  & + & {
+    width: auto;
+  }
+
   @media (max-width: 1600px) {
     width: calc(25% - 45px);
   }
