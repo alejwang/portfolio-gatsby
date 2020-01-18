@@ -1,5 +1,6 @@
 {   
     "cats": {
+        "all":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "dof", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
         "selected":["alipay", "tide-mobile", "si-hunt", "sketch-clip", "dof", "smartpill", "inforest", "edge-shelter", "seniortalk", "civicrm-nz"],
         "mobile":["alipay", "si-hunt", "tide-mobile", "smartpill"],
         "web":["sketch-clip"],
@@ -10,8 +11,8 @@
         "alipay": {
             "title": "Alipay",
             "id": "alipay",
-            "gradient_start": "#153c88",
-            "gradient_end": "#3068e8",
+            "gradient_start": "#15224A",
+            "gradient_end": "#2D76E5",
             "subtitle": "Mobile payments and city service - works in Ant Financial, a TechFin company",
             "text": "Learned from designing mobile payments and city service in Ant Finiancial",
             "year": 2018,
@@ -34,7 +35,7 @@
             "title": "SI Hunt",
             "id": "si-hunt",
             "gradient_start": "#032859",
-            "gradient_end": "#16319D",
+            "gradient_end": "#3B62B2",
             "subtitle": "Event and place discovery using ARKit",
             "text": "Discovery app agile development for U of Mich freshmen", 
             "year": 2019,
@@ -81,7 +82,7 @@
             "title": "InForest Place",
             "id": "inforest",
             "gradient_start": "#365B41",
-            "gradient_end": "#596235",
+            "gradient_end": "#7A8C35",
             "subtitle": "Invoke deep dreams of forest in city mist by a heart travel",
             "text": "Invoke deep dreams of forest in heavy city mist by a beatiful heart travel",
             "year": 2016,
@@ -91,8 +92,8 @@
         "edge-shelter": {
             "title": "The Edge Shelter For Animals",
             "id": "edge-shelter",
-            "gradient_start": "#AFC6DC",
-            "gradient_end": "#AFC6DC",
+            "gradient_start": "#5E5E5E",
+            "gradient_end": "#bbb",
             "subtitle": "Product design for homeless animals",
             "text": "Design for animals with a view of animals to make an shelter for us animals - all the way from fund to adoption",
             "year": 2015,

@@ -38,11 +38,11 @@ const Landing = styled.div`
 const Blurrer = styled.div`
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     pointer-events: none;
     position: fixed;
     z-index: 999;
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0.6) 100%);
 
     transition: 1s linear;
     opacity: ${props => props.isScrolled ? "0" : "1"};
@@ -67,8 +67,8 @@ const MyInfo = styled.p`
 `
 
 
-
 const ScrollIndicator = styled.p`
+    display: none;
     position: absolute;
     width: 100%;
     bottom: 5vw;
@@ -110,13 +110,13 @@ const Grid = styled.div`
   justify-content: space-between;
   align-content: flex-start;
 
-  transition: ${props => props.isScrolled? "0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.3s cubic-bezier(0.23, 1, 0.32, 1)" };  
+  transition: ${props => props.isScrolled? "opacity 0.3s linear, filter 0.6s cubic-bezier(0.86, 0, 0.07, 1), transform 0.6s cubic-bezier(0.86, 0, 0.07, 1)" : "0.3s cubic-bezier(0.23, 1, 0.32, 1)" };  
   -webkit-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -o-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -moz-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   -ms-filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
   filter: ${props => props.isScrolled ? "blur(0)" : "blur(20px)"};
-  transform: ${props => props.isScrolled ? "scale3d(1,1,1) translate3d(0px, 0px, 0px)" : "scale3d(0.9, 0.9, 0.9) translate3d(0px, 150px, 0px)"};;
+  transform: ${props => props.isScrolled ? "scale3d(1,1,1) translate3d(0px, 0px, 0px)" : "scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px)"};;
 
   // transition: opacity 0.3s;
   opacity: ${props => props.isReloading ? "0" : "1"};
@@ -333,12 +333,12 @@ class IndexPage extends React.Component {
           <Nav><a href={resumePdf}>Resume</a></Nav>
         </HeaderSecondary>
         <ViewBy isScrolled={isScrolled}>
-          View: <br/>  
+          View <br/>  
           <Option isActive={!isViewSelected} onClick={(e) => this.handleFilter('selected', false)}>All</Option>
           <Option isActive={isViewSelected} onClick={(e) => this.handleFilter('selected', true)}>Selected</Option>
         </ViewBy>
         <ViewBy isScrolled={isScrolled}>
-          Filtered By: <br/>  
+          Filter <br/>  
           <Option isActive={ filteredByOption==='all' } onClick={(e) => this.handleFilter('cat', 'all')}>All</Option>
           <Option isActive={ filteredByOption==='web' } onClick={(e) => this.handleFilter('cat', 'web')}>Web</Option>
           <Option isActive={ filteredByOption==='mobile' } onClick={(e) => this.handleFilter('cat', 'mobile')}>Mobile</Option>
@@ -349,7 +349,7 @@ class IndexPage extends React.Component {
           {Object.keys(staticdata.works).map((id, index) => staticdata.works[id].hidden ||
             <Work index={index} data={staticdata.works[id]} 
             isFiltered={((staticdata.works[id].selected === isViewSelected) || !isViewSelected) && (staticdata.works[id].cat === filteredByOption || filteredByOption === "all")} 
-            fromList="selected" />
+            fromList={isViewSelected ? "selected" : filteredByOption} />
           )}
         </Grid>
       </Loader>

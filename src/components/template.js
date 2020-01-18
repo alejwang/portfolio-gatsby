@@ -52,9 +52,10 @@ export const Image = styled.img`
 `
 
 export const InlineImage = styled(Image)`
-  width: 100%;
-  margin: 120px auto 100px auto;
+  width: 106%;
+  margin: 120px -3% 100px -3%;
   @media (max-width: 768px) {
+    width: 100%;
     margin: 80px auto;
   }
 `
@@ -65,9 +66,7 @@ export const Section = styled.div`
   max-width: 1000px;
   margin: 100px auto;
   box-sizing: border-box;
-  // overflow: auto;
   @media (max-width: 1224px) {
-    padding-left: 0;
     margin: 150px auto; 
   }
   @media (max-width: 768px) {

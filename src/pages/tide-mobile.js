@@ -34,10 +34,10 @@ const TideMobile = ({ location }) => (
         </InfoGroup>
         <InfoGroup>
           <InfoTitle>Client + Team</InfoTitle>
-          <InfoText><a href="http://www.qsc.zju.edu.cn">Student Portal, ZJU<span className="linkarrow">></span></a> <br/> Bubu, Jingjing, Shiguan</InfoText>
+          <InfoText><a href="http://www.qsc.zju.edu.cn">Student Portal, ZJU<span className="linkarrow">→</span></a> <br/> Bubu, Jingjing, Shiguan</InfoText>
         </InfoGroup>
         <MainText>
-        Tide Mobile 3.0 (求是潮手机站) is an everyday calendar app for university students to organize their academic calendar and find more club activities in leisure life. <br/> Check it out on <a href="https://itunes.apple.com/app/qiu-shi-chaomobile/id583334920">App Store<span className="linkarrow">></span></a>.
+        Tide Mobile 3.0 (求是潮手机站) is an everyday calendar app for university students to organize their academic calendar and find more club activities in leisure life. <br/> Check it out on <a href="https://itunes.apple.com/app/qiu-shi-chaomobile/id583334920">App Store<span className="linkarrow">→</span></a>.
         </MainText>
         <MainText>
           My Role: <br/>
@@ -45,7 +45,7 @@ const TideMobile = ({ location }) => (
         </MainText>
 
         <NoteText>
-        <a href={pdf}>Download the PDF version <span className="linkarrow">></span></a><br/>Due to agile updates, the images below from different periods may look a little bit different.
+        <a href={pdf}>Download the PDF version <span className="linkarrow">→</span></a><br/>Due to agile updates, the images below from different periods may look a little bit different.
         </NoteText>
     </InfoPanelGroup>
 
@@ -53,7 +53,7 @@ const TideMobile = ({ location }) => (
 
     <Section>
       <ChapterTitle>overview</ChapterTitle>
-      <SectionTitle>Tide Mobile 3 is born to improve productivity in school. <br/>By saving students' time and energy to organize all the information they need, <br/>we finally brought them a new school lifestyle.</SectionTitle>
+      <SectionTitle>Tide Mobile 3 is born to improve productivity in school. By saving students' time and energy to organize all the information they need, we finally brought them a new school lifestyle.</SectionTitle>
     </Section>
 
     <SectionForImagesFlex>
@@ -65,7 +65,7 @@ const TideMobile = ({ location }) => (
 
     <Section>
       <ChapterTitle>key problems</ChapterTitle>
-      <SectionTitle>Before, life in my school wasn't easy and fun <br/>because of some major problems.</SectionTitle>
+      <SectionTitle>Before, life in my school wasn't easy and fun because of some major issues.</SectionTitle>
       <StepContainerGroup>
         <StepNo>01</StepNo>
         <StepTitle>Isolated useful resources</StepTitle>
@@ -79,14 +79,14 @@ const TideMobile = ({ location }) => (
       <StepContainerGroup>
         <StepNo>03</StepNo>
         <StepTitle>Tide Mobile 2.0 can't fulfill the changing user needs</StepTitle>
-        <StepText>Tide Mobile's old version designed by <a href="http://ruolan.design">Ruolan Xia<span className="linkarrow">></span></a> was published in 2014. Cards with different information showed on the Home screen and users can click cards to see more and do actions. However, students are having increasing negative feedback on this app.</StepText>
+        <StepText>Tide Mobile's old version designed by <a href="http://ruolan.design">Ruolan Xia<span className="linkarrow">→</span></a> was published in 2014. Cards with different information showed on the Home screen and users can click cards to see more and do actions. However, students are having increasing negative feedback on this app.</StepText>
       </StepContainerGroup>
     </Section>
 
     <hr/>
     <Section>
       <ChapterTitle>design critique + research</ChapterTitle>
-      <SectionTitle>We started from design critique on the previous version 2.0 base on our user research. <br/> We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
+      <SectionTitle>We started from design critique on the previous version 2.0 base on our user research. We also conducted interviews on peers, senoirs and freshmen.</SectionTitle>
     </Section>
     <Image src={require("../images/tide-mobile-research.png")} /> 
     <Section>
@@ -139,7 +139,7 @@ const TideMobile = ({ location }) => (
       <ChapterTitle>after release</ChapterTitle>
       <SectionTitle>Till Oct. 2016, Tide Mobile has more than 18,000 daily active users. 
         We feel very proud to help almost 61% undergraduate student at Zhejiang University to have an easy and joyful life. 
-        Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">></span></a>.</SectionTitle>
+        Don't forget to check out cool <a href="https://youtu.be/24HFhpKGtkQ">ad<span className="linkarrow">→</span></a>.</SectionTitle>
     </Section>
 
     <hr/>

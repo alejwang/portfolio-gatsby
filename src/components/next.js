@@ -63,24 +63,25 @@ class NextNav extends React.Component {
         const indexInList = workList.indexOf(this.props.currentPage)
         const isFirst = (indexInList === 0)
         const isLast = (indexInList === workList.length - 1)
+        const listName = (this.props.fromList === "all" ? '' : this.props.fromList)
         
         return(
             <div>
                 {/* <Hr/> */}
                 <NextContainer>
                     <NextGroup>
-                        { isFirst ? (<NextName>this is the first {this.props.fromList} project</NextName>) : <NextName>prev</NextName> }
+                        { isFirst ? (<NextName>this is the first {listName} project</NextName>) : <NextName>prev</NextName> }
                         { isFirst ||
                             <AniLink cover to={'/'+staticdata.works[workList[indexInList - 1]].id} direction="right" bg="#111">
-                                <NextWork> &lt; {staticdata.works[workList[indexInList - 1]].title}</NextWork>
+                                <NextWork>← {staticdata.works[workList[indexInList - 1]].title}</NextWork>
                             </AniLink> 
                         } 
                     </NextGroup>
                     <NextGroupRight>
-                        { isLast ? (<NextName>this is the last {this.props.fromList} project</NextName>) : <NextName>next {this.props.fromList} project</NextName> }
+                        { isLast ? (<NextName>this is the last {listName} project</NextName>) : <NextName>next {listName} project</NextName> }
                         { isLast ||
                             <AniLink cover to={'/'+staticdata.works[workList[indexInList + 1]].id} direction="left" bg="#111">
-                                <NextWork> {staticdata.works[workList[indexInList + 1]].title} &gt; </NextWork>
+                                <NextWork> {staticdata.works[workList[indexInList + 1]].title} →</NextWork>
                             </AniLink> 
                         }
                     </NextGroupRight>

@@ -109,19 +109,19 @@ const Image = styled.img`
     width: 100%;
     height: auto;
 
-    background: linear-gradient(to bottom, ${props => props.gradient_start} 25%, ${props => props.gradient_end} 100%);
-    background-size:1px 300%;  
+    background: linear-gradient(to bottom, ${props => props.gradient_start} 0%, ${props => props.gradient_end} 100%);
+    background-size:1px 200%;  
 
     transition: 0.2s;
     filter:  ${props => props.isClickable ? "none" : "grayscale(100%)"};
     opacity:  ${props => props.isClickable ? "1" : "0.5"};
 
     @media (max-width: 768px) {
-        background-position: 300%;  
+        background-position: 200%;  
     }
 
     ${WorkCardGroup}:hover & {
-        background-position: 300%;  
+        background-position: 200%;  
     }
 `
 
@@ -130,11 +130,11 @@ const Video = styled.video`
     margin: 0;
     padding: 0;
 
-    -webkit-filter: grayscale(20%);
-    -moz-filter: grayscale(20%);
-    -ms-filter: grayscale(20%);
-    -o-filter: grayscale(20%);
-    filter: grayscale(20%);
+    -webkit-filter: brightness(80%);
+    -moz-filter: brightness(80%);
+    -ms-filter: brightness(80%);
+    -o-filter: brightness(80%);
+    filter: brightness(80%);
     transition: filter 0.2s;
 
     @media (max-width: 768px) {
@@ -142,11 +142,11 @@ const Video = styled.video`
     }
 
     ${WorkCardGroup}:hover & {
-        -webkit-filter: grayscale(0); 
-        -moz-filter: grayscale(0); 
-        -ms-filter: grayscale(0); 
-        -o-filter: grayscale(0); 
-        filter: grayscale(0); 
+        -webkit-filter: brightness(1);
+        -moz-filter: brightness(1);
+        -ms-filter: brightness(1); 
+        -o-filter: brightness(1);
+        filter: brightness(1); 
     }
 `
 
@@ -164,7 +164,7 @@ class Work extends React.Component {
           state={{ fromList: this.props.fromList }}
           direction="down"
           bg="#111111"
-          duration={1.5}>
+          duration={1}>
             {this.props.data.usingVideoAsCover ? 
                 <Video src={require("../videos/"+this.props.data.id+"-cover-v5.mp4")} preload="auto" autoPlay muted loop playsinline webkit-playsinline></Video> 
             :

@@ -18,7 +18,7 @@ const Alipay = ({ location }) => (
         </InfoGroup>
         <InfoGroup>
           <InfoTitle>Company + Team</InfoTitle>
-          <InfoText><a href="https://www.antfin.com/index.htm?locale=en_US" target="_blank" rel="noopener noreferrer">Ant Financial<span className="linkarrow">></span></a><br/> <a href="https://global.alipay.com/index.htm" target="_blank" rel="noopener noreferrer">Alipay App<span className="linkarrow">></span></a> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
+          <InfoText><a href="https://www.antfin.com/index.htm?locale=en_US" target="_blank" rel="noopener noreferrer">Ant Financial<span className="linkarrow">→</span></a><br/> <a href="https://global.alipay.com/index.htm" target="_blank" rel="noopener noreferrer">Alipay App<span className="linkarrow">→</span></a> <br/> K.P. Wang - Mentor <br /> Huajing Jin - Supervisor</InfoText>
         </InfoGroup>
         <MainText>
           Mobile payments in the city service era - what I learned from working for Alipay in Ant Financial, the highest valued TechFin company in the world.
@@ -61,13 +61,13 @@ const Alipay = ({ location }) => (
         Since the work flow chart covers all the pages and components, it's easy for future usage - when another city use this feature with unique needs, developers only need to set some parameters for current interface and add some single pages.
       </ImageText>
       <ImageText>
-        Powered by <a href="https://whimsical.com" target="_blank" rel="noopener noreferrer">Whimsical<span className="linkarrow">></span></a> .
+        Powered by <a href="https://whimsical.com" target="_blank" rel="noopener noreferrer">Whimsical<span className="linkarrow">→</span></a> .
       </ImageText>
     </SectionForImages>
 
     <Section>
       <ChapterTitle>Other Projects</ChapterTitle>
-      <SectionTitle>Using my work time and free time, I also worked on brainstorming new ideas and some motion designs. Powered by <a href="https://framer.com" target="_blank" rel="noopener noreferrer">Framer Studio<span className="linkarrow">></span></a> and <a href="https://airbnb.design/lottie/" target="_blank" rel="noopener noreferrer">Lottie<span className="linkarrow">></span></a>.</SectionTitle>
+      <SectionTitle>Using my work time and free time, I also worked on brainstorming new ideas and some motion designs. Powered by <a href="https://framer.com" target="_blank" rel="noopener noreferrer">Framer Studio<span className="linkarrow">→</span></a> and <a href="https://airbnb.design/lottie/" target="_blank" rel="noopener noreferrer">Lottie<span className="linkarrow">→</span></a>.</SectionTitle>
     </Section>
 
     <SectionForImagesFlex>
